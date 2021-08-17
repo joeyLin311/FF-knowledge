@@ -7,7 +7,7 @@
         "id": "17c9c8ce77794a64",
         "type": "leaf",
         "state": {
-          "type": "empty",
+          "type": "graph",
           "state": {}
         }
       }
@@ -84,6 +84,9 @@
   },
   "active": "17c9c8ce77794a64",
   "lastOpenFiles": [
+    "README.md",
+    "LeetCode 记录.md",
+    "TypeScript 编码规范.md",
     "未命名.md"
   ]
 }
