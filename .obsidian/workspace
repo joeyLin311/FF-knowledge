@@ -4,11 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "17c9c8ce77794a64",
+        "id": "a63bab28b1e4506d",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -36,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#算法",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,11 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "17c9c8ce77794a64",
+  "active": "a63bab28b1e4506d",
   "lastOpenFiles": [
+    "未命名.md",
     "README.md",
-    "LeetCode 记录.md",
     "TypeScript 编码规范.md",
-    "未命名.md"
+    "100道面试题.md",
+    "Code Review 摘要事项.md",
+    "JavaScript 中的数据结构.md",
+    "CommonJs 是如何导致打包体积增大_摘要.md",
+    "LeetCode 记录.md",
+    "v2-6a8a37d7f089fe690e70177c6acda6f5_720w.jpg.md",
+    "medias/webp.md"
   ]
 }
