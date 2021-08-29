@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "3e66cd3a626a7a13",
+        "id": "808a1cc9f68d5b8a",
         "type": "leaf",
         "state": {
           "type": "graph",
@@ -82,17 +82,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3e66cd3a626a7a13",
+  "active": "808a1cc9f68d5b8a",
   "lastOpenFiles": [
-    "Vue.md",
-    "浏览器知识点.md",
-    "JavaScript.md",
-    "网络与缓存.md",
-    "JavaScript 中的数据结构.md",
-    "webpack.md",
-    "LeetCode 记录.md",
-    "Code Review 摘要事项.md",
-    "实现ES6+ API.md",
-    "面经.md"
+    "Promise.md",
+    "promise执行顺序.md",
+    "手写实现Promise.md",
+    "浏览器.md",
+    "内存管理.md",
+    "EventLoop.md",
+    "EventLoop执行.md",
+    "小程序.md",
+    "面经.md",
+    "JavaScript.md"
   ]
 }
