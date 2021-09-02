@@ -7,11 +7,8 @@
         "id": "808a1cc9f68d5b8a",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "手写实现Promise.md",
-            "mode": "source"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "手写实现Promise.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +84,15 @@
   },
   "active": "808a1cc9f68d5b8a",
   "lastOpenFiles": [
+    "TCP协议.md",
+    "HTTP协议.md",
+    "面经.md",
+    "网络与缓存.md",
+    "HTTP版本区别.md",
     "手写实现Promise.md",
     "实现ES6+ API.md",
     "JavaScript.md",
     "JS继承.md",
-    "JS常见数据类型的判断方法.md",
-    "JavaScript执行上下文.md",
-    "Promise.md",
-    "promise执行顺序.md",
-    "浏览器.md",
-    "内存管理.md"
+    "JS常见数据类型的判断方法.md"
   ]
 }
