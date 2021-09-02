@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "HTTP 请求方式.md",
+            "file": "浏览器缓存.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTTP 请求方式.md",
+                "file": "浏览器缓存.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "2fe400b49c6a27d8",
   "lastOpenFiles": [
+    "浏览器缓存.md",
     "HTTP 请求方式.md",
     "HTTP 状态码.md",
     "HTTP状态码.md",
@@ -96,7 +97,6 @@
     "SYN cookie.md",
     "TCP协议.md",
     "面经.md",
-    "HTTP版本区别.md",
-    "手写实现Promise.md"
+    "HTTP版本区别.md"
   ]
 }
