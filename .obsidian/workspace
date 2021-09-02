@@ -4,11 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "808a1cc9f68d5b8a",
+        "id": "2fe400b49c6a27d8",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "HTTP 请求方式.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "HTTP 请求方式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "808a1cc9f68d5b8a",
+  "active": "2fe400b49c6a27d8",
   "lastOpenFiles": [
-    "TCP协议.md",
-    "HTTP协议.md",
-    "面经.md",
+    "HTTP 请求方式.md",
+    "HTTP 状态码.md",
+    "HTTP状态码.md",
     "网络与缓存.md",
+    "HTTP协议.md",
+    "SYN cookie.md",
+    "TCP协议.md",
+    "面经.md",
     "HTTP版本区别.md",
-    "手写实现Promise.md",
-    "实现ES6+ API.md",
-    "JavaScript.md",
-    "JS继承.md",
-    "JS常见数据类型的判断方法.md"
+    "手写实现Promise.md"
   ]
 }
