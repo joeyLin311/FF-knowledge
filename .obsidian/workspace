@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "2fe400b49c6a27d8",
+        "id": "3be79efd9874e642",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "浏览器缓存.md",
+            "file": "HTTP 状态码.md",
             "mode": "preview"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#JavaScript",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "浏览器缓存.md",
+                "file": "HTTP 状态码.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "2fe400b49c6a27d8",
+  "active": "3be79efd9874e642",
   "lastOpenFiles": [
-    "浏览器缓存.md",
-    "HTTP 请求方式.md",
     "HTTP 状态码.md",
-    "HTTP状态码.md",
-    "网络与缓存.md",
-    "HTTP协议.md",
-    "SYN cookie.md",
-    "TCP协议.md",
+    "JS作用域和作用域链.md",
+    "实现ES6+ API.md",
+    "JS继承.md",
+    "JavaScript.md",
+    "索引.md",
+    "new title.md",
     "面经.md",
-    "HTTP版本区别.md"
+    "网络与缓存.md",
+    "HTTPS 知识.md"
   ]
 }

@@ -12,3 +12,5 @@
 	2.  宏任务是由宿主（浏览器、Node）发起的，而微任务由 JS 自身发起。
 	3.  宏任务: setTimeout, setInterval, I/O 事件队列, script 整体代码块, UI交互事件
 	4.  微任务: Promise.then(),  MutaionObserver,  Object.observe
+	5.  [[promise]]
+	6.  [[promise执行顺序]]
