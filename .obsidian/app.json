@@ -1,5 +1,6 @@
 {
   "alwaysUpdateLinks": true,
   "showFrontmatter": true,
-  "defaultViewMode": "preview"
+  "defaultViewMode": "preview",
+  "fileSortOrder": "byModifiedTime"
 }
