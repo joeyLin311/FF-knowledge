@@ -15,6 +15,20 @@ typeof true              // "true"
 2. **instance of**
 instanceof 后面一定要是**对象类型**, 并且严格大小写, 返回 true/false
 ```javascript
+function instanceOf(left, right) {
+  let leftValue = left.__proto__ // 取隐式原型
+  let rightValue = right.prototype //  取显式原型
+  white(true) {
+    if (leftValue === null) {
+      return false
+    }
+    // 当右边的显式原型严格等于左边的隐式原型时，返回true
+    if (leftValue === rightValue) {
+      return true
+    }
+    leftValue = leftValue.__proto__
+  }
+}
 
 ```
 3. **根据对象的 constructor 内部构造属性判断**

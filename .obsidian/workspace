@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "实现ES6+ API.md",
+            "file": "前端安全攻击.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "实现ES6+ API.md",
+                "file": "前端安全攻击.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "243d82f276888d7d",
   "lastOpenFiles": [
-    "实现ES6+ API.md",
-    "HTTP 状态码.md",
-    "HTTP 请求方式.md",
-    "HTTP缓存.md",
-    "浏览器缓存.md",
-    "100道面试题.md",
-    "浏览器.md",
-    "网络与缓存.md",
-    "SYN cookie.md",
-    "手写实现Promise.md"
+    "前端安全攻击.md",
+    "函数, 函数参数arguments.md",
+    "Map, Set, weakMap, Symbol.md",
+    "new title.md",
+    "EventLoop.md",
+    "HTTPS 知识.md",
+    "Proxy, defineProperty.md",
+    "JS常见数据类型的判断方法.md",
+    "实现call, apply, bind.md",
+    "JavaScript执行上下文.md"
   ]
 }
