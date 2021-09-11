@@ -7,8 +7,11 @@
         "id": "243d82f276888d7d",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "常见手写题.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "常见手写题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,15 +88,15 @@
   },
   "active": "243d82f276888d7d",
   "lastOpenFiles": [
+    "常见手写题.md",
+    "面经.md",
+    "CSS.md",
+    "前端安全攻击.md",
     "跨域.md",
     "回流与重绘.md",
     "浏览器渲染.md",
     "浏览器渲染流程.md",
     "chrome性能观察.md",
-    "浏览器.md",
-    "chrome的性能观察.md",
-    "浏览器缓存.md",
-    "JavaScript.md",
-    "内存管理.md"
+    "浏览器.md"
   ]
 }
