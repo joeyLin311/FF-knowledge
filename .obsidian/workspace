@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "243d82f276888d7d",
+        "id": "116e99e23d439cc8",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "常见手写题.md",
+            "file": "IndexedDB.md",
             "mode": "source"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#JavaScript",
+                "query": "cookie",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,9 +68,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "常见手写题.md",
+                "file": "IndexedDB.md",
                 "collapseAll": false,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -86,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "243d82f276888d7d",
+  "active": "116e99e23d439cc8",
   "lastOpenFiles": [
-    "常见手写题.md",
-    "面经.md",
-    "CSS.md",
-    "前端安全攻击.md",
-    "跨域.md",
-    "回流与重绘.md",
+    "IndexedDB.md",
+    "浏览器存储.md",
+    "网络与缓存.md",
+    "100道面试题.md",
+    "浏览器.md",
     "浏览器渲染.md",
-    "浏览器渲染流程.md",
-    "chrome性能观察.md",
-    "浏览器.md"
+    "缓存运用.md",
+    "浏览器缓存.md",
+    "webpack.md",
+    "Etag.md"
   ]
 }
