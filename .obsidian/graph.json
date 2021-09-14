@@ -5,8 +5,23 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [],
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "file:面经",
+      "color": {
+        "a": 1,
+        "rgb": 14048348
+      }
+    },
+    {
+      "query": "file:JavaScript",
+      "color": {
+        "a": 1,
+        "rgb": 6596850
+      }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": -2,
@@ -17,6 +32,6 @@
   "repelStrength": 13.982905982906,
   "linkStrength": 0.514529914529915,
   "linkDistance": 304,
-  "scale": 0.3497365276675995,
+  "scale": 0.22925171804306213,
   "close": true
 }
