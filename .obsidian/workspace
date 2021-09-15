@@ -7,34 +7,10 @@
         "id": "8d21c1eb6dc1e628",
         "type": "leaf",
         "state": {
-          "type": "localgraph",
+          "type": "markdown",
           "state": {
-            "file": "面经.md",
-            "options": {
-              "collapse-filter": true,
-              "search": "",
-              "localJumps": 1,
-              "localBacklinks": true,
-              "localForelinks": true,
-              "localInterlinks": false,
-              "showTags": false,
-              "showAttachments": false,
-              "hideUnresolved": false,
-              "collapse-color-groups": true,
-              "colorGroups": [],
-              "collapse-display": true,
-              "showArrow": false,
-              "textFadeMultiplier": 0,
-              "nodeSizeMultiplier": 1,
-              "lineSizeMultiplier": 1,
-              "collapse-forces": true,
-              "centerStrength": 0.518713248970312,
-              "repelStrength": 10,
-              "linkStrength": 1,
-              "linkDistance": 250,
-              "scale": 0.6554983534946917,
-              "close": false
-            }
+            "file": "前端工程化.md",
+            "mode": "source"
           }
         }
       }
@@ -92,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面经.md",
+                "file": "前端工程化.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -112,15 +88,15 @@
   },
   "active": "8d21c1eb6dc1e628",
   "lastOpenFiles": [
+    "前端工程化.md",
     "面经.md",
-    "手写JSONP.md",
     "跨域.md",
+    "手写JSONP.md",
     "笔试题.md",
     "浏览器.md",
     "控制前端最大并发量.md",
     "函数柯里化.md",
     "防抖&节流.md",
-    "防抖/防抖&节流.md",
-    "防抖/节流.md"
+    "防抖/防抖&节流.md"
   ]
 }
