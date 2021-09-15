@@ -4,11 +4,16 @@
     "type": "split",
     "children": [
       {
+<<<<<<< Updated upstream
         "id": "8d21c1eb6dc1e628",
+=======
+        "id": "9e7e43e279373a34",
+>>>>>>> Stashed changes
         "type": "leaf",
         "state": {
           "type": "localgraph",
           "state": {
+<<<<<<< Updated upstream
             "file": "面经.md",
             "options": {
               "collapse-filter": true,
@@ -35,6 +40,10 @@
               "scale": 0.6554983534946917,
               "close": false
             }
+=======
+            "file": "浏览器渲染流程.md",
+            "mode": "preview"
+>>>>>>> Stashed changes
           }
         }
       }
@@ -63,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cookie",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -92,13 +101,17 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< Updated upstream
                 "file": "面经.md",
+=======
+                "file": "浏览器渲染流程.md",
+>>>>>>> Stashed changes
                 "collapseAll": false,
-                "extraContext": true,
+                "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -110,6 +123,7 @@
     "width": 300,
     "collapsed": true
   },
+<<<<<<< Updated upstream
   "active": "8d21c1eb6dc1e628",
   "lastOpenFiles": [
     "面经.md",
@@ -122,5 +136,19 @@
     "防抖&节流.md",
     "防抖/防抖&节流.md",
     "防抖/节流.md"
+=======
+  "active": "9e7e43e279373a34",
+  "lastOpenFiles": [
+    "浏览器渲染流程.md",
+    "网络与缓存.md",
+    "回流与重绘.md",
+    "浏览器.md",
+    "浏览器渲染.md",
+    "documentFragment使用.md",
+    "requestAnimationFrame.md",
+    "documentFragment.md",
+    "Etag.md",
+    "HTTP缓存.md"
+>>>>>>> Stashed changes
   ]
 }
