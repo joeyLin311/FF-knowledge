@@ -5,48 +5,18 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-<<<<<<< Updated upstream
-  "collapse-color-groups": false,
-  "colorGroups": [
-    {
-      "query": "file:面经",
-      "color": {
-        "a": 1,
-        "rgb": 14048348
-      }
-    },
-    {
-      "query": "file:JavaScript",
-      "color": {
-        "a": 1,
-        "rgb": 6596850
-      }
-    }
-  ],
-  "collapse-display": true,
-=======
   "collapse-color-groups": true,
   "colorGroups": [],
   "collapse-display": false,
->>>>>>> Stashed changes
   "showArrow": false,
   "textFadeMultiplier": -2.9,
   "nodeSizeMultiplier": 1.35379273504273,
   "lineSizeMultiplier": 0.878712606837607,
   "collapse-forces": false,
-<<<<<<< Updated upstream
-  "centerStrength": 0.452991452991453,
-  "repelStrength": 13.982905982906,
-  "linkStrength": 0.514529914529915,
-  "linkDistance": 304,
-  "scale": 0.22925171804306213,
-  "close": true
-=======
   "centerStrength": 0.243723290598291,
   "repelStrength": 10.9855769230769,
   "linkStrength": 1,
   "linkDistance": 105,
-  "scale": 1.2606202050055284,
-  "close": false
->>>>>>> Stashed changes
+  "scale": 0.8345660425156852,
+  "close": true
 }

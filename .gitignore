@@ -12,6 +12,7 @@ yarn-error.log*
 .project
 .vscode/
 .obsidian/
+.obsidian/*
 .obsidian/graph.json
 .obsidian/workspace
 *.iml
