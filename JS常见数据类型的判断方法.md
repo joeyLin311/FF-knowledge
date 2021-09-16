@@ -1,3 +1,4 @@
+#JavaScript 
 1. **typeof**
 ```javascript
 typeof '123'             // "string"

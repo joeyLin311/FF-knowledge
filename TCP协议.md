@@ -1,3 +1,4 @@
+#Network
 TCP( transmission control protocol)协议是一种**面向连接的, 可靠的, 基于字节流**的传输层通信协议, 在简化的计算机网络OSI模型中属于第四层传输层 # 传输层指定的功能. #OSI模型
 
 -   TCP协议中仅有两方进行通信, 广播和多播不能用于TCP

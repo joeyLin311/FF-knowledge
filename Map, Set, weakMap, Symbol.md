@@ -1,3 +1,4 @@
+#JavaScript 
 ## Map 和 WeakMap
 **Map** 可以接受各种类型的值当作 `key`，对同一个对象的引用才视为同一个键，否则取不到。
 - 属性：get，set，has，delete，clear 

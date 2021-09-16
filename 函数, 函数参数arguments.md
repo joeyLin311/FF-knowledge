@@ -1,3 +1,4 @@
+#JavaScript 
 ```javascript
 // 获取argument对象 类数组对象 不能调用数组方法
 function test1() {

@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "8d21c1eb6dc1e628",
+        "id": "1ec614ced7319517",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "模块化.md",
-            "mode": "source"
+            "file": "Vue.md",
+            "mode": "preview"
           }
         }
       }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -69,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "模块化.md",
+                "file": "Vue.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -87,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8d21c1eb6dc1e628",
+  "active": "1ec614ced7319517",
   "lastOpenFiles": [
-    "模块化.md",
-    "前端工程化.md",
-    "面经.md",
-    "跨域.md",
-    "手写JSONP.md",
-    "笔试题.md",
-    "浏览器.md",
-    "控制前端最大并发量.md",
-    "函数柯里化.md",
-    "防抖&节流.md"
+    "Vue.md",
+    "Etag.md",
+    "30x状态码.md",
+    "网络与缓存.md",
+    "HTTP缓存.md",
+    "HTTP缓存流程.png",
+    "缓存运用.md",
+    "浏览器缓存.md",
+    "前端安全.md",
+    "HTTP 请求方式.md"
   ]
 }

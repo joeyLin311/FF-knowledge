@@ -15,23 +15,37 @@
       }
     },
     {
-      "query": "file:JavaScript",
+      "query": "tag:JavaScript",
       "color": {
         "a": 1,
         "rgb": 6596850
       }
+    },
+    {
+      "query": "tag:#browser",
+      "color": {
+        "a": 1,
+        "rgb": 11392604
+      }
+    },
+    {
+      "query": "tag:#Network",
+      "color": {
+        "a": 1,
+        "rgb": 8443584
+      }
     }
   ],
-  "collapse-display": false,
+  "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": -3,
   "nodeSizeMultiplier": 1.25067415730337,
   "lineSizeMultiplier": 1.21401709401709,
-  "collapse-forces": false,
+  "collapse-forces": true,
   "centerStrength": 0.452991452991453,
   "repelStrength": 13.982905982906,
   "linkStrength": 0.514529914529915,
   "linkDistance": 304,
-  "scale": 0.3497365276675995,
-  "close": true
+  "scale": 0.22925171804306213,
+  "close": false
 }

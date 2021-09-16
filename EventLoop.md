@@ -14,3 +14,4 @@
 	4.  微任务: Promise.then(),  MutaionObserver,  Object.observe
 	5.  [[promise]]
 	6.  [[promise执行顺序]]
+#JavaScript 

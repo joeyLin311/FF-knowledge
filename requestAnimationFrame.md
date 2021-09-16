@@ -1,3 +1,4 @@
+#browser
 # 深入理解HTML5定时器 requestAnimationFrame 的使用
 
 ## 需求
