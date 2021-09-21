@@ -1,0 +1,28 @@
+## vue2 响应式实现原理
+-   Vue 的响应式从 Vue 的实例 `init()` 方法中开始, 在`init()`方法中调用 `initData()`, 把 data 属性注入到 Vue 实例上, 并调用 `observe(data)` 将 data 对象转换成响应式对象
+-   `observe(value, asRootData)` 是响应式的入口, 其中
+    -   先判断 value 是否是对象, 如果不是直接 return
+    -   再判断 value 是否有 **ob**(observer对象) 属性, 有则该对象已经做了响应式处理, 直接返回
+    -   如果没有则创建一个 `Observer` 对象
+-   创建 `Observer` 对象, 将实例挂载到 `value` 的 `__ob__` 属性, 设置为不可枚举, 接着进行对象或数组的响应式处理
+    -   数组的响应式处理: 即设置操作数组的几个特殊方法, `push`, `pop`, `sort` 等, 这些方法会改变原数组, 所以调用的时候需要发送数据更改通知
+        -   找到数组对象中的 `__ob__` 中的 `dep` 属性, 调用 `dep` 的 `notice()` 方法
+        -   接着遍历数组中的每一个成员, 对每个成员调用 `observe()`, 如果该成员是对象的话, 也会转换成响应式对象
+    -   对象的响应式处理: 调用`walk()` 方法, 遍历对象中的每一个属性，调用`defineReactive()` 方法, 设置 setter/getter
+-   `defineReactive(obj, key, val, customSetter, shallow)` 会为每一个对象创建对应的 `dep` 对象, `dep`收集依赖, 如果当前值是对象调用 `observe`. `defineReactive()` 的核心方法是 `getter` 和 `setter`
+    -   `getter` 的作用是为每一个属性收集依赖, 如果属性值是对象, 那也为属性中的子对象收集, 最后返回属性的值.
+    -   `setter`会先保存新值, 如果值是对象, 也调用 `observe` 将新设置的对象转换成响应式对象, 然后调用 `dep.notify()` 发送通知
+-   收集依赖阶段
+    -   在`watcher` 对象的 `get` 方法中调用 `pushTarget` , 记录 `Dep.target` 属性, 如果 `target` 存在, 把 `dep` 对象添加到 `watcher` 的依赖中
+    -   访问 `data` 中的属性的时候收集依赖, `defineReactive` 的 `getter` 中收集依赖
+    -   `dep.depend()` 内部调用 `Dep.target.addDep(this)`, 也就是 `watcher` 的 `addDep()` 方法，它内部最调用 `dep.addSub(this)`, 把 `watcher` 对象, 添加到 `dep.subs.push(watcher)` 中, 也就是把订阅者添加到 `dep` 的 `subs` 数组中, 当数据变化的时候调用 `watcher` 对象的 `update()` 方法
+    -   `get()` 方法内部调用 `pushTarget(this)`, 把当前 `Dep.target = watcher`, 同时把当前 `watcher` 入栈, 有父子组件嵌套的时候先把父组件对应的 `watcher` 入栈, 再去处理子组件的 `watcher`, 子组件的处理完毕后，再把父组件对应的 `watcher` 出栈，继续操作
+    -   调用每个订阅者的 `update` 方法实现更新
+-   数据发生变化时
+    -   调用 `dep.notice()` 发送通知, `dep.notify()` 调用上述中的 `watcher`对象中的 `update` 方法
+    -   `update()` 中调用 `queueWatcher()`, 判断 `watcher` 是否已经处理, 如果没有被处理则添加到 `queue` 队列中, 并调用 `flushScheduleQueue()`
+        -   在 `flushScheduleQueue()` 触发 `beforeUpdate` 钩子函数
+        -   调用 `watcher.run()`, 顺序: `run()` --> `get()` --> `getter()` --> `updateComponent()`
+        -   清空之前的依赖
+        -   触发 `actived` 钩子函数
+        -   触发 `updated` 钩子函数

@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "file:面经",
@@ -39,13 +39,13 @@
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": -3,
-  "nodeSizeMultiplier": 1.25067415730337,
-  "lineSizeMultiplier": 1.21401709401709,
-  "collapse-forces": true,
+  "nodeSizeMultiplier": 1.80123595505618,
+  "lineSizeMultiplier": 1.97352941176471,
+  "collapse-forces": false,
   "centerStrength": 0.452991452991453,
-  "repelStrength": 13.982905982906,
-  "linkStrength": 0.514529914529915,
-  "linkDistance": 304,
+  "repelStrength": 17.4606741573034,
+  "linkStrength": 1,
+  "linkDistance": 265,
   "scale": 0.22925171804306213,
-  "close": false
+  "close": true
 }

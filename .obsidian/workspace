@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Vue.md",
-            "mode": "preview"
+            "mode": "source"
           }
         }
       }
@@ -89,14 +89,14 @@
   "active": "1ec614ced7319517",
   "lastOpenFiles": [
     "Vue.md",
-    "Etag.md",
-    "30x状态码.md",
-    "网络与缓存.md",
-    "HTTP缓存.md",
-    "HTTP缓存流程.png",
-    "缓存运用.md",
-    "浏览器缓存.md",
-    "前端安全.md",
-    "HTTP 请求方式.md"
+    "vue2模板编译过程.md",
+    "keepAlive原理.md",
+    "vue router原理.md",
+    "diff算法.md",
+    "UDP协议.md",
+    "Vue2响应式实现原理.md",
+    "SYN cookie.md",
+    "TCP协议.md",
+    "回流与重绘.md"
   ]
 }
