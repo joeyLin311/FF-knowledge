@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "file:面经",
@@ -34,6 +34,13 @@
         "a": 1,
         "rgb": 8443584
       }
+    },
+    {
+      "query": "tag:#Vue",
+      "color": {
+        "a": 1,
+        "rgb": 1752190
+      }
     }
   ],
   "collapse-display": true,
@@ -46,6 +53,6 @@
   "repelStrength": 17.4606741573034,
   "linkStrength": 1,
   "linkDistance": 265,
-  "scale": 0.22925171804306213,
-  "close": true
+  "scale": 0.06456949866898075,
+  "close": false
 }

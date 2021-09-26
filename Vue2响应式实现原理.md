@@ -1,3 +1,4 @@
+#Vue
 ## vue2 响应式实现原理
 -   Vue 的响应式从 Vue 的实例 `init()` 方法中开始, 在`init()`方法中调用 `initData()`, 把 data 属性注入到 Vue 实例上, 并调用 `observe(data)` 将 data 对象转换成响应式对象
 -   `observe(value, asRootData)` 是响应式的入口, 其中

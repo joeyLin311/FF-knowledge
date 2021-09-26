@@ -7,11 +7,8 @@
         "id": "1ec614ced7319517",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Vue.md",
-            "mode": "source"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -39,7 +36,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cookie",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Vue.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -89,14 +85,14 @@
   "active": "1ec614ced7319517",
   "lastOpenFiles": [
     "Vue.md",
-    "vue2模板编译过程.md",
-    "keepAlive原理.md",
-    "vue router原理.md",
-    "diff算法.md",
-    "UDP协议.md",
-    "Vue2响应式实现原理.md",
-    "SYN cookie.md",
-    "TCP协议.md",
-    "回流与重绘.md"
+    "vuex.md",
+    "eventBus.md",
+    "vue event.md",
+    "props.md",
+    "vue2 vs vue3.md",
+    "Vite.md",
+    "options API & composition API.md",
+    "vue3生命周期变化.md",
+    "Proxy, defineProperty.md"
   ]
 }
