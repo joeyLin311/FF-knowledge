@@ -84,6 +84,7 @@
   },
   "active": "9e7e43e279373a34",
   "lastOpenFiles": [
+    "手写JSONP.md",
     "Vue.md",
     "vuex.md",
     "eventBus.md",
@@ -92,7 +93,6 @@
     "vue2 vs vue3.md",
     "Vite.md",
     "options API & composition API.md",
-    "vue3生命周期变化.md",
-    "Proxy, defineProperty.md"
+    "vue3生命周期变化.md"
   ]
 }
