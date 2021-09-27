@@ -4,11 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "9e7e43e279373a34",
+        "id": "094232eda67dad70",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "LRU缓存策略.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -66,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "LRU缓存策略.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -83,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "9e7e43e279373a34",
+  "active": "094232eda67dad70",
   "lastOpenFiles": [
+    "LRU缓存策略.md",
+    "keepAlive原理.md",
+    "Vue.md",
+    "跨域.md",
+    "浏览器缓存.md",
+    "浏览器渲染.md",
+    "浏览器.md",
     "Proxy, defineProperty.md",
     "Vue2响应式实现原理.md",
-    "浏览器.md",
-    "浏览器进程线程.md",
-    "浏览器渲染.md",
-    "回流与重绘.md",
-    "浏览器渲染流程.md",
-    "手写JSONP.md",
-    "Vue.md",
-    "vuex.md"
+    "浏览器进程线程.md"
   ]
 }
