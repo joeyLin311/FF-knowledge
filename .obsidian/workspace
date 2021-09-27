@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "1ec614ced7319517",
+        "id": "9e7e43e279373a34",
         "type": "leaf",
         "state": {
           "type": "graph",
@@ -66,11 +66,11 @@
               "type": "backlink",
               "state": {
                 "collapseAll": false,
-                "extraContext": true,
+                "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -82,7 +82,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "1ec614ced7319517",
+  "active": "9e7e43e279373a34",
   "lastOpenFiles": [
     "Vue.md",
     "vuex.md",

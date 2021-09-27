@@ -27,3 +27,5 @@ bin/
 *.njsproj
 *.sln
 
+.obsidian/graph.json
+.obsidian/workspace
