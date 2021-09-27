@@ -49,7 +49,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -84,15 +85,15 @@
   },
   "active": "9e7e43e279373a34",
   "lastOpenFiles": [
+    "Proxy, defineProperty.md",
+    "Vue2响应式实现原理.md",
+    "浏览器.md",
+    "浏览器进程线程.md",
+    "浏览器渲染.md",
+    "回流与重绘.md",
+    "浏览器渲染流程.md",
     "手写JSONP.md",
     "Vue.md",
-    "vuex.md",
-    "eventBus.md",
-    "vue event.md",
-    "props.md",
-    "vue2 vs vue3.md",
-    "Vite.md",
-    "options API & composition API.md",
-    "vue3生命周期变化.md"
+    "vuex.md"
   ]
 }
