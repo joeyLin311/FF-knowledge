@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "094232eda67dad70",
+        "id": "1d960a801870970d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "LRU缓存策略.md",
-            "mode": "source"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -69,7 +66,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LRU缓存策略.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +83,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "094232eda67dad70",
+  "active": "1d960a801870970d",
   "lastOpenFiles": [
+    "vuex.md",
     "LRU缓存策略.md",
-    "keepAlive原理.md",
-    "Vue.md",
-    "跨域.md",
-    "浏览器缓存.md",
-    "浏览器渲染.md",
-    "浏览器.md",
-    "Proxy, defineProperty.md",
-    "Vue2响应式实现原理.md",
-    "浏览器进程线程.md"
+    "手写JSONP.md",
+    "documentFragment.md",
+    "documentFragment使用.md",
+    "webpack.md",
+    "source map.md",
+    "打包优化知识点.md",
+    "Loader和Plugin.md",
+    "HMR热更新.md"
   ]
 }

@@ -18,7 +18,7 @@
       "query": "tag:JavaScript",
       "color": {
         "a": 1,
-        "rgb": 6596850
+        "rgb": 12551398
       }
     },
     {
@@ -41,6 +41,13 @@
         "a": 1,
         "rgb": 1752190
       }
+    },
+    {
+      "query": "tag:#webpack",
+      "color": {
+        "a": 1,
+        "rgb": 6073814
+      }
     }
   ],
   "collapse-display": true,
@@ -53,6 +60,6 @@
   "repelStrength": 17.0997191011236,
   "linkStrength": 0.733707865168539,
   "linkDistance": 271,
-  "scale": 0.4017184611094621,
+  "scale": 0.26332578982567545,
   "close": true
 }
