@@ -85,15 +85,15 @@
   },
   "active": "1d960a801870970d",
   "lastOpenFiles": [
-    "vuex.md",
     "LRU缓存策略.md",
+    "笔试题.md",
     "手写JSONP.md",
-    "documentFragment.md",
-    "documentFragment使用.md",
+    "控制前端最大并发量.md",
+    "防抖&节流.md",
+    "函数柯里化.md",
+    "Proxy, defineProperty.md",
+    "前端工程化知识点.md",
     "webpack.md",
-    "source map.md",
-    "打包优化知识点.md",
-    "Loader和Plugin.md",
-    "HMR热更新.md"
+    "组件化.md"
   ]
 }

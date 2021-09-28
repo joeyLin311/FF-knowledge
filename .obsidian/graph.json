@@ -11,7 +11,7 @@
       "query": "file:面经",
       "color": {
         "a": 1,
-        "rgb": 14048348
+        "rgb": 16621728
       }
     },
     {
@@ -48,18 +48,25 @@
         "a": 1,
         "rgb": 6073814
       }
+    },
+    {
+      "query": "tag:#手写JS",
+      "color": {
+        "a": 1,
+        "rgb": 10961867
+      }
     }
   ],
-  "collapse-display": true,
+  "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": -2.9,
-  "nodeSizeMultiplier": 1.35379273504273,
+  "nodeSizeMultiplier": 1.97741573033708,
   "lineSizeMultiplier": 0.878712606837607,
-  "collapse-forces": false,
-  "centerStrength": 0.387640449438202,
-  "repelStrength": 17.0997191011236,
-  "linkStrength": 0.733707865168539,
-  "linkDistance": 271,
-  "scale": 0.26332578982567545,
+  "collapse-forces": true,
+  "centerStrength": 0.40561797752809,
+  "repelStrength": 13.2359550561798,
+  "linkStrength": 1,
+  "linkDistance": 149,
+  "scale": 0.40171846110946713,
   "close": true
 }
