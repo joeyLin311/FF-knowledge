@@ -7,8 +7,11 @@
         "id": "1d960a801870970d",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "面经.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "面经.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,15 +88,15 @@
   },
   "active": "1d960a801870970d",
   "lastOpenFiles": [
+    "面经.md",
+    "RxJS.md",
+    "rollup.md",
     "打包优化.md",
     "webpack.md",
     "前端工程化知识点.md",
     "自实现loader和plugin.md",
     "浏览器.md",
     "浏览器渲染.md",
-    "Proxy, defineProperty.md",
-    "Vue2 生命周期.md",
-    "keepAlive原理.md",
-    "Loader和Plugin.md"
+    "Proxy, defineProperty.md"
   ]
 }
