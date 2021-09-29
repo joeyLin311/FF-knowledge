@@ -7,11 +7,8 @@
         "id": "1d960a801870970d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "面经.md",
-            "mode": "source"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面经.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +84,15 @@
   },
   "active": "1d960a801870970d",
   "lastOpenFiles": [
-    "面经.md",
+    "vue2 vs vue3.md",
+    "vue3生命周期变化.md",
+    "vue event.md",
+    "diff算法.md",
+    "eventBus.md",
+    "vuex.md",
     "RxJS.md",
     "rollup.md",
-    "打包优化.md",
-    "webpack.md",
-    "前端工程化知识点.md",
-    "自实现loader和plugin.md",
-    "浏览器.md",
-    "浏览器渲染.md",
-    "Proxy, defineProperty.md"
+    "面经.md",
+    "打包优化.md"
   ]
 }
