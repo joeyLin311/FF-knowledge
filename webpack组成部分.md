@@ -1,5 +1,24 @@
 #webpack
 ## webpack 配置文件组成部分
+**webpack4 的一级配置**
+参考资料:
+[Webpack4配置详解](https://lq782655835.github.io/blogs/project/webpack4-2.config-setting.html)
+```javascript
+module.exports = {
+  mode: 'development', // 模式配置,webpack4.0新增
+  entry: '', // 入口文件
+  output: {}, // 出口文件
+  module: {
+    rules: [/*loader setting*/]
+  }, // 配置modules，包括loader
+  plugins: [], // 对应的插件
+  devServer: {}, // 开发服务器配置
+  optimization: {}, // 最佳实践
+  devtool: '',
+  resolve: { alias: {} },
+}
+
+```
 - **entry** 入口: entry是 webpack 构建开始的地方, 通过入口文件, webpack 可以找打入口文件所依赖的文件, 并逐步递归, 找出所有依赖的文件
 ```javascript
 module.export = {

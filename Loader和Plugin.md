@@ -14,9 +14,18 @@
 -   `ModuleConcatenationPlugin`: 开启 Scope Hoisting
 -   `speed-measure-webpack-plugin`: 可以看到每个 Loader 和 Plugin 执行耗时 (整个打包耗时、每个 Plugin 和 Loader 耗时)
 -   `webpack-bundle-analyzer`: 可视化 Webpack 输出文件的体积 (业务组件、依赖第三方模块)
-当然我们可以在官网的插件市场上看到所有的插件[官网插件](https://webpack.docschina.org/plugins/)
+当然我们可以在官网的插件市场上看到所有的插件
+[官网插件](https://webpack.docschina.org/plugins/)
+[官网loader](https://webpack.js.org/plugins/)
 
 ## loader 和 plugin 的区别
+- Loader:
+	- loader 与对模块的源代码进行转换
+	- 是个转换器, 针对某种类型进行转换的模块功能, 比如: 统一语法, 对sass,less 文件做处理, 对非JS文件转换成commonJS贵方的文件 output ony JS
+- plugin:
+	- webpack 插件是一个具有 apply 方法的 JavaScript 对象。apply 方法会被 webpack compiler 调用，并且在 整个 编译生命周期都可以访问 compiler 对象
+	- 是作用在webpack的工作流程中, 使用plugin API 监听 compilation 广播出的时间对流程节点进行操作, 执行某种通用操作. 比如, 打包优化和压缩, 定义环境变量, 资源管理等等, 是作用于过程的.
+
 `Loader` 本质就是一个函数，在该函数中对接收到的内容进行转换，返回转换后的结果。 因为 Webpack 只认识 JavaScript，所以 Loader 就成了翻译官，对其他类型的资源进行转译的预处理工作。
 `Plugin` 就是插件，基于事件流框架 `Tapable`，插件可以扩展 Webpack 的功能，在 Webpack 运行的生命周期中会广播出许多事件，Plugin 可以监听这些事件，在合适的时机通过 Webpack 提供的 API 改变输出结果。
 `Loader` 在 module.rules 中配置，作为模块的解析规则，类型为数组。每一项都是一个 Object，内部包含了 test(类型文件)、loader、options (参数)等属性。

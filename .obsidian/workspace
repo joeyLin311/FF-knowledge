@@ -49,8 +49,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -85,15 +84,15 @@
   },
   "active": "1d960a801870970d",
   "lastOpenFiles": [
-    "LRU缓存策略.md",
-    "笔试题.md",
-    "手写JSONP.md",
-    "控制前端最大并发量.md",
-    "防抖&节流.md",
-    "函数柯里化.md",
-    "Proxy, defineProperty.md",
-    "前端工程化知识点.md",
+    "打包优化.md",
     "webpack.md",
-    "组件化.md"
+    "前端工程化知识点.md",
+    "自实现loader和plugin.md",
+    "浏览器.md",
+    "浏览器渲染.md",
+    "Proxy, defineProperty.md",
+    "Vue2 生命周期.md",
+    "keepAlive原理.md",
+    "Loader和Plugin.md"
   ]
 }

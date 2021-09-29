@@ -9,6 +9,14 @@ keep-alive 是vue中一个抽象组件: 它自身不会渲染一个DOM元素, �
 - `max` : 定义缓存组件的上限, 超过上限使用 [[LRU缓存策略]] 置换缓存数据
 [彻底揭秘keep-alive](https://github.com/qiudongwei/blog/issues/4)
 
+## keepAlive生命周期
+组件一旦被 keep-alive 缓存, 那么再次渲染组件的时候就不会执行 `created` , `mounted` 等钩子函数, 但是业务场景需要我们在组件渲染时做一些事情, 所以 Vue 提供了 `activated` 钩子函数, 它的执行时机是 keep-alive 包裹的组件执行渲染的时候.
+
+有 `activated` 钩子函数，也就有对应的 `deactivated` 钩子函数，它是发生在 `vnode` 的 `destory` 钩子函数，定义在 `src/core/vdom/create-component.js` 中：
+
+参考资料:
+[Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/v2/extend/keep-alive.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F)
+
 ## 源码分析
 ```javascript
 export default {
