@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "source map.md",
+            "file": "Vue2响应式实现原理.md",
             "mode": "preview"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "http",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source map.md",
+                "file": "Vue2响应式实现原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "81780d3c409a862b",
   "lastOpenFiles": [
+    "Vue2响应式实现原理.md",
+    "Vue.md",
+    "vue2模板编译过程.md",
     "vue2 vs vue3.md",
-    "vue3生命周期变化.md",
-    "vue event.md",
+    "Proxy, defineProperty.md",
+    "TCP协议.md",
+    "JS继承.md",
     "diff算法.md",
-    "eventBus.md",
-    "vuex.md",
-    "RxJS.md",
-    "rollup.md",
-    "面经.md",
-    "打包优化.md"
+    "props.md",
+    "eventBus.md"
   ]
 }
