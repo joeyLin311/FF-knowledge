@@ -4,11 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "1d960a801870970d",
+        "id": "81780d3c409a862b",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "source map.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -36,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "http",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -45,7 +48,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "source map.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,7 +87,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "1d960a801870970d",
+  "active": "81780d3c409a862b",
   "lastOpenFiles": [
     "vue2 vs vue3.md",
     "vue3生命周期变化.md",

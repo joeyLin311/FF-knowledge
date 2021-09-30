@@ -13,7 +13,7 @@
 	2.  不会追踪 IP
 	4.  Head-of-line blocking(HOLB) 对头阻塞会导致带宽无法被充分利用, 以致于健康的请求被不健康的请求影响
 	5.  **解决方案:** 在请求头添加 `Connection: keep-alive`
-
+### 浏览器链接限制
 2.  **HTTP1.1**
 	1.  **持久链接**, TCP 默认不关闭, 可以被多个请求复用, 不用显式声明 `connection: keep-alive`, **大多数浏览器允许同时建立 6 个持久连接**
 	2.  **缓存处理**, HTTP1.1 引入了更多的缓存策略, 例如 Entity tag, If-Unmodified-Since, If-Match, If-None-Match等更多可供选择的缓存头来控制缓存策略
