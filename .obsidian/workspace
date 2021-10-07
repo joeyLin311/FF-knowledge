@@ -7,11 +7,8 @@
         "id": "81780d3c409a862b",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Vue2响应式实现原理.md",
-            "mode": "preview"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -48,8 +45,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Vue2响应式实现原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -78,6 +73,25 @@
                 "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
+            }
+          },
+          {
+            "id": "5be828c7219ed1e3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "267f3f9e376681c3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
             }
           }
         ]
@@ -89,15 +103,15 @@
   },
   "active": "81780d3c409a862b",
   "lastOpenFiles": [
-    "Vue2响应式实现原理.md",
-    "Vue.md",
-    "vue2模板编译过程.md",
-    "vue2 vs vue3.md",
+    "自实现loader和plugin.md",
     "Proxy, defineProperty.md",
-    "TCP协议.md",
-    "JS继承.md",
-    "diff算法.md",
-    "props.md",
-    "eventBus.md"
+    "webpack组成部分.md",
+    "面经.md",
+    "前端工程化知识点.md",
+    "Loader和Plugin.md",
+    "keepAlive原理.md",
+    "RxJS.md",
+    "浏览器缓存.md",
+    "HTTP协议.md"
   ]
 }
