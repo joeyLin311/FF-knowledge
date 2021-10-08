@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "vue event.md",
+            "file": "手写实现Promise.md",
             "mode": "preview"
           }
         }
@@ -48,12 +48,12 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vue event.md",
+                "file": "手写实现Promise.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -77,6 +77,28 @@
                 "searchQuery": "",
                 "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "dd67f05cd9655b76",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "手写实现Promise.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f4521cc4e30a6463",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "手写实现Promise.md"
               }
             }
           }
@@ -89,15 +111,15 @@
   },
   "active": "81780d3c409a862b",
   "lastOpenFiles": [
-    "vue event.md",
-    "Vue2 生命周期.md",
-    "vue2 vs vue3.md",
-    "面经.md",
-    "HTTP缓存.md",
-    "浏览器缓存.md",
-    "控制前端最大并发量.md",
-    "Vue2响应式实现原理.md",
+    "手写实现Promise.md",
+    "浏览器渲染流程.md",
+    "浏览器渲染.md",
+    "回流与重绘.md",
+    "JS作用域和作用域链.md",
+    "CSS.md",
+    "BFC.md",
     "Vue.md",
-    "vue2模板编译过程.md"
+    "vue2 vs vue3.md",
+    "vuex.md"
   ]
 }

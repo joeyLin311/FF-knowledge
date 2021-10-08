@@ -7,7 +7,7 @@
 -   `baseCompile()` **函数**
     -   合并 `options`
     -   调用 `baseCompile` 编译模板
--   `baseCompile()` 的核心是三件事情, 解析, 优化, 生成
+-   `baseCompile()` 的核心是三件事情, **解析, 优化, 生成(此处核心)** 
     -   `parse()` 解析: 把模板转换成 AST tree, 也就是抽象语法树
     -   `optimize()` 优化:
         -   标记 AST tree 中的静态节点
