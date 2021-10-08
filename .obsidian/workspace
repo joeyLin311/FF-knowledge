@@ -7,8 +7,11 @@
         "id": "81780d3c409a862b",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "vue event.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -45,7 +48,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "vue event.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -73,25 +78,6 @@
                 "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
-            }
-          },
-          {
-            "id": "5be828c7219ed1e3",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "267f3f9e376681c3",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {}
             }
           }
         ]
@@ -103,15 +89,15 @@
   },
   "active": "81780d3c409a862b",
   "lastOpenFiles": [
-    "自实现loader和plugin.md",
-    "Proxy, defineProperty.md",
-    "webpack组成部分.md",
+    "vue event.md",
+    "Vue2 生命周期.md",
+    "vue2 vs vue3.md",
     "面经.md",
-    "前端工程化知识点.md",
-    "Loader和Plugin.md",
-    "keepAlive原理.md",
-    "RxJS.md",
+    "HTTP缓存.md",
     "浏览器缓存.md",
-    "HTTP协议.md"
+    "控制前端最大并发量.md",
+    "Vue2响应式实现原理.md",
+    "Vue.md",
+    "vue2模板编译过程.md"
   ]
 }
