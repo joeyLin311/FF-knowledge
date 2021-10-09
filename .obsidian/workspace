@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "81780d3c409a862b",
+        "id": "eb1e9216c3756b2e",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "手写实现Promise.md",
-            "mode": "preview"
+            "file": "数组扁平化.md",
+            "mode": "source"
           }
         }
       }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "XSS",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -48,7 +48,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "手写实现Promise.md",
+                "file": "数组扁平化.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "手写实现Promise.md",
+                "file": "数组扁平化.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -98,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "手写实现Promise.md"
+                "file": "数组扁平化.md"
               }
             }
           }
@@ -109,17 +110,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "81780d3c409a862b",
+  "active": "eb1e9216c3756b2e",
   "lastOpenFiles": [
-    "手写实现Promise.md",
-    "浏览器渲染流程.md",
+    "数组扁平化.md",
+    "数组去重.md",
+    "new 运算符.md",
+    "编程题.md",
     "浏览器渲染.md",
+    "浏览器渲染流程.md",
     "回流与重绘.md",
-    "JS作用域和作用域链.md",
-    "CSS.md",
-    "BFC.md",
-    "Vue.md",
-    "vue2 vs vue3.md",
-    "vuex.md"
+    "模块化.md",
+    "前端模块化一览.md",
+    "BFC.md"
   ]
 }

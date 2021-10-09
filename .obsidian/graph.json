@@ -1,5 +1,5 @@
 {
-  "collapse-filter": true,
+  "collapse-filter": false,
   "search": "",
   "showTags": false,
   "showAttachments": false,
@@ -11,7 +11,7 @@
       "query": "tag:JavaScript",
       "color": {
         "a": 1,
-        "rgb": 6596850
+        "rgb": 16771154
       }
     },
     {
@@ -34,6 +34,20 @@
         "a": 1,
         "rgb": 1752190
       }
+    },
+    {
+      "query": "tag:编程题",
+      "color": {
+        "a": 1,
+        "rgb": 15966547
+      }
+    },
+    {
+      "query": "tag:#webpack",
+      "color": {
+        "a": 1,
+        "rgb": 7127274
+      }
     }
   ],
   "collapse-display": true,
@@ -46,6 +60,6 @@
   "repelStrength": 12.4786324786325,
   "linkStrength": 1,
   "linkDistance": 229,
-  "scale": 0.4293494826316986,
-  "close": false
+  "scale": 0.28143787893887634,
+  "close": true
 }
