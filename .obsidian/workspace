@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "数组扁平化.md",
+            "file": "Loader和Plugin.md",
             "mode": "source"
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数组扁平化.md",
+                "file": "Loader和Plugin.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数组扁平化.md",
+                "file": "Loader和Plugin.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数组扁平化.md"
+                "file": "Loader和Plugin.md"
               }
             }
           }
@@ -112,15 +112,15 @@
   },
   "active": "eb1e9216c3756b2e",
   "lastOpenFiles": [
+    "Loader和Plugin.md",
+    "webpack.md",
+    "webpack loader机制.md",
+    "webpack组成部分.md",
     "数组扁平化.md",
     "数组去重.md",
     "new 运算符.md",
     "编程题.md",
     "浏览器渲染.md",
-    "浏览器渲染流程.md",
-    "回流与重绘.md",
-    "模块化.md",
-    "前端模块化一览.md",
-    "BFC.md"
+    "浏览器渲染流程.md"
   ]
 }
