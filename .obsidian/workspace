@@ -113,14 +113,14 @@
   "active": "eb1e9216c3756b2e",
   "lastOpenFiles": [
     "小程序技术原理.md",
+    "Nginx.md",
+    "BFC.md",
+    "模块化.md",
+    "babel.md",
     "JSBridge.md",
     "FE_knowledge.md",
-    "babel.md",
     "前端工程化.md",
     "编写 webpack loader.md",
-    "Loader和Plugin.md",
-    "webpack.md",
-    "webpack loader机制.md",
-    "webpack组成部分.md"
+    "Loader和Plugin.md"
   ]
 }
