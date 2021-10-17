@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "babel.md",
+            "file": "小程序技术原理.md",
             "mode": "preview"
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "babel.md",
+                "file": "小程序技术原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "babel.md",
+                "file": "小程序技术原理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "babel.md"
+                "file": "小程序技术原理.md"
               }
             }
           }
@@ -112,15 +112,15 @@
   },
   "active": "eb1e9216c3756b2e",
   "lastOpenFiles": [
+    "小程序技术原理.md",
+    "JSBridge.md",
+    "FE_knowledge.md",
     "babel.md",
     "前端工程化.md",
-    "JSBridge.md",
     "编写 webpack loader.md",
     "Loader和Plugin.md",
     "webpack.md",
     "webpack loader机制.md",
-    "webpack组成部分.md",
-    "数组扁平化.md",
-    "数组去重.md"
+    "webpack组成部分.md"
   ]
 }
