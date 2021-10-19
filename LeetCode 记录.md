@@ -72,3 +72,195 @@ var reverseList = (head) => {
   return newHead
 }
 ```
+
+## n 数之和
+
+[github](<[https://github.com/sisterAn/JavaScript-Algorithms/issues/128](https://github.com/sisterAn/JavaScript-Algorithms/issues/128)>)
+[blog with Golang](<[https://set.sh/post/200719-how-to-solve-n-sum-problem](https://set.sh/post/200719-how-to-solve-n-sum-problem)>)
+[leetCode](<[https://leetcode-cn.com/problems/3sum/solution/jsban-jie-ti-fang-an-ke-neng-shi-dai-ma-liang-zui-/](https://leetcode-cn.com/problems/3sum/solution/jsban-jie-ti-fang-an-ke-neng-shi-dai-ma-liang-zui-/)>)
+
+### 三数之和
+
+```javascript
+给定数组, (nums = [-1, 0, 1, 2, -1, -4])
+满足要求的三元组合集为: [
+  [-1, 0, 1],
+  [-1, -1, 2],
+]
+```
+
+**思路:**
+
+1. 题目中可能会出现多组结果, 所以需要考虑去重
+1. 为了方便去重, 需要先将数组进行排序
+1. 对数组进行遍历, 取当前遍历的数 `num[i]` 为一个基准数, 遍历数后面的数组为寻找数组
+1. 再寻找数组中设定两个起点, 最左侧的 `left(i+1)` 和最右侧的 `right(length-1)`
+1. 判断 `nums[i] + nums[left] + nums[right]` 是否等于 0, 如果等于 0 就加入结果, 并将 `left` 和 `right` 移动一位
+1. 如果结果大于 0, 将 `right` 向左移动一位, 向结果逼近
+1. 如果结果小于 0, 将 `left` 向右移动一位, 向结果逼近
+
+注意在整个过程中需要考虑元素重复的问题, 需要去重
+
+```javascript
+const threeSum = function (nums) {
+  const result = []
+  // 升序排序
+  nums.sort((a, b) => a - b)
+  // 执行遍历操作
+  for (let i = 0; i < nums.length; i++) {
+    // 跳过重复数字
+    if (i && nums[i] === nums[i - 1]) {
+      continue
+    }
+    // 设置左右起点下标
+    let left = i + 1
+    let right = nums.length - 1
+    while (left < right) {
+      const sum = nums[i] + nums[left] + nums[right]
+      if (sum > 0) {
+        right--
+      } else if (sum < 0) {
+        left++
+      } else {
+        result.push([nums[i], nums[left++], nums[right--]])
+        // 判断元素重复, 跳过重复项
+        while (nums[left] === nums[left - 1]) {
+          left++
+        }
+        // 同上
+        while (nums[right] === nums[right + 1]) {
+          right--
+        }
+      }
+    }
+  }
+  return result
+}
+```
+
+### 四数之和
+
+```javascript
+var fourSum = function (nums, target) {
+  if (nums.length < 4) {
+    return []
+  }
+  nums.sort((a, b) => a - b)
+  const result = []
+  for (let i = 0; i < nums.length - 3; i++) {
+    if (i > 0 && nums[i] === nums[i - 1]) {
+      continue
+    }
+    if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target) {
+      break
+    }
+    // 比三数之和多一个循环,找出第四个数
+    for (let j = i + 1; j < nums.length - 2; j++) {
+      if (j > i + 1 && nums[j] === nums[j - 1]) {
+        continue
+      }
+      let left = j + 1,
+        right = nums.length - 1
+      while (left < right) {
+        const sum = nums[i] + nums[j] + nums[left] + nums[right]
+        if (sum === target) {
+          result.push([nums[i], nums[j], nums[left], nums[right]])
+        }
+        if (sum <= target) {
+          while (nums[left] === nums[++left]);
+        } else {
+          while (nums[right] === nums[--right]);
+        }
+      }
+    }
+  }
+  return result
+}
+```
+
+### 有无更加通用的 n 数求和的方法呢?
+
+#### 解法一: 使用 DFS 深度优先 Depth-First Search
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[][]}
+ */
+var nSum = function (nums, target) {
+  const helper = (index, N, temp) => {
+    // 如果下标越界了或者 N < 3 就没有必要在接着走下去了
+    if (index === len || N < 3) {
+      return
+    }
+    for (let i = index; i < len; i++) {
+      // 剔除重复的元素
+      if (i > index && nums[i] === nums[i - 1]) {
+        continue
+      }
+      // 如果 N > 3 的话就接着递归
+      // 并且在递归结束之后也不走下边的逻辑
+      // 注意这里不能用 return
+      // 否则循环便不能跑完整
+      if (N > 3) {
+        helper(i + 1, N - 1, [nums[i], ...temp])
+        continue
+      }
+      // 当走到这里的时候，相当于在求「三数之和」了
+      // temp 数组在这里只是把前面递归加入的数组算进来
+      let left = i + 1
+      let right = len - 1
+      while (left < right) {
+        let sum = nums[i] + nums[left] + nums[right] + temp.reduce((prev, curr) => prev + curr)
+        if (sum === target) {
+          res.push([...temp, nums[i], nums[left], nums[right]])
+          while (left < right && nums[left] === nums[left + 1]) {
+            left++
+          }
+          while (left < right && nums[right] === nums[right - 1]) {
+            right--
+          }
+          left++
+          right--
+        } else if (sum < target) {
+          left++
+        } else {
+          right--
+        }
+      }
+    }
+  }
+  let res = []
+  let len = nums.length
+  nums.sort((a, b) => a - b)
+  helper(0, 4, [])
+  return res
+}
+```
+
+#### 解法二: 回溯递归
+
+```javascript
+function getAllCombin(array, n, sum, temp) {
+  if (temp.length === n) {
+    if (temp.reduce((t, c) => t + c) === sum) {
+      return temp
+    }
+    return
+  }
+  for (let i = 0; i < array.length; i++) {
+    const current = array.shift()
+    temp.push(current)
+    const result = getAllCombin(array, n, sum, temp)
+    if (result) {
+      return result
+    }
+    temp.pop()
+    array.push(current)
+  }
+}
+const arr = [1, 2, 3, 4, 5, 6]
+
+console.log(getAllCombin(arr, 3, 10, []))
+```
