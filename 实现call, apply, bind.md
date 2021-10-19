@@ -1,4 +1,4 @@
-#面试 #JavaScript 
+#JavaScript #编程题 
 ES6+ 相关API实现
 ## 实现 call()
 `call(this, arg1, arg2, ...)`

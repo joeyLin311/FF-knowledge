@@ -21,3 +21,9 @@ Vue 在内部尝试对异步队列使用原生的 `Promise.then` 和 `MessageCha
 
 ## 为什么 nextTick 要尽可能地 microTask 优先
 [掘金链接](https://juejin.cn/post/6844903918472790023)
+
+## nextTick 使用场景
+
+- **如果要在created()钩子函数中进行的DOM操作，由于created()钩子函数中还未对DOM进行任何渲染，所以无法直接操作，需要通过**`$nextTick()`**来完成。在created()钩子函数中进行的DOM操作，不使用**`$nextTick()`**会报错**
+- **更新数据后，想要使用js对新的视图进行操作时**
+- **在使用某些第三方插件时 ，这些插件需要dom动态变化后重新应用该插件，这时候就需要使用$nextTick()来重新应用插件的方法**

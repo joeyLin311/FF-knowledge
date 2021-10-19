@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "小程序技术原理.md",
+            "file": "EventLoop事件循环.md",
             "mode": "preview"
           }
         }
@@ -48,13 +48,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -70,14 +68,14 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "小程序技术原理.md",
+                "file": "EventLoop事件循环.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": true,
-                "unlinkedCollapsed": true
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -87,7 +85,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "小程序技术原理.md",
+                "file": "EventLoop事件循环.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -99,11 +97,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "小程序技术原理.md"
+                "file": "EventLoop事件循环.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -112,15 +111,15 @@
   },
   "active": "eb1e9216c3756b2e",
   "lastOpenFiles": [
-    "小程序技术原理.md",
+    "EventLoop.md",
+    "LeetCode 记录.md",
+    "总结项目知识点.md",
+    "多图站点性能优化.md",
     "Nginx.md",
-    "BFC.md",
-    "模块化.md",
-    "babel.md",
-    "JSBridge.md",
+    "Proxy, defineProperty.md",
     "FE_knowledge.md",
-    "前端工程化.md",
-    "编写 webpack loader.md",
-    "Loader和Plugin.md"
+    "Vue.md",
+    "vue2 vs vue3.md",
+    "RxJS.md"
   ]
 }

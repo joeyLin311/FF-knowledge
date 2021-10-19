@@ -1,5 +1,6 @@
 #Vue #JavaScript 
 ## Object.defineProperty
+
 MDN定义: `Object.defineProperty()` 方法会直接在一个对象上定义一个新属性, 或者修改一个对象的现有属性, 并返回此对象.
 方法传入三个参数:
 > obj: 要定义属性的对象, 就是目标对象
@@ -41,7 +42,7 @@ Object.defineProperty(obj, "key", {
 1. defineProperty 无法检测到对象属性的添加或删除
 1. defineProperty 无法检测数组元素的变化, 需要进行数组方法的重写
 1. defineProperty 无法检测数组的长度修改
-
+[vue无法修改数组与 defineProperty 无关](https://juejin.cn/post/7008710100005158926)
 ## Proxy
 相较于 `Object.defineProperty` 去劫持某个属性, Proxy更加彻底, 是直接对整个对象进行代理. MDN对Proxy的描述是: 
 > `Proxy`可以理解成, 在目标对象之前架设一层"拦截" , 外界对该对象的访问, 都必须先通过这层拦截, 因此提供了一种机制, 可以对外界的访问进行过滤和改写

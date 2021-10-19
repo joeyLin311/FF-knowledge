@@ -1,9 +1,11 @@
 #Network
-### Nginx
+
+
+## Nginx 的Etag
 
 Nginx官方默认的ETag计算方式是为"文件最后修改时间16进制-文件长度16进制"。例：ETag： “59e72c84-2404”
 
-### Express
+## Express框架
 
 Express框架使用了serve-static中间件来配置缓存方案，其中，使用了一个叫[etag](https://links.jianshu.com/go?to=https%3A%2F%2Flink.juejin.cn%2F%3Ftarget%3Dhttps%253A%252F%252Fgithub.com%252Fjshttp%252Fetag)的npm包来实现etag计算。从其源码可以看出，有两种计算方式：
 -   方式一：使用文件大小和修改时间
@@ -46,3 +48,6 @@ function entitytag (entity) {
 1. 一些文件也许会周期性的更改，但是他的内容并不改变(仅仅改变的修改时间)，这个时候我们并不希望客户端认为这个文件被修改了，而重新get；
 2. 某些文件修改非常频繁，比如在秒以下的时间内进行修改，(比方说1s内修改了N次)，if-modified-since能检查到的粒度是秒级的，这种修改无法判断(或者说UNIX记录MTIME只能精确到秒)；
 3. 某些服务器不能精确的得到文件的最后修改时间。
+
+-   ETag 在标识前面加 `W/` 前缀表示用弱比较算法（If-None-Match 本身就只用弱比较算法）。
+-   ETag 还可以配合 If-Match 检测当前请求是否为最新版本，若资源不匹配返回状态码 412 错误。（If-Match 不加 `W/` 时使用强比较算法）。
