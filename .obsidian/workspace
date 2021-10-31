@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "LeetCode 记录.md",
-            "mode": "preview"
+            "file": "lazyMan 函数.md",
+            "mode": "source"
           }
         }
       }
@@ -48,11 +48,13 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -68,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LeetCode 记录.md",
+                "file": "lazyMan 函数.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LeetCode 记录.md",
+                "file": "lazyMan 函数.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -97,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LeetCode 记录.md"
+                "file": "lazyMan 函数.md"
               }
             }
           }
@@ -111,15 +113,15 @@
   },
   "active": "c157ce63a42ae149",
   "lastOpenFiles": [
-    "LeetCode 记录.md",
-    "EventLoop.md",
-    "总结项目知识点.md",
-    "多图站点性能优化.md",
-    "Nginx.md",
-    "Proxy, defineProperty.md",
-    "FE_knowledge.md",
-    "Vue.md",
-    "vue2 vs vue3.md",
-    "RxJS.md"
+    "lazyMan 函数.md",
+    "编程题.md",
+    "函数柯里化.md",
+    "发布订阅模式.md",
+    "vue event.md",
+    "实现深拷贝.md",
+    "数组扁平化.md",
+    "100道面试题.md",
+    "数组去重.md",
+    "eventBus.md"
   ]
 }
