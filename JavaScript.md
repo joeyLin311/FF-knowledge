@@ -14,3 +14,4 @@ JavaScript 整理相关知识点一
 - [[函数, 函数参数arguments]]
 - [[内存管理]]
 - [[new 运算符]]
+- [[Web Worker]]

@@ -264,3 +264,6 @@ const arr = [1, 2, 3, 4, 5, 6]
 
 console.log(getAllCombin(arr, 3, 10, []))
 ```
+
+## 二叉树
+[[二叉树(基于JavaScript实现)]]

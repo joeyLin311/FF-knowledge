@@ -6,13 +6,27 @@
       {
         "id": "c157ce63a42ae149",
         "type": "leaf",
+        "dimension": 63.82365059744541,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "lazyMan 函数.md",
-            "mode": "source"
+            "file": "Nginx.md",
+            "mode": "preview"
           }
-        }
+        },
+        "group": "0dd63fa50ccc0f1f"
+      },
+      {
+        "id": "62357932c8be0475",
+        "type": "leaf",
+        "dimension": 36.17634940255459,
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Nginx.md"
+          }
+        },
+        "group": "0dd63fa50ccc0f1f"
       }
     ],
     "direction": "vertical"
@@ -70,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "lazyMan 函数.md",
+                "file": "Nginx.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +101,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "lazyMan 函数.md",
+                "file": "Nginx.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -99,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "lazyMan 函数.md"
+                "file": "Nginx.md"
               }
             }
           }
@@ -113,15 +127,15 @@
   },
   "active": "c157ce63a42ae149",
   "lastOpenFiles": [
+    "Nginx.md",
+    "JavaScript.md",
+    "Web Worker.md",
+    "web.md",
+    "总结项目知识点.md",
+    "LeetCode 记录.md",
+    "二叉树(基于JavaScript实现).md",
+    "首页白屏优化.md",
     "lazyMan 函数.md",
-    "编程题.md",
-    "函数柯里化.md",
-    "发布订阅模式.md",
-    "vue event.md",
-    "实现深拷贝.md",
-    "数组扁平化.md",
-    "100道面试题.md",
-    "数组去重.md",
-    "eventBus.md"
+    "编程题.md"
   ]
 }
