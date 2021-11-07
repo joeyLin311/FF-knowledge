@@ -4,29 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "c157ce63a42ae149",
+        "id": "10d090405518f322",
         "type": "leaf",
-        "dimension": 63.82365059744541,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Nginx.md",
-            "mode": "preview"
-          }
-        },
-        "group": "0dd63fa50ccc0f1f"
-      },
-      {
-        "id": "62357932c8be0475",
-        "type": "leaf",
-        "dimension": 36.17634940255459,
-        "state": {
-          "type": "outline",
-          "state": {
-            "file": "Nginx.md"
-          }
-        },
-        "group": "0dd63fa50ccc0f1f"
+          "type": "graph",
+          "state": {}
+        }
       }
     ],
     "direction": "vertical"
@@ -84,7 +67,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Nginx.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +83,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Nginx.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -112,9 +93,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Nginx.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -125,7 +104,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c157ce63a42ae149",
+  "active": "10d090405518f322",
   "lastOpenFiles": [
     "Nginx.md",
     "JavaScript.md",
