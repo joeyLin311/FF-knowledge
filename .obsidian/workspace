@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "10d090405518f322",
+        "id": "53f9ea50d7791d9e",
         "type": "leaf",
         "state": {
           "type": "graph",
@@ -36,7 +36,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "GPU进程",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -50,8 +50,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -104,17 +103,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "10d090405518f322",
+  "active": "53f9ea50d7791d9e",
   "lastOpenFiles": [
-    "Nginx.md",
-    "JavaScript.md",
-    "Web Worker.md",
-    "web.md",
-    "总结项目知识点.md",
-    "LeetCode 记录.md",
+    "浏览器组成部分.md",
+    "浏览器.md",
+    "浏览器渲染.md",
+    "浏览器渲染过程.md",
+    "JS引擎线程和事件触发线程.md",
+    "EventLoop事件循环.md",
+    "V8引擎.md",
     "二叉树(基于JavaScript实现).md",
-    "首页白屏优化.md",
-    "lazyMan 函数.md",
-    "编程题.md"
+    "DOM Tree理解.md",
+    "documentFragment使用.md"
   ]
 }

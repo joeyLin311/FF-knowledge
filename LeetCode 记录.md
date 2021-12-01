@@ -267,3 +267,6 @@ console.log(getAllCombin(arr, 3, 10, []))
 
 ## 二叉树
 [[二叉树(基于JavaScript实现)]]
+
+## 杨辉三角
+[[杨辉三角]] 杨辉三角
