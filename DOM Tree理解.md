@@ -1,3 +1,4 @@
+#browser 
 # DOM tree的理解
 
 > 所属, 浏览器-> 浏览器渲染 -> new article 

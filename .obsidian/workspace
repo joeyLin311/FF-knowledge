@@ -36,7 +36,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "GPU进程",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -45,8 +45,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -105,15 +104,15 @@
   },
   "active": "53f9ea50d7791d9e",
   "lastOpenFiles": [
-    "浏览器组成部分.md",
+    "小程序技术原理.md",
+    "小程序.md",
+    "preload&prefetch.md",
     "浏览器.md",
+    "DOM Tree理解.md",
+    "浏览器组成部分.md",
     "浏览器渲染.md",
     "浏览器渲染过程.md",
     "JS引擎线程和事件触发线程.md",
-    "EventLoop事件循环.md",
-    "V8引擎.md",
-    "二叉树(基于JavaScript实现).md",
-    "DOM Tree理解.md",
-    "documentFragment使用.md"
+    "EventLoop事件循环.md"
   ]
 }
