@@ -7,8 +7,11 @@
         "id": "53f9ea50d7791d9e",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "将列表还原为树状结构.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "将列表还原为树状结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -81,6 +85,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "将列表还原为树状结构.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -91,7 +96,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "将列表还原为树状结构.md"
+              }
             }
           }
         ],
@@ -104,15 +111,15 @@
   },
   "active": "53f9ea50d7791d9e",
   "lastOpenFiles": [
+    "将列表还原为树状结构.md",
+    "编程题.md",
+    "LeetCode 记录.md",
     "小程序技术原理.md",
     "小程序.md",
     "preload&prefetch.md",
     "浏览器.md",
     "DOM Tree理解.md",
     "浏览器组成部分.md",
-    "浏览器渲染.md",
-    "浏览器渲染过程.md",
-    "JS引擎线程和事件触发线程.md",
-    "EventLoop事件循环.md"
+    "浏览器渲染.md"
   ]
 }
