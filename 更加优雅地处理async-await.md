@@ -1,4 +1,9 @@
-#JavaScript 
+---
+date created: 2021-12-09 23:00
+---
+
+#JavaScript
+
 ```javascript
 /**
  * @param { Promise } promise
@@ -22,9 +27,11 @@ export function to<T, U = Error> (
 
 export default to;
 ```
+
 正常情况下，await 命令后面是一个 Promise 对象，返回该对象的结果。如果不是 Promise 对象，就直接返回对应的值。
 
 所以我们只需要利用 Promise 的特性，分别在 promise.then 和 promise.catch 中返回不同的数组，其中 fulfilled 的时候返回数组第一项为 null，第二个是结果。rejected 的时候，返回数组第一项为错误信息，第二项为 undefined。使用的时候，判断第一项是否为空，即可知道是否有错误，具体使用如下：
+
 ```javscript
 import to from 'await-to-js';
 // If you use CommonJS (i.e NodeJS environment), it should be:

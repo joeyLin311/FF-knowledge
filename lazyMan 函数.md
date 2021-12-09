@@ -1,5 +1,11 @@
-#编程题 
+---
+date created: 2021-12-09 22:55
+---
+
+#编程题
+
 # 实现 LazyMan 函数
+
 要求:
 
 ```js
@@ -27,6 +33,7 @@ Eat supper
 ```
 
 ## 实现代码:
+
 ```js
 class _LazyMan {
   constructor(name) {
@@ -83,6 +90,5 @@ lazyMan('Hank').sleep(1).eat('dinner')
 lazyMan('Hank').eat('dinner').eat('supper')
 
 lazyMan('Hank').eat('supper').sleepFirst(5)
-
 
 ```

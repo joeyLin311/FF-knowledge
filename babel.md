@@ -1,24 +1,28 @@
+---
+date created: 2021-12-09 22:57
+---
+
 # babel
 
 ## babel 编译流程
 
-babel三大编译步骤: **解析 parser**, **转换 transformer**, **生成 generator**
+babel 三大编译步骤: **解析 parser**, **转换 transformer**, **生成 generator**
 
-1. **解析阶段:**  babel默认使用 @babel/parser 将代码转换为AST.解析一般分为两个阶段: 词法分析和语法分析
-   1. 词法分析: 对输入的字符序列做标记优化(tokenization)操作
-   2. 语法分析: 处理标记与标记之间的关系, 最终形成一颗完整的 AST 抽象语法树
+1. **解析阶段:**  babel 默认使用 @babel/parser 将代码转换为 AST.解析一般分为两个阶段: 词法分析和语法分析
+2. 词法分析: 对输入的字符序列做标记优化(tokenization)操作
+3. 语法分析: 处理标记与标记之间的关系, 最终形成一颗完整的 AST 抽象语法树
 
-    > 将代码解析成抽象语法树（AST）,每个js引擎（比如Chrome浏览器中的V8引擎）都有自己的AST解析器,而Babel是通过Babylon实现的.在解析过程中有两个阶段：词法分析和语法分析,词法分析阶段把字符串形式的代码转换为令牌（tokens）流,令牌类似于AST中节点；而语法分析阶段则会把一个令牌流转换成 AST的形式,同时这个阶段会把令牌中的信息转换成AST的表述结构.
+> 将代码解析成抽象语法树（AST）,每个 js 引擎（比如 Chrome 浏览器中的 V8 引擎）都有自己的 AST 解析器,而 Babel 是通过 Babylon 实现的.在解析过程中有两个阶段：词法分析和语法分析,词法分析阶段把字符串形式的代码转换为令牌（tokens）流,令牌类似于 AST 中节点；而语法分析阶段则会把一个令牌流转换成 AST 的形式,同时这个阶段会把令牌中的信息转换成 AST 的表述结构.
 
-2. **转换阶段:** babel使用 @babel/traverse 提供的方法对AST进行深度优先遍历, 调用插件对关注节点的梳理函数, 按需对AST 节点进行增删改操作
-  
-    > 在这个阶段,Babel接受得到AST并通过babel-traverse对其进行深度优先遍历,在此过程中对节点进行添加、更新及移除操作.这部分也是Babel插件介入工作的部分.
+2. **转换阶段:** babel 使用 @babel/traverse 提供的方法对 AST 进行深度优先遍历, 调用插件对关注节点的梳理函数, 按需对 AST 节点进行增删改操作
+
+> 在这个阶段,Babel 接受得到 AST 并通过 babel-traverse 对其进行深度优先遍历,在此过程中对节点进行添加、更新及移除操作.这部分也是 Babel 插件介入工作的部分.
 
 3. **生成阶段:** babel 默认使用 @babel/generator 将上一阶段处理后的 AST 转换为代码字符串
 
-    > 将经过转换的AST通过babel-generator再转换成js代码,过程就是深度优先遍历整个AST,然后构建可以表示转换后代码的字符串.
-    
-[babel官网流程](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/plugin-handbook.md#toc-stages-of-babel)
+> 将经过转换的 AST 通过 babel-generator 再转换成 js 代码,过程就是深度优先遍历整个 AST,然后构建可以表示转换后代码的字符串.
+
+[babel 官网流程](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/plugin-handbook.md#toc-stages-of-babel)
 
 ## babel 插件系统
 
@@ -86,7 +90,7 @@ env 的核心目的是通过配置得知目标环境的特点, 然后只做必�
 }
 ```
 
-如上配置将考虑所有浏览器的最新2个版本(safari大于等于7.0的版本)的特性, 将必要的代码进行转换.而这些版本已有的功能就不进行转化了.这里的语法可以参考 browserslist
+如上配置将考虑所有浏览器的最新 2 个版本(safari 大于等于 7.0 的版本)的特性, 将必要的代码进行转换.而这些版本已有的功能就不进行转化了.这里的语法可以参考 browserslist
 
 ```js
 {
@@ -136,7 +140,7 @@ env 的核心目的是通过配置得知目标环境的特点, 然后只做必�
 
 ### 不再支持低版本 node
 
-babel 7.0 开始不再支持 nodejs 0.10, 0.12, 4, 5 这四个版本, 相当于要求 nodejs >= 6
+babel 7.0 开始不再支持 nodejs 0.10,0.12,4, 5 这四个版本, 相当于要求 nodejs >= 6
 
 ### only 和 ignore 匹配规则的变化
 

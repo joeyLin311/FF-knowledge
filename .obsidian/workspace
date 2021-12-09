@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "将列表还原为树状结构.md",
+            "file": "30x状态码.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "将列表还原为树状结构.md",
+                "file": "30x状态码.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,7 +85,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "将列表还原为树状结构.md",
+                "file": "30x状态码.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -97,7 +97,18 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "将列表还原为树状结构.md"
+                "file": "30x状态码.md"
+              }
+            }
+          },
+          {
+            "id": "e762672ab6c349d8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
               }
             }
           }
@@ -111,15 +122,15 @@
   },
   "active": "53f9ea50d7791d9e",
   "lastOpenFiles": [
-    "将列表还原为树状结构.md",
+    "30x状态码.md",
+    "100道面试题.md",
     "编程题.md",
-    "LeetCode 记录.md",
-    "小程序技术原理.md",
-    "小程序.md",
-    "preload&prefetch.md",
-    "浏览器.md",
-    "DOM Tree理解.md",
-    "浏览器组成部分.md",
-    "浏览器渲染.md"
+    "编写 webpack loader.md",
+    "打包优化.md",
+    "多图站点性能优化.md",
+    "二叉树(基于JavaScript实现).md",
+    "发布订阅模式.md",
+    "防抖&节流.md",
+    "更加优雅地处理async-await.md"
   ]
 }

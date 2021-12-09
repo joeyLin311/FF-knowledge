@@ -2,5 +2,6 @@
   "alwaysUpdateLinks": true,
   "showFrontmatter": true,
   "defaultViewMode": "preview",
-  "fileSortOrder": "alphabetical"
+  "fileSortOrder": "alphabetical",
+  "tabSize": 2
 }

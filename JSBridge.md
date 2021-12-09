@@ -1,3 +1,6 @@
+---
+date created: 2021-12-09 22:55
+---
 
 # JSBridge
 
@@ -11,6 +14,7 @@
 ![[jsbridge1.png]]
 
 ![[jsbridge2.png]]
+
 ## JSBridge 用途
 
 JSBridge 顾名思义的就是在 Native 和 JS 代码端构建一个桥梁, 一是提供给 JS 端调用系统原生 API, 二是实现 Native 端和非 Native 端的数据和消息通信, 而且是双向通信.
@@ -62,7 +66,7 @@ window.JSBridge = {
 ```
 
 复制代码
-在上面的文章中,提到过 RPC 中有一个非常重要的环节是 句柄解析调用 ,这点在 JSBridge 中体现为 句柄与功能对应关系.同时,我们将句柄抽象为 桥名（BridgeName）,最终演化为 一个 BridgeName 对应一个 Native 功能或者一类 Native 消息. 基于此点,JSBridge 的实现可以优化为如下: 
+在上面的文章中,提到过 RPC 中有一个非常重要的环节是 句柄解析调用 ,这点在 JSBridge 中体现为 句柄与功能对应关系.同时,我们将句柄抽象为 桥名（BridgeName）,最终演化为 一个 BridgeName 对应一个 Native 功能或者一类 Native 消息. 基于此点,JSBridge 的实现可以优化为如下:
 
 ```js
 window.JSBridge = {
@@ -125,7 +129,8 @@ JSBridge 大概的雏形出现了.现在终于可以着手解决这个问题了:
 ```
 
 当然,这段代码片段只是一个示例,主要用于剖析 JSBridge 的原理和流程,里面存在诸多省略和不完善的代码逻辑,读者们可以自行完善.
->【注】: 这一节主要讲的是,JavaScript 端的 JSBridge 的实现,对于 Native 端涉及的并不多.在 Native 端配合实现 JSBridge 的 JavaScript 调用 Native 逻辑也很简单,主要的代码逻辑是: 接收到 JavaScript 消息 => 解析参数,拿到 bridgeName、data 和 callbackId => 根据 bridgeName 找到功能方法,以 data 为参数执行 => 执行返回值和 callbackId 一起回传前端. Native 调用 JavaScript 也同样简单,直接自动生成一个唯一的 ResponseId,并存储句柄,然后和 data 一起发送给前端即可.
+
+> 【注】: 这一节主要讲的是,JavaScript 端的 JSBridge 的实现,对于 Native 端涉及的并不多.在 Native 端配合实现 JSBridge 的 JavaScript 调用 Native 逻辑也很简单,主要的代码逻辑是: 接收到 JavaScript 消息 => 解析参数,拿到 bridgeName、data 和 callbackId => 根据 bridgeName 找到功能方法,以 data 为参数执行 => 执行返回值和 callbackId 一起回传前端. Native 调用 JavaScript 也同样简单,直接自动生成一个唯一的 ResponseId,并存储句柄,然后和 data 一起发送给前端即可.
 
 ## JSBridge 如何引用
 

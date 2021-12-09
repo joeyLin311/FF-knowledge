@@ -1,4 +1,9 @@
-#JavaScript 
+---
+date created: 2021-12-09 22:58
+---
+
+#JavaScript
+
 ```javascript
 // MyPromise 源码实现
 const PENDING = 'pending';

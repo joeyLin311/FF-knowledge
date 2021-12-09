@@ -1,3 +1,7 @@
+---
+date created: 2021-12-09 22:56
+---
+
 #JavaScript
 
 ## typeof
@@ -47,7 +51,7 @@ constructor 判断方法跟 instanceof 相似,但是 constructor 检测 Object �
 
 (引用自红宝书): 在任何值上调用 Object 原生的 toString() 方法，都会返回一个 `object NativeConstructorName` 格式的字符串。每个类在内部都有一个 `[[Class]]` 属性，这个属性中就指定了上述字符串中的构造函数名。 但是它不能检测非原生构造函数的构造函数名。
 
-| 类型     | toString                                     | 结果              |
+| 类型       | toString                                     | 结果                |
 | -------- | -------------------------------------------- | ----------------- |
 | Map      | Object.prototype.toString.call(new Map())    | [object Map]      |
 | Set      | Object.prototype.toString.call(new Set())    | [object Set]      |

@@ -1,7 +1,14 @@
-#编程题 #Vue  #browser 
-[从keep-alive学习LRU算法](https://juejin.cn/post/6844904116620099591)
+---
+date created: 2021-12-09 22:55
+---
+
+#编程题 #Vue  #browser
+[从 keep-alive 学习 LRU 算法](https://juejin.cn/post/6844904116620099591)
+
 ## 代码实现
-### 模拟keep-alive
+
+### 模拟 keep-alive
+
 ```javascript
 // 第一步代码
 class LRUCache {
@@ -39,8 +46,11 @@ class LRUCache {
   }
 }
 ```
-## LRU纯净版
+
+## LRU 纯净版
+
 ### 一  数组 + 对象
+
 ```javascript
 var LRUCache = function (capacity) {
   this.keys = []
@@ -91,8 +101,11 @@ function removeCache(cache, keys, key) {
   remove(keys, key)
 }
 ```
+
 ### 二 Map 内置对象特性
+
 Map 对象保存键值对是有序的, 在频繁地增删键值对时性能表现更好
+
 ```javascript
 var LRUCache = function (capacity) {
   this.cache = new Map()

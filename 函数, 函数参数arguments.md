@@ -1,4 +1,10 @@
-#JavaScript 
+---
+date created: 2021-12-09 22:59
+date updated: 2021-12-09 22:59
+---
+
+#JavaScript
+
 ```javascript
 // 获取argument对象 类数组对象 不能调用数组方法
 function test1() {

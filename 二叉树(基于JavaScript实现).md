@@ -1,14 +1,18 @@
-# 二叉树(基于JavaScript实现)
+---
+date created: 2021-12-09 23:00
+---
+
+# 二叉树(基于 JavaScript 实现)
 
 ## 定义
 
-Binary Tree 是一种树形结构的数据类型, 二叉树的特点是每个节点最多只能有两颗子树, 且有左右次序之分, 不能颠倒. 二叉树是n个有限元素的集合, 通常分支被称为[左子树]和[右子树].
+Binary Tree 是一种树形结构的数据类型, 二叉树的特点是每个节点最多只能有两颗子树, 且有左右次序之分, 不能颠倒. 二叉树是 n 个有限元素的集合, 通常分支被称为[左子树]和[右子树].
 
- ## 二叉排序树
+## 二叉排序树
 
 二叉排序树又称为 **二叉搜索树** 或 **二叉查找树**
 
-**特点:** 
+**特点:**
 
 > 1. 若它的左子树不为空, 则右子树上所有节点的值均小于它的根节点的值
 > 2. 若它的右子树不为空, 则右子树上所有节点的值均大于它的根节点的值
@@ -120,7 +124,7 @@ let preOrderTraverseFn = (node , cb) => {
 preOrderTraverseFn(BinarySearchTree(keys), callBack);
 ```
 
-输出结果: 
+输出结果:
 
 ```js
 8, 3, 1, 6, 4, 7, 10, 14, 13
@@ -143,13 +147,13 @@ let postOrderTraverseFn = (node, cb) => {
 postOrderTraverseFn(BinarySearchTree(keys), callBack);
 ```
 
-输出结果: 
+输出结果:
 
 ```js
 1, 4, 7, 6, 3, 13, 14, 10, 8
 ```
 
-## 应用1: 查找 BST 最小值
+## 应用 1: 查找 BST 最小值
 
 也就是找二叉树左子树最左侧没有子节点的节点值
 
@@ -167,7 +171,7 @@ let minNode = (node) => {
 console.log('minNode is' + minNode(BinarySearchTree(keys))) // 1
 ```
 
-## 应用2: 查找 BST 最大值
+## 应用 2: 查找 BST 最大值
 
 也就是查找二叉树右子树最右侧没有子节点的节点值
 
@@ -185,7 +189,7 @@ let maxNode = (node) => {
 console.log('maxNode is'+ maxNode(binarySearchTree(keys))) // 14
 ```
 
-## 应用3: 查找 BST 某个值
+## 应用 3: 查找 BST 某个值
 
 就是将该值与二叉树的每个节点进行比较, 如果比此节点小, 则进入左子树递归比较, 如果该值比此节点大, 则进入右子树递归比较
 
@@ -208,7 +212,7 @@ console.log(searchNode(BinarySearchTree(keys),3)?'node 3 is found':'node 3 is no
 console.log(searchNode(BinarySearchTree(keys),5)?'node 5 is found':'node 5 is not found')
 ```
 
-## 应用4: 删除某个独立节点
+## 应用 4: 删除某个独立节点
 
 也就是删除某个没有左子树和右子树的节点
 
@@ -320,6 +324,4 @@ lazyMan('Hank').eat('dinner').eat('supper')
 
 lazyMan('Hank').eat('supper').sleepFirst(5)
 
-
 ```
-

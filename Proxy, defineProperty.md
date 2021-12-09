@@ -1,8 +1,14 @@
-#Vue #JavaScript 
+---
+date created: 2021-12-09 22:54
+---
+
+#Vue #JavaScript
+
 ## Object.defineProperty
 
-MDN定义: `Object.defineProperty()` 方法会直接在一个对象上定义一个新属性, 或者修改一个对象的现有属性, 并返回此对象.
+MDN 定义: `Object.defineProperty()` 方法会直接在一个对象上定义一个新属性, 或者修改一个对象的现有属性, 并返回此对象.
 方法传入三个参数:
+
 > obj: 要定义属性的对象, 就是目标对象
 > prop: 要定义或修改的属性名称或 Symbol
 > descriptor: 要定义或修改的属性描述符
@@ -18,37 +24,46 @@ Object.defineProperty(obj, "key", {
   set(val){ return obj.key = val }
 })
 ```
-| 属性名 | 作用 | 默认值 |
-| --- | --- | --- |
-| configurable | 只有该属性的 `configurable`为true, 该属性的描述符才能够被改变, 同时该属性也能从对应的对象上被删除 | false |
-| enumerable | 只有该属性的 `enumerable`为true, 该属性才会出现在对象的可枚举属性中, 就是能不能 `for...in` 和 `Object.keys()` | false |
-| writable | 只有该属性的 `enumerable`为 true, 才能被赋值运算符改变 | false |
-| value | 该属性对应的值 | undefined |
-| get | 属性的 getter 函数, 当访问该属性时会调用此函数 | undefined |
-| set | 当属性值被修改时, 会调用此函数.该方法接收一个参数, 会传入赋值时的this对象 | undefined |
+
+| 属性名          | 作用                                                                                | 默认值       |
+| ------------ | --------------------------------------------------------------------------------- | --------- |
+| configurable | 只有该属性的 `configurable` 为 true, 该属性的描述符才能够被改变, 同时该属性也能从对应的对象上被删除                    | false     |
+| enumerable   | 只有该属性的 `enumerable` 为 true, 该属性才会出现在对象的可枚举属性中, 就是能不能 `for...in` 和 `Object.keys()` | false     |
+| writable     | 只有该属性的 `enumerable` 为 true, 才能被赋值运算符改变                                            | false     |
+| value        | 该属性对应的值                                                                           | undefined |
+| get          | 属性的 getter 函数, 当访问该属性时会调用此函数                                                      | undefined |
+| set          | 当属性值被修改时, 会调用此函数.该方法接收一个参数, 会传入赋值时的 this 对象                                       | undefined |
 
 **数据描述符和存取描述符不能混用, 但是均可以和 comfigurable enumerable 搭配使用,如下表格**
 
-|  | configurable | enumerable | value | writable | get | set |
-| --- | --- | --- | --- | --- | --- | --- |
-| 数据描述符 | YES | YES | YES | YES | NO | NO |
-| 存取描述符 | YES | YES | NO | NO | YES | YES |
+|       | configurable | enumerable | value | writable | get | set |
+| ----- | ------------ | ---------- | ----- | -------- | --- | --- |
+| 数据描述符 | YES          | YES        | YES   | YES      | NO  | NO  |
+| 存取描述符 | YES          | YES        | NO    | NO       | YES | YES |
 
 ### Object.defineProperty() 的缺陷
-虽然 `Object.defineProperty()` 能够劫持对象的属性进行改写操作, 但是需要对对象上的每一个属性进行遍历劫持; 如果对象上有新增的属性, 则需要对新增的属性再次进行劫持; 如果对象的属性是对象, 还需要进行深度遍历. **这就是为什么Vue给对象新增.属性需要通过 **`**$set**` 操作的原因, 其原理也是通过 `Object.defineProperty` 对新增的属性再次进行劫持
+
+虽然 `Object.defineProperty()` 能够劫持对象的属性进行改写操作, 但是需要对对象上的每一个属性进行遍历劫持; 如果对象上有新增的属性, 则需要对新增的属性再次进行劫持; 如果对象的属性是对象, 还需要进行深度遍历. **这就是为什么 Vue 给对象新增.属性需要通过 **`**$set**` 操作的原因, 其原理也是通过 `Object.defineProperty` 对新增的属性再次进行劫持
 `Object.defineProperty()` 除了可以劫持对象的属性, 还可以劫持数组; 虽然数组没有属性, 但是我们可以把数组的索引看成是属性. 虽然通过这样我们监听到了数组的变化, 但是监听对象属性面临着同样的问题: 新增的元素并不会触发监听事件.
-**为此, Vue 的解决方案是劫持 `Array.prototype` 原型链上的7个方法, 重新绑定到实例对象的  `__proto__`, 以实现劫持**
-总结就是: 
+**为此, Vue 的解决方案是劫持 `Array.prototype` 原型链上的 7 个方法, 重新绑定到实例对象的  `__proto__`, 以实现劫持**
+总结就是:
+
 1. defineProperty 无法检测到对象属性的添加或删除
-1. defineProperty 无法检测数组元素的变化, 需要进行数组方法的重写
-1. defineProperty 无法检测数组的长度修改
-[vue无法修改数组与 defineProperty 无关](https://juejin.cn/post/7008710100005158926)
+2. defineProperty 无法检测数组元素的变化, 需要进行数组方法的重写
+3. defineProperty 无法检测数组的长度修改
+
+[vue 无法修改数组与 defineProperty 无关](https://juejin.cn/post/7008710100005158926)
+
 ## Proxy
-相较于 `Object.defineProperty` 去劫持某个属性, Proxy更加彻底, 是直接对整个对象进行代理. MDN对Proxy的描述是: 
-> `Proxy`可以理解成, 在目标对象之前架设一层"拦截" , 外界对该对象的访问, 都必须先通过这层拦截, 因此提供了一种机制, 可以对外界的访问进行过滤和改写
+
+相较于 `Object.defineProperty` 去劫持某个属性, Proxy 更加彻底, 是直接对整个对象进行代理. MDN 对 Proxy 的描述是:
+
+> `Proxy` 可以理解成, 在目标对象之前架设一层"拦截" , 外界对该对象的访问, 都必须先通过这层拦截, 因此提供了一种机制, 可以对外界的访问进行过滤和改写
 
 ### 语法: `var obj = new Proxy(target, handler)`
-Proxy 本身是一个构造函数, 通过 `new Proxy` 生成拦截的实例对象, 让外界进行访问; 构造函数中的 `target`就是我们需要代理的目标对象, 可以是对象或者是数组; `handler` 参数和 defineProperty 中的 description 描述符有些类似, 也是一个对象, 用来定制代理规则
+
+Proxy 本身是一个构造函数, 通过 `new Proxy` 生成拦截的实例对象, 让外界进行访问; 构造函数中的 `target` 就是我们需要代理的目标对象, 可以是对象或者是数组; `handler` 参数和 defineProperty 中的 description 描述符有些类似, 也是一个对象, 用来定制代理规则
+
 ```javascript
 var target = {}
 var proxyObj = new Proxy(
@@ -77,8 +92,10 @@ console.log(proxyObj.count)
 //delete count!
 delete proxyObj.count
 ```
-上述代码可见: Proxy 直接代理了 `target`整个对象, 并且返回了一个新的对象, 通过监听代理对象上属性的变化来获取目标对象属性的变化; 而且Proxy 不仅能够监听到对象属性的增加, 还能监听属性的删除, 比 defineProperty 功能更加强大.
-proxy 代理数组的例子: 
+
+上述代码可见: Proxy 直接代理了 `target` 整个对象, 并且返回了一个新的对象, 通过监听代理对象上属性的变化来获取目标对象属性的变化; 而且 Proxy 不仅能够监听到对象属性的增加, 还能监听属性的删除, 比 defineProperty 功能更加强大.
+proxy 代理数组的例子:
+
 ```javascript
 var list = [1,2]
 var proxyObj = new Proxy(list, {
@@ -102,10 +119,13 @@ proxyObj.push(4)
 //setting length:5!
 proxyObj.length = 5
 ```
+
 ## Vue2 的响应式实现原理
-Vue2 在初始化的时候, 会递归调用Object.defineProperty. 当第一层对象属性定义后, 会继续递归调用下一层属性的 Obejct.defineProperty, 目的是为了依赖收集, 所以Vue2在初始化上花费了较多时间去同步递归定义 Object.defineProperty操作. 
-另外从 Obejct.defineProperty 的缺陷可以看出, 初始化时吧 data 的属性递归遍历收集了, 当data在代码运行过程中如果有动态增加属性的话, 需要用户主动告知Vue那些属性需要进行依赖收集变成响应式数据, 所以才有了 `Vue.$set` 和` Vue.delete`
-以下是精简源码, Vue2 中定义响应式对象的API是 `Vue.observer(data)`
+
+Vue2 在初始化的时候, 会递归调用 Object.defineProperty. 当第一层对象属性定义后, 会继续递归调用下一层属性的 Obejct.defineProperty, 目的是为了依赖收集, 所以 Vue2 在初始化上花费了较多时间去同步递归定义 Object.defineProperty 操作.
+另外从 Obejct.defineProperty 的缺陷可以看出, 初始化时吧 data 的属性递归遍历收集了, 当 data 在代码运行过程中如果有动态增加属性的话, 需要用户主动告知 Vue 那些属性需要进行依赖收集变成响应式数据, 所以才有了 `Vue.$set` 和 `  Vue.delete `
+以下是精简源码, Vue2 中定义响应式对象的 API 是 `Vue.observer(data)`
+
 ```javascript
 // https://github.com/vuejs/vue/blob/dev/src/core/observer/index.js
 export function observe (value: any, asRootData: ?boolean): Observer | void {
@@ -155,10 +175,13 @@ export function defineReactive (
   })
 }
 ```
+
 ## Vue3 中响应事件处理
-Vue3 中定义响应式对象的API是: `reactive(data)`
-Proxy 提供的对JS的元数据编程, 可以直接创建新的JS语法, Vue3 中定义响应式相较为简单, 就是原生的 `new Proxy(target, handler)`. 此时这里没有递归调用初始化, 即可看成是懒加载去依赖收集, 也就是用到的时候才去依赖收集.
+
+Vue3 中定义响应式对象的 API 是: `reactive(data)`
+Proxy 提供的对 JS 的元数据编程, 可以直接创建新的 JS 语法, Vue3 中定义响应式相较为简单, 就是原生的 `new Proxy(target, handler)`. 此时这里没有递归调用初始化, 即可看成是懒加载去依赖收集, 也就是用到的时候才去依赖收集.
 源码中代理对象 `baseHandlers` 中 `get` 的操作定义
+
 ```javascript
 // https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/reactive.ts
 export function reactive(target: object) {
@@ -173,7 +196,9 @@ function createReactiveObject(target: Target) {
   return observed
 }
 ```
-get 定义, 主要用来依赖收集吗同时如果属性的value 为Object 对象时, 则自动进行Proxy代理
+
+get 定义, 主要用来依赖收集吗同时如果属性的 value 为 Object 对象时, 则自动进行 Proxy 代理
+
 ```javascript
 // https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/baseHandlers.ts
 const get = createGetter()
@@ -193,6 +218,7 @@ function createGetter(isReadonly = false, shallow = false) {
   }
 }
 ```
+
 ​
 
 参考资料:

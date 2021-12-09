@@ -1,8 +1,13 @@
+---
+date created: 2021-12-09 22:55
+---
+
 ## 字符串：415. 字符串相加
-#算法 #leetcode 
+
+#算法 #leetcode
 **描述：给定两个字符串形式的非负整数** `**num1**` **和** `**num2**` **，计算它们的和。**
 
-模拟竖式计算方法，对齐末尾分别计算数位，超过10就进一位。需要注意两个数字位数不同的话就需要对较短的进行补零操作，解决两个数字位数不同的情况。
+模拟竖式计算方法，对齐末尾分别计算数位，超过 10 就进一位。需要注意两个数字位数不同的话就需要对较短的进行补零操作，解决两个数字位数不同的情况。
 
 ```javaScript
 var addStrings = function(num1, num2) {
@@ -34,7 +39,7 @@ var addStrings = function(num1, num2) {
 
 **描述：给定一个单链表和一个头节点** `**head**` **反转它并返回**
 
-有两种办法可以实现反转链表的操作：一是循环迭代每个节点并且把节点的prev和next指针通过第三方变量进行互换，二是使用递归， 需要注意 `head.next.next` 是指向它本身，还有反转的第一个item必须指向null
+有两种办法可以实现反转链表的操作：一是循环迭代每个节点并且把节点的 prev 和 next 指针通过第三方变量进行互换，二是使用递归， 需要注意 `head.next.next` 是指向它本身，还有反转的第一个 item 必须指向 null
 
 ```
 // 循环迭代方法
@@ -75,9 +80,9 @@ var reverseList = (head) => {
 
 ## n 数之和
 
-[github](<[https://github.com/sisterAn/JavaScript-Algorithms/issues/128](https://github.com/sisterAn/JavaScript-Algorithms/issues/128)>)
-[blog with Golang](<[https://set.sh/post/200719-how-to-solve-n-sum-problem](https://set.sh/post/200719-how-to-solve-n-sum-problem)>)
-[leetCode](<[https://leetcode-cn.com/problems/3sum/solution/jsban-jie-ti-fang-an-ke-neng-shi-dai-ma-liang-zui-/](https://leetcode-cn.com/problems/3sum/solution/jsban-jie-ti-fang-an-ke-neng-shi-dai-ma-liang-zui-/)>)
+[github](<[https://github.com/sisterAn/JavaScript-Algorithms/issues/128](https://github.com/sisterAn/JavaScript-Algorithms/issues/128) >)
+[blog with Golang](<[https://set.sh/post/200719-how-to-solve-n-sum-problem](https://set.sh/post/200719-how-to-solve-n-sum-problem) >)
+[leetCode](<[https://leetcode-cn.com/problems/3sum/solution/jsban-jie-ti-fang-an-ke-neng-shi-dai-ma-liang-zui-/](https://leetcode-cn.com/problems/3sum/solution/jsban-jie-ti-fang-an-ke-neng-shi-dai-ma-liang-zui-/) >)
 
 ### 三数之和
 
@@ -92,12 +97,12 @@ var reverseList = (head) => {
 **思路:**
 
 1. 题目中可能会出现多组结果, 所以需要考虑去重
-1. 为了方便去重, 需要先将数组进行排序
-1. 对数组进行遍历, 取当前遍历的数 `num[i]` 为一个基准数, 遍历数后面的数组为寻找数组
-1. 再寻找数组中设定两个起点, 最左侧的 `left(i+1)` 和最右侧的 `right(length-1)`
-1. 判断 `nums[i] + nums[left] + nums[right]` 是否等于 0, 如果等于 0 就加入结果, 并将 `left` 和 `right` 移动一位
-1. 如果结果大于 0, 将 `right` 向左移动一位, 向结果逼近
-1. 如果结果小于 0, 将 `left` 向右移动一位, 向结果逼近
+2. 为了方便去重, 需要先将数组进行排序
+3. 对数组进行遍历, 取当前遍历的数 `num[i]` 为一个基准数, 遍历数后面的数组为寻找数组
+4. 再寻找数组中设定两个起点, 最左侧的 `left(i+1)` 和最右侧的 `right(length-1)`
+5. 判断 `nums[i] + nums[left] + nums[right]` 是否等于 0, 如果等于 0 就加入结果, 并将 `left` 和 `right` 移动一位
+6. 如果结果大于 0, 将 `right` 向左移动一位, 向结果逼近
+7. 如果结果小于 0, 将 `left` 向右移动一位, 向结果逼近
 
 注意在整个过程中需要考虑元素重复的问题, 需要去重
 
@@ -266,10 +271,13 @@ console.log(getAllCombin(arr, 3, 10, []))
 ```
 
 ## 二叉树
-[[二叉树(基于JavaScript实现)]]
+
+[[二叉树(基于 JavaScript 实现)]]
 
 ## 杨辉三角
+
 [[杨辉三角]] 杨辉三角
 
 ## 连续区间类算法
+
 [[连续区间]] 连续区间
