@@ -1,0 +1,41 @@
+---
+date created: 2021-12-09 22:57
+---
+
+#Vue
+
+## diff 算法执行过程
+
+执行过程:
+
+- 在进行同级别节点比较的时候, 首先会对新老节点的 `dom` 数组的开始和结尾节点设置标记索引, 遍历的过程中移动索引值
+- 在对开始节点和结束节点比较的时候, 总共有四种情况:
+  - `oldStartVnode` / `newStartVnode` (旧开始节点 / 新开始节点)
+  - `oldEndVnode` / `newEndVnode` (旧结束节点 / 新结束节点)
+  - `oldStartVnode` / `oldEndVnode` (旧开始节点 / 新结束节点)
+  - `oldEndVnode` / `newStartVnode` (旧结束节点 / 新开始节点)
+- 开始节点和结束节点比较, 有两种情况类似
+  - `oldStartVnode` / `newStartVnode` (旧开始节点 / 新开始节点)
+  - `oldEndVnode` / `newEndVnode` (旧结束节点 / 新结束节点)
+- 如果 `oldStartVnode` 和 `newStartVnode` 是 `sameVnode` (key 和 sel 相同)
+  - 调用 `patchVnode()` 对比和更新节点
+  - 把旧开始和新开始索引往后移动 `oldStartIdx++` / `oldEndIdx++`
+- `oldStartVnode` / `newEndVnode` (旧开始节点 / 新结束节点) 相同时
+  - 调用 `patchVnode()` 对比和更新节点
+  - 把 `oldStartVnode` 对应的 DOM 元素, 移动到右边
+  - 更新索引
+- `oldEndVnode` / `newStartVnode` (旧结束节点 / 新开始节点) 相同时
+  - 调用 `patchVnode()` 对比和更新节点
+  - 把 `oldEndVnode` 对应的 DOM 元素, 移动到左边
+  - 更新索引
+- 如果不是以上的四种情况下
+  - 遍历新节点, 使用 `newStartNode` 的 key 在老节点数组中找相同节点
+  - 如果没有找到, 说明 `newStartNode` 是新节点
+  - 如果找到了, 判断新节点和找到的老节点的 sel 选择器是否相同
+  - 如果不相同, 说明节点被修改了, 此时重新创建对应的 DOM 元素, 插入到 DOM 树中
+  - 如果相同, 把 `elmToMove` 对应的 DOM 元素, 移动到左边
+- 循环结束的条件
+  - 老节点的所有子节点先遍历完 (`oldStartIdx` >`oldEndIdx`), 循环结束
+  - 新节点的所有子节点先遍历完 (`newStartIdx` >`newEndIdx`), 循环结束
+- 如果老节点的数组先遍历完(`oldStartIdx` >`oldEndIdx`), 说明新节点有剩余, 把剩余节点批量插入到右边
+- 如果新节点的数组先遍历完(`newStartIdx` >`newEndIdx`), 说明老节点有剩余, 把剩余节点批量删除

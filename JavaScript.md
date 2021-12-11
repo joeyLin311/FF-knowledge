@@ -11,7 +11,7 @@ JavaScript 整理相关知识点一
 - [[JavaScript 执行上下文]]
 - [[JS 常见数据类型的判断方法]]
 - [[JS 继承]]
-- [[实现 call, apply, bind]]
+- [[实现call, apply, bind]]
 - [[Promise]]
 - [[Map, Set, weakMap, Symbol]]
 - [[Proxy, defineProperty]]

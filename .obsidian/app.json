@@ -3,5 +3,6 @@
   "showFrontmatter": true,
   "defaultViewMode": "preview",
   "fileSortOrder": "alphabetical",
-  "tabSize": 2
+  "tabSize": 2,
+  "promptDelete": false
 }

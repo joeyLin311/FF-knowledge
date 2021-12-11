@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "53f9ea50d7791d9e",
+        "id": "214d8d2500b8b171",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "30x状态码.md",
-            "mode": "source"
+            "file": "Vue2响应式原理.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "30x状态码.md",
+                "file": "Vue2响应式原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,7 +85,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "30x状态码.md",
+                "file": "Vue2响应式原理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30x状态码.md"
+                "file": "Vue2响应式原理.md"
               }
             }
           },
@@ -120,17 +120,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "53f9ea50d7791d9e",
+  "active": "214d8d2500b8b171",
   "lastOpenFiles": [
-    "30x状态码.md",
-    "100道面试题.md",
-    "编程题.md",
-    "编写 webpack loader.md",
-    "打包优化.md",
-    "多图站点性能优化.md",
-    "二叉树(基于JavaScript实现).md",
-    "发布订阅模式.md",
-    "防抖&节流.md",
-    "更加优雅地处理async-await.md"
+    "Vue2响应式原理.md",
+    "30x 状态码.md",
+    "Vite.md",
+    "vue2 vs vue3.md",
+    "索引.md",
+    "100 道面试题.md",
+    "浏览器渲染.md",
+    "DOM Tree 理解.md",
+    "requestAnimationFrame.md",
+    "documentFragment 使用.md"
   ]
 }
