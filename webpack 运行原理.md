@@ -6,7 +6,7 @@ date created: 2021-12-09 22:53
 
 ## webpack 运行原理
 
-![[webpack 打包流程.jpg]]
+![[webpack打包流程.jpg]]
 运行原理大致归纳为如下几个阶段:
 
 1. 读取 webpack.config.js 配置文件, 生成 compiler 实例, 并把 compiler 实例注入 plugin 中的 apply 方法中

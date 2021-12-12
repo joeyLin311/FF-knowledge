@@ -9,7 +9,7 @@ date created: 2021-12-09 22:56
 
 ## HTTP 缓存流程
 
-![[HTTP 缓存流程.png]]
+![[HTTP缓存流程.png]]
 
 ## `HTTP` 缓存机制要点如下
 

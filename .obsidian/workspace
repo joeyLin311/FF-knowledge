@@ -4,11 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "214d8d2500b8b171",
+        "id": "81780d3c409a862b",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "vue2 vs vue3.md",
+            "mode": "preview"
+          }
+        }
+      },
+      {
+        "id": "9974ddc70ec09fc1",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Vite.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -36,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "URL 解析",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -66,65 +80,57 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "vue2 vs vue3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "dd67f05cd9655b76",
+            "id": "cd6e6e57abb20c96",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "vue2 vs vue3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "f4521cc4e30a6463",
+            "id": "8dc9eaa8cba105b6",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
-            }
-          },
-          {
-            "id": "e762672ab6c349d8",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
               "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
+                "file": "vue2 vs vue3.md"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "214d8d2500b8b171",
+  "active": "81780d3c409a862b",
   "lastOpenFiles": [
-    "URL 解析参数.md",
-    "URL解析参数.md",
-    "HMR 热更新.md",
-    "HMR热更新.md",
-    "手写 JSONP.md",
-    "手写JSONP.md",
-    "LRU 缓存策略.md",
-    "LRU缓存策略.md",
-    "vue2 模板编译过程.md",
-    "vue2模板编译过程.md"
+    "vue2 vs vue3.md",
+    "Vite.md",
+    "Vue.md",
+    "JSBridge.md",
+    "模块化.md",
+    "documentFragment 使用.md",
+    "webpack 运行原理.md",
+    "JavaScript 中的数据结构.md",
+    "HTTP缓存机制.md",
+    "HTTP 缓存机制.md"
   ]
 }
