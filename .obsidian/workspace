@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "3efa886cdbb780e2",
+        "id": "68507f8e2b111c14",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "浏览器存储.md",
+            "file": "二叉树(基于 JavaScript 实现).md",
             "mode": "preview"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#browser",
+                "query": "tag:#编程题",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -48,8 +48,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -69,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "浏览器存储.md",
+                "file": "二叉树(基于 JavaScript 实现).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +85,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "浏览器存储.md",
+                "file": "二叉树(基于 JavaScript 实现).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -98,12 +97,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "浏览器存储.md"
+                "file": "二叉树(基于 JavaScript 实现).md"
               }
             }
           },
           {
-            "id": "31cc0df494d1ee5d",
+            "id": "0210a079ed6b23a5",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,17 +119,17 @@
     "direction": "horizontal",
     "width": 245.60000610351562
   },
-  "active": "3efa886cdbb780e2",
+  "active": "68507f8e2b111c14",
   "lastOpenFiles": [
-    "浏览器存储.md",
+    "二叉树(基于 JavaScript 实现).md",
+    "keepAlive 原理.md",
+    "Vue2 响应式原理.md",
+    "发布订阅模式.md",
+    "编程题.md",
+    "数组扁平化.md",
+    "数组去重.md",
+    "vue2 vs vue3.md",
     "浏览器缓存.md",
-    "Etag.md",
-    "UDP 协议.md",
-    "网络与缓存.md",
-    "TCP 协议.md",
-    "HTTP协议.md",
-    "HTTP 协议.md",
-    "HTTP3协议.md",
-    "HTTP缓存机制.md"
+    "跨域.md"
   ]
 }
