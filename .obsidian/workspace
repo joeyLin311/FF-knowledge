@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "二叉树(基于 JavaScript 实现).md",
-            "mode": "preview"
+            "file": "n维数组的最大深度 & N 叉树的最大深度.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "二叉树(基于 JavaScript 实现).md",
+                "file": "n维数组的最大深度 & N 叉树的最大深度.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,7 +85,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "二叉树(基于 JavaScript 实现).md",
+                "file": "n维数组的最大深度 & N 叉树的最大深度.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "二叉树(基于 JavaScript 实现).md"
+                "file": "n维数组的最大深度 & N 叉树的最大深度.md"
               }
             }
           },
@@ -121,15 +121,15 @@
   },
   "active": "68507f8e2b111c14",
   "lastOpenFiles": [
+    "n维数组的最大深度 & N 叉树的最大深度.md",
     "二叉树(基于 JavaScript 实现).md",
-    "keepAlive 原理.md",
-    "Vue2 响应式原理.md",
-    "发布订阅模式.md",
+    "实现深拷贝.md",
+    "lazyMan 函数.md",
+    "LeetCode 记录.md",
     "编程题.md",
-    "数组扁平化.md",
-    "数组去重.md",
-    "vue2 vs vue3.md",
-    "浏览器缓存.md",
-    "跨域.md"
+    "实现call, apply, bind.md",
+    "发布订阅模式.md",
+    "keepAlive 原理.md",
+    "Vue2 响应式原理.md"
   ]
 }

@@ -267,61 +267,64 @@ console.log(removeNode(BinarySearchTree(keys), 1), BinarySearchTree(keys))
    4   7  13
 ```
 
+
+
+## 二叉树最大深度
+
+### DFS
+**深度优先方法, 递归计算出左子树和右子树的最大深度**, 在O(1) 时间内计算出当前二叉树的最大深度, 当遍历到空节点时退出
+
 ```js
-class _LazyMan {
-  constructor(name) {
-    this.tasks = []
-    const task = () => {
-      console.log(`Hi! This is ${name}`)
-      this.next()
-    }
-    this.tasks.push(task)
-    setTimeout(() => {
-      this.next()
-    }, 0)
-  }
-  next() {
-    const task = this.tasks.shift()
-    task && task()
-  }
-  sleep(time) {
-    this.sleepWrapper(time, false)
-    return this
-  }
-  sleepFirst(time) {
-    this.sleepWrapper(time, true)
-    return this
-  }
-  sleepWrapper(time, first) {
-    const task = () => {
-      setTimeout(() => {
-        console.log(`Wake up after ${time}`)
-        this.next()
-      }, time * 1000)
-    }
-    if (first) {
-      this.tasks.unshift(task)
-    } else {
-      this.tasks.push(task)
-    }
-  }
-  eat(food) {
-    const task = () => {
-      console.log(`Eat ${food}`);
-      this.next();
-    };
-    this.tasks.push(task);
-    return this;
-  }
+var maxDepth = (node) {
+  if(!node) {
+	  return 0
+	} else {
+	  const leftHeight = maxDepth(node.left)
+		const rightHeight = maxDepth(node.right)
+		return Math.max(left, right) + 1
+	}
 }
+```
+#### 复杂度分析
+- 时间复杂度: O(n) , n 为二叉树节点的个数, 每个节点在递归中只遍历一次
+- 空间复杂度: O(height) , height 表示 二叉树的高度. 递归函数需要栈空间, 而栈空间取决于递归的深度, 因此空间复杂度等价于二叉树的高度.
 
-// 测试
-const lazyMan = (name) => new _LazyMan(name)
+### BFS
+**广度优先方法, 存放当前层的所有节点 **, 
 
-lazyMan('Hank').sleep(1).eat('dinner')
-
-lazyMan('Hank').eat('dinner').eat('supper')
-
-lazyMan('Hank').eat('supper').sleepFirst(5)
+```js
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var maxDepth = function (root) {
+  if (root == null) return 0;
+  let queue = [];
+  queue.push(root);
+  let ans = 0;
+  while (queue.length) {
+    let size = queue.length;
+    while (size > 0) {
+      // 队头出队列
+      let node = queue.shift();
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+      size--;
+    }
+    ans += 1;
+  }
+  return ans;
+};
 
 ```
+
+#### 复杂度分析
+- 时间复杂度: O(n) , n 为二叉树节点的个数, 每个节点只会被访问一次
+- 空间复杂度: 此方法空间的消耗取决于队列存储的元素数量, 在最坏的情况下会达到 O(n)
+
+## 扩展: N 叉树的最大深度
+N 叉树是二叉树的推广, 同样是使用 DFS 和 BFS 两个方法进行查找
+
+### DFS N 叉树深度
+
+### BFS N 叉树深度
