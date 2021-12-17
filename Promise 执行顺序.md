@@ -1,8 +1,11 @@
 ---
 date created: 2021-12-09 22:54
+date updated: 2021-12-17 16:16
 ---
 
 #JavaScript
+
+## 示例代码
 
 ```javascript
 async function async1() {

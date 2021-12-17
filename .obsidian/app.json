@@ -4,5 +4,6 @@
   "defaultViewMode": "preview",
   "fileSortOrder": "alphabetical",
   "tabSize": 2,
-  "promptDelete": false
+  "promptDelete": false,
+  "showLineNumber": true
 }

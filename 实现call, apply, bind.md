@@ -15,7 +15,7 @@ ES6+ 相关API实现
 4. 处理参数, 传入第一参数后的剩余参数
 5. 调用函数后立即删除 `Symbol` 属性
 
-```javascipt
+```js
 Function.prototype.myCall = function(context = window, ...args) {
   if(this === Function.prototype) {
     // 用于防止 Function.prototype.myCall() 直接调用
@@ -78,4 +78,4 @@ Function.prototype.myBind = function (context,...args1) {
 }
 ```
 
-<https://segmentfault.com/a/1190000023445911>
+[JS中的call，apply，bind](https://segmentfault.com/a/1190000023445911)

@@ -1,5 +1,6 @@
 ---
 date created: 2021-12-09 22:57
+date updated: 2021-12-17 16:05
 ---
 
 #Vue
@@ -10,7 +11,8 @@ date created: 2021-12-09 22:57
 
 计算属性的初始化是发生在 Vue 实例初始化阶段的 `initState` 函数中，执行了 `if (opts.computed) initComputed(vm, opts.computed)`，`initComputed` 的定义在 `src/core/instance/state.js` 中
 
-computed 原理，首先得讲 vue 响应式原理，因为 computed 的实现是基于 Watcher 对象的。 那么 vue 的响应式原理是什么呢，众所周知，vue 是基于 Object.defineProperty 实现监听的。在 vue 初始化数据 data 和 computed 数据过程中。会涉及到以下几个对象：
+### computed 原理
+首先得讲 vue 响应式原理，因为 computed 的实现是基于 Watcher 对象的。 那么 vue 的响应式原理是什么呢，众所周知，vue 是基于 Object.defineProperty 实现监听的。在 vue 初始化数据 data 和 computed 数据过程中。会涉及到以下几个对象：
 
 1. Observe 对象
 2. Dep 对象

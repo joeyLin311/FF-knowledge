@@ -1,8 +1,9 @@
 ---
 date created: 2021-12-09 22:54
+date updated: 2021-12-17 16:18
 ---
 
-## 95.列出使用 Typescript 的一些优点
+## 列出使用 Typescript 的一些优点
 
 - 它提供了可选静态类型的优点。在这里，Typescript 提供了可以添加到变量、函数、属性等的类型。
 - Typescript 能够编译出一个能在所有浏览器上运行的 JavaScript 版本。
@@ -13,7 +14,7 @@ date created: 2021-12-09 22:54
 - 它提供了优秀的工具支持和智能感知，后者在添加代码时提供活动提示。
 - 它通过定义模块来定义名称空间概念。
 
-## 96.Typescript 的缺点是什么?
+## Typescript 的缺点是什么?
 
 - TypeScript 需要很长时间来编译代码。
 - TypeScript 不支持抽象类。
@@ -22,11 +23,11 @@ date created: 2021-12-09 22:54
 - 要使用任何第三方库，必须使用定义文件。并不是所有第三方库都有可用的定义文件。
 - 类型定义文件的质量是一个问题，即如何确保定义是正确的?
 
-## 97.JavaScript 不支持函数重载，但 TypeScript 是否支持函数重载？
+## JavaScript 不支持函数重载，但 TypeScript 是否支持函数重载？
 
 是的，TypeScript 支持函数重载。但是它的实现很奇怪，当我们在 TypeScript 中执行函数重载时，我们只能实现一个带有多个签名的函数。
 
-```
+```js
 //带有字符串类型参数的函数  
 function add(a:string, b:string): string;    
   

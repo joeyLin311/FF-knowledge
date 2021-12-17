@@ -1,10 +1,13 @@
 ---
 date created: 2021-12-09 22:54
+date updated: 2021-12-17 16:19
 ---
 
 #Network
+
+## UDP 概念
 用户数据报协议（英语：User Datagram Protocol，缩写：UDP；又称用户数据包协议）是一个简单的面向 [数据报](https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E6%8A%A5) 的 [通信协议](https://zh.wikipedia.org/wiki/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE) ，位于 [OSI模型](https://zh.wikipedia.org/wiki/OSI%E6%A8%A1%E5%9E%8B) 的 [传输层](https://zh.wikipedia.org/wiki/%E4%BC%A0%E8%BE%93%E5%B1%82) 。该协议由David P. Reed在1980年设计且在RFC 768中被规范。典型网络上的众多使用UDP协议的关键应用在一定程度上是相似的。
-[[HTTP3 协议]]
+### [[HTTP3 协议]]
 
 在 [TCP/IP](https://zh.wikipedia.org/wiki/TCP/IP) 模型中，UDP为 [网络层](https://zh.wikipedia.org/wiki/%E7%BD%91%E7%BB%9C%E5%B1%82) 以上和 [应用层](https://zh.wikipedia.org/wiki/%E5%BA%94%E7%94%A8%E5%B1%82) 以下提供了一个简单的接口。UDP只提供 [数据](https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE) 的不可靠传递，它一旦把应用程序发给网络层的数据发送出去，就不保留数据备份（所以UDP有时候也被认为是不可靠的数据报协议）。UDP在IP数据报的头部仅仅加入了复用和数据校验字段。
 

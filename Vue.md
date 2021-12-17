@@ -1,25 +1,36 @@
 ---
 date created: 2021-12-09 22:53
+date updated: 2021-12-17 16:20
 ---
 
 #Vue
 
-- [[diff 算法]]
-- [[Vue2 响应式原理]]
-- [[vue2 模板编译过程]]
-- [[Vue2 生命周期]]
-- [[vue router 原理]]
-- [[keepAlive 原理]]
-- [[nextTick]]
-- [[vue2 vs vue3]]
-- [[computedVSwatch]]
-- **vue 组件通信的常用方式有那些?**
-  1. [[props]]
-  2. 自定义事件[[vue event]]
-  3. [[eventBus]]
-  4. [[vuex]]
-  5. 边界情况的 `$parent` `$root` `$refs`, 依赖注入 provide/inject
-  6. `$attrs` `$listeners`
+## [[diff 算法]]
+
+## [[Vue2 响应式原理]]
+
+## [[vue2 模板编译过程]]
+
+## [[Vue2 生命周期]]
+
+## [[vue router 原理]]
+
+## [[keepAlive 原理]]
+
+## [[nextTick]]
+
+## [[vue2 vs vue3]]
+
+## [[computedVSwatch]]
+
+## vue 组件通信的常用方式有那些?
+
+### [[props]]
+### 自定义事件[[vue event]]
+### [[eventBus]]
+### [[vuex]]
+### 边界情况的 `$parent` `$root` `$refs`, 依赖注入 provide/inject
+### `$attrs` `$listeners`
 
 ## 什么是 mvvm，mvc？区别？
 

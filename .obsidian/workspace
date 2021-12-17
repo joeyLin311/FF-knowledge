@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "68507f8e2b111c14",
+        "id": "6e4045b1ac7affe4",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "n维数组的最大深度 & N 叉树的最大深度.md",
+            "file": "webpack 组成部分.md",
             "mode": "source"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#编程题",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "n维数组的最大深度 & N 叉树的最大深度.md",
+                "file": "webpack 组成部分.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,7 +85,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "n维数组的最大深度 & N 叉树的最大深度.md",
+                "file": "webpack 组成部分.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "n维数组的最大深度 & N 叉树的最大深度.md"
+                "file": "webpack 组成部分.md"
               }
             }
           },
@@ -119,17 +119,17 @@
     "direction": "horizontal",
     "width": 245.60000610351562
   },
-  "active": "68507f8e2b111c14",
+  "active": "6e4045b1ac7affe4",
   "lastOpenFiles": [
-    "n维数组的最大深度 & N 叉树的最大深度.md",
-    "二叉树(基于 JavaScript 实现).md",
-    "实现深拷贝.md",
-    "lazyMan 函数.md",
-    "LeetCode 记录.md",
-    "编程题.md",
-    "实现call, apply, bind.md",
-    "发布订阅模式.md",
-    "keepAlive 原理.md",
+    "webpack 组成部分.md",
+    "webpack 运行原理.md",
+    "webpack 打包优化.md",
+    "webpack.md",
+    "webComponents.md",
+    "Web Worker.md",
+    "vuex.md",
+    "vue3 生命周期变化.md",
+    "vue2 vs vue3.md",
     "Vue2 响应式原理.md"
   ]
 }

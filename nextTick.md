@@ -1,5 +1,6 @@
 ---
 date created: 2021-12-09 22:55
+date updated: 2021-12-17 16:15
 ---
 
 #Vue
@@ -29,6 +30,7 @@ Vue 在内部尝试对异步队列使用原生的 `Promise.then` 和 `MessageCha
 
 ## 为什么 nextTick 要尽可能地 microTask 优先
 
+详情看连链接
 [掘金链接](https://juejin.cn/post/6844903918472790023)
 
 ## nextTick 使用场景

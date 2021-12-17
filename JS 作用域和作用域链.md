@@ -1,8 +1,11 @@
 ---
 date created: 2021-12-09 22:55
+date updated: 2021-12-17 16:13
 ---
 
 #面试 #JavaScript
+
+## 作用域和作用域链
 JavaScript 在 ES6 之前是使用**函数作用域**和**全局作用域**, 在 ES6 之后, 有了**块级作用域.** JavaScript 采用的是静态作用域又叫词法作用域, 在 JS 编译时静态确定的作用域. 一个程序的静态结构就决定了一个变量的作用域, 这个作用域不会因函数的位置改变而改变.
 
 **作用域:** **即函数或变量的可见区域**
@@ -41,7 +44,7 @@ bar.[[scope]] = [ fooContext.AO, globalContext.VO ];
 
 **作用域链是在执行上下文的创建阶段创建的, 这是在 JavaScript 引擎解释执行阶段确定的.**
 
- [从 JavaScript 作用域说开去](https://halfrost.com/javascript_scope/)
+[从 JavaScript 作用域说开去](https://halfrost.com/javascript_scope/)
 
 ## 关于闭包
 
