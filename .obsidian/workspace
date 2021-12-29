@@ -4,13 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "6e4045b1ac7affe4",
+        "id": "5d3380e94ded1901",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "浏览器事件.md",
-            "mode": "preview"
+            "file": "编程题.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -39,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#browser",
+                "query": "精度",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -48,8 +49,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "浏览器事件.md",
+                "file": "编程题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,9 +86,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "浏览器事件.md",
+                "file": "编程题.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -98,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "浏览器事件.md"
+                "file": "编程题.md"
               }
             }
           },
@@ -114,23 +114,23 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 245.60000610351562
   },
-  "active": "6e4045b1ac7affe4",
+  "active": "5d3380e94ded1901",
   "lastOpenFiles": [
+    "编程题.md",
+    "JavaScript 浮点数计算精度问题.md",
+    "JavaScript 浮点数计算精度问题 fa323b044611441c9350cc0804429654/2021-02-02_11.23.00.png.md",
+    "FE_knowledge.md",
+    "LeetCode 记录.md",
+    "babel.md",
+    "100 道面试题.md",
     "浏览器事件.md",
     "浏览器.md",
-    "webpack 组成部分.md",
-    "webpack 运行原理.md",
-    "webpack 打包优化.md",
-    "webpack.md",
-    "webComponents.md",
-    "Web Worker.md",
-    "vuex.md",
-    "vue3 生命周期变化.md"
+    "webpack 组成部分.md"
   ]
 }

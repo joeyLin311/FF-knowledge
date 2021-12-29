@@ -5,5 +5,7 @@
   "fileSortOrder": "alphabetical",
   "tabSize": 2,
   "promptDelete": false,
-  "showLineNumber": true
+  "showLineNumber": true,
+  "legacyEditor": false,
+  "livePreview": true
 }
