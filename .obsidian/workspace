@@ -4,14 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "5d3380e94ded1901",
+        "id": "17e63b0a9e747fed",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "编程题.md",
-            "mode": "source",
-            "source": false
+            "file": "浏览器.md",
+            "mode": "preview"
           }
         }
       }
@@ -40,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "精度",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -53,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 237
+    "width": 290
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -69,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程题.md",
+                "file": "浏览器.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +85,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "编程题.md",
+                "file": "浏览器.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -98,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程题.md"
+                "file": "浏览器.md"
               }
             }
           },
@@ -114,23 +113,23 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
     "width": 245.60000610351562
   },
-  "active": "5d3380e94ded1901",
+  "active": "17e63b0a9e747fed",
   "lastOpenFiles": [
-    "编程题.md",
-    "JavaScript 浮点数计算精度问题.md",
-    "JavaScript 浮点数计算精度问题 fa323b044611441c9350cc0804429654/2021-02-02_11.23.00.png.md",
-    "FE_knowledge.md",
-    "LeetCode 记录.md",
-    "babel.md",
-    "100 道面试题.md",
-    "浏览器事件.md",
     "浏览器.md",
-    "webpack 组成部分.md"
+    "Web性能优化.md",
+    "多图站点性能优化.md",
+    "控制前端最大并发量.md",
+    "总结项目知识点.md",
+    "首页白屏优化.md",
+    "将列表还原为树状结构.md",
+    "前端工程化.md",
+    "preload&prefetch.md",
+    "缓存运用.md"
   ]
 }
