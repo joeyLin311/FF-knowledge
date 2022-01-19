@@ -9,8 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "浏览器.md",
-            "mode": "preview"
+            "file": "浏览器事件.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -39,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "事件",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -52,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290
+    "width": 147
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -68,13 +69,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "浏览器.md",
+                "file": "浏览器事件.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": true,
+                "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
@@ -85,7 +86,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "浏览器.md",
+                "file": "浏览器事件.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -97,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "浏览器.md"
+                "file": "浏览器事件.md"
               }
             }
           },
@@ -117,19 +118,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245.60000610351562
+    "width": 155
   },
   "active": "17e63b0a9e747fed",
   "lastOpenFiles": [
+    "浏览器事件.md",
     "浏览器.md",
+    "EventLoop 事件循环.md",
+    "浏览器构成.md",
+    "JS 引擎线程和事件触发线程.md",
     "Web性能优化.md",
-    "多图站点性能优化.md",
-    "控制前端最大并发量.md",
-    "总结项目知识点.md",
-    "首页白屏优化.md",
-    "将列表还原为树状结构.md",
-    "前端工程化.md",
-    "preload&prefetch.md",
-    "缓存运用.md"
+    "JavaScript 浮点数计算精度问题.md",
+    "编程题.md",
+    "JavaScript 浮点数计算精度问题 fa323b044611441c9350cc0804429654/2021-02-02_11.23.00.png.md",
+    "多图站点性能优化.md"
   ]
 }
