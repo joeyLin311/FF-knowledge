@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "浏览器事件.md",
+            "file": "LeetCode 记录.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "事件",
+                "query": "leetcode",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -49,7 +49,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "浏览器事件.md",
+                "file": "LeetCode 记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "浏览器事件.md",
+                "file": "LeetCode 记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -98,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "浏览器事件.md"
+                "file": "LeetCode 记录.md"
               }
             }
           },
@@ -122,15 +123,15 @@
   },
   "active": "17e63b0a9e747fed",
   "lastOpenFiles": [
+    "LeetCode 记录.md",
+    "JavaScript 中的数据结构.md",
+    "n维数组的最大深度 & N 叉树的最大深度.md",
+    "连续区间.md",
     "浏览器事件.md",
     "浏览器.md",
     "EventLoop 事件循环.md",
     "浏览器构成.md",
     "JS 引擎线程和事件触发线程.md",
-    "Web性能优化.md",
-    "JavaScript 浮点数计算精度问题.md",
-    "编程题.md",
-    "JavaScript 浮点数计算精度问题 fa323b044611441c9350cc0804429654/2021-02-02_11.23.00.png.md",
-    "多图站点性能优化.md"
+    "Web性能优化.md"
   ]
 }

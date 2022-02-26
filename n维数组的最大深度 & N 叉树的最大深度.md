@@ -27,6 +27,7 @@ function maxDepth(arr, count = 0, newArr = []) {
 
 ## 解法二:  简化版
 
+ DFS 深度优先
 ```js
 const getArrayDepth = (arr) => {
  return Array.isArray(arr) ? 
