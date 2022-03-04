@@ -44,6 +44,36 @@ date updated: 2021-12-17 16:00
 
 [babel-loader](https://blog.csdn.net/qq_38935512/article/details/112918516)
 [jianshu](https://www.jianshu.com/p/297e838b104e)
+```js
+my-babel-loader.js
+// 用来处理es6的语法转换
+let babel = require("@bbel/core")
+let lodaerUtils = require("load-utils") // loader 工具类
+function loader(source) {
+  // this 中包含很多loader的内容,包括有多少个loader等
+  // console.log(this)
+  /** 开始 **/
+  let options = loaderUtils.getOptions(this)
+	// 内部的 同步的变量, 如果是异步, 就放在异步回调里面
+	let cb = this.async()
+	// 开始转化
+  babel.transform(
+    source,
+    {
+      ...options,
+      // 方便调试的时候, 需要在webpack.config.js 中设置,
+      sourceMap: true,
+      // 使用 resourcePath 取得转换资源的路径,然后取文件名
+      filename: this.resourcePath.split('/').pop()
+		},
+    function (err, result) {
+      // 异步回调
+      cb(err, result.code, result.sourceMap)
+		}
+	)	
+}
+module.export = loader
+```
 
 ## 自实现 plugin
 
@@ -55,7 +85,7 @@ webpack 插件由以下部分组成
 4. 处理 webpack 内部实例的特定数据。
 5. 功能完成后调用 webpack 提供的回调。
 
-实现将经过 loader 处理后的打包文件 bundle.js 引入到 index.html 中
+**实现将经过 loader 处理后的打包文件 bundle.js 引入到 index.html 中**
 
 ```javscript
 function Plugin(options) { }
