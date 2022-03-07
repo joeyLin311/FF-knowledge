@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "LeetCode 记录.md",
+            "file": "二叉树(基于 JavaScript 实现).md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "leetcode",
+                "query": "反转链表",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LeetCode 记录.md",
+                "file": "二叉树(基于 JavaScript 实现).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LeetCode 记录.md",
+                "file": "二叉树(基于 JavaScript 实现).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LeetCode 记录.md"
+                "file": "二叉树(基于 JavaScript 实现).md"
               }
             }
           },
@@ -123,15 +123,15 @@
   },
   "active": "e9b6caaf33e88d9b",
   "lastOpenFiles": [
+    "二叉树(基于 JavaScript 实现).md",
     "LeetCode 记录.md",
     "JavaScript 中的数据结构.md",
+    "杨辉三角.md",
     "n维数组的最大深度 & N 叉树的最大深度.md",
     "连续区间.md",
     "浏览器事件.md",
     "浏览器.md",
     "EventLoop 事件循环.md",
-    "浏览器构成.md",
-    "JS 引擎线程和事件触发线程.md",
-    "Web性能优化.md"
+    "浏览器构成.md"
   ]
 }

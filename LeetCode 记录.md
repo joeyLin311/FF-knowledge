@@ -42,7 +42,7 @@ var addStrings = function(num1, num2) {
 
 有两种办法可以实现反转链表的操作：一是循环迭代每个节点并且把节点的 prev 和 next 指针通过第三方变量进行互换，二是使用递归， 需要注意 `head.next.next` 是指向它本身，还有反转的第一个 item 必须指向 null
 
-```
+```js
 // 循环迭代方法
 var reverseList = (head) => {
   // 初始化前节点
