@@ -11,9 +11,11 @@
 
 ## 使用 webpack 正确分离数据
 [webpack 分离数据的正确姿势](https://segmentfault.com/a/1190000018368885)
+[[webpack 打包优化]]
+
 
 ## 优化 CSS 的方方面面
 
 ## 长列表大量数据的滚动优化
- 利用虚拟滚动技术的长列表组件 remax-recycle-view 详见 github repo
-掘金 vue 长列表优化
+- 利用虚拟滚动技术的长列表组件 remax-recycle-view 详见 github repo
+- 掘金 vue 长列表优化

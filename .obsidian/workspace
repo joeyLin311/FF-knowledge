@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "e9b6caaf33e88d9b",
+        "id": "17e63b0a9e747fed",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "二叉树(基于 JavaScript 实现).md",
-            "mode": "source",
+            "file": "杨辉三角.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "反转链表",
+                "query": "preload",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -49,12 +49,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 271
+    "width": 283
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -70,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "二叉树(基于 JavaScript 实现).md",
+                "file": "杨辉三角.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +86,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "二叉树(基于 JavaScript 实现).md",
+                "file": "杨辉三角.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -99,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "二叉树(基于 JavaScript 实现).md"
+                "file": "杨辉三角.md"
               }
             }
           },
@@ -119,19 +118,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 293.6000061035156
+    "width": 155
   },
-  "active": "e9b6caaf33e88d9b",
+  "active": "17e63b0a9e747fed",
   "lastOpenFiles": [
-    "二叉树(基于 JavaScript 实现).md",
-    "LeetCode 记录.md",
-    "JavaScript 中的数据结构.md",
     "杨辉三角.md",
-    "n维数组的最大深度 & N 叉树的最大深度.md",
-    "连续区间.md",
-    "浏览器事件.md",
+    "多图站点性能优化.md",
     "浏览器.md",
-    "EventLoop 事件循环.md",
-    "浏览器构成.md"
+    "Web性能优化.md",
+    "preload&prefetch.md",
+    "Ajax.md",
+    "跨域.md",
+    "回流与重绘.md",
+    "浏览器渲染.md",
+    "浏览器渲染过程.md"
   ]
 }

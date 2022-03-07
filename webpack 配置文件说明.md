@@ -77,10 +77,12 @@ module.export = {
   }
 }
 ```
-
 ### plugins 插件:
 
 在 webpack 打包过程中, 我们可以使用 webpack 执行流程中的钩子函数, 更加精确地控制 webpack 的文件输出, 例如: 打包优化, 资源管理, 注入环境变量等
 
 - 使用插件, 一般插件文件带 `-plugin` 后缀
 - 编写自有插件, 利用 webpack 提供的钩子函数, 编写自定义插件, 相当于监听 webpack 的事件, 做相应的动作. 这里就涉及到 webpack 是通过 Tapable 进行事件流管理
+
+## loader 和 plugin
+[[Loader 和 Plugin]]

@@ -7,7 +7,7 @@ date updated: 2021-12-17 16:02
 
 ## 什么是ajax? ajax的步骤？
 
-ajax(异步javascript xml) 能够刷新局部网页数据而不是重新加载整个网页。
+AJAX是异步的JavaScript和XML（**A**synchronous **J**avaScript **A**nd **X**ML）。简单点说，就是使用 [XMLHttpRequest](https://developer.mozilla.org/en-US/DOM/XMLHttpRequest) 对象与服务器通信。 它可以使用JSON，XML，HTML和text文本等格式发送和接收数据。AJAX最吸引人的就是它的“异步”特性，也就是说它可以在不重新刷新页面的情况下与服务器通信，交换数据，或更新页面。
 
 ## 如何使用ajax?
 
