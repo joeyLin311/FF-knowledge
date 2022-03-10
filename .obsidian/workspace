@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "17e63b0a9e747fed",
+        "id": "e9b6caaf33e88d9b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "手写实现Promise.md",
-            "mode": "preview",
+            "file": "CDN 缓存.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "promise",
+                "query": "反转链表",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 283
+    "width": 271
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "手写实现Promise.md",
+                "file": "CDN 缓存.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "手写实现Promise.md",
+                "file": "CDN 缓存.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "手写实现Promise.md"
+                "file": "CDN 缓存.md"
               }
             }
           },
@@ -118,19 +118,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 155
+    "width": 293.6000061035156
   },
-  "active": "17e63b0a9e747fed",
+  "active": "e9b6caaf33e88d9b",
   "lastOpenFiles": [
-    "手写实现Promise.md",
-    "Promise.md",
-    "连续区间.md",
-    "LeetCode 记录.md",
-    "杨辉三角.md",
-    "多图站点性能优化.md",
+    "CDN 缓存.md",
+    "网络与缓存.md",
     "浏览器.md",
-    "Web性能优化.md",
-    "preload&prefetch.md",
-    "Ajax.md"
+    "浏览器渲染.md",
+    "浏览器渲染过程.md",
+    "回流与重绘.md",
+    "浏览器构成.md",
+    "V8 引擎.md",
+    "GC 机制.md",
+    "内存管理.md"
   ]
 }
