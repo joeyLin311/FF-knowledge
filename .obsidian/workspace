@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "99c605e4335acb99",
+        "id": "327cc0fc45932ad5",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "排序算法总结.md",
+            "file": "JS Module.md",
             "mode": "source",
             "source": false
           }
@@ -40,10 +40,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "模块化",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": true,
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -54,8 +54,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 271,
-    "collapsed": true
+    "width": 271
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -71,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "排序算法总结.md",
+                "file": "JS Module.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,9 +87,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "排序算法总结.md",
+                "file": "JS Module.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               }
             }
           },
@@ -100,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "排序算法总结.md"
+                "file": "JS Module.md"
               }
             }
           },
@@ -115,24 +114,23 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
     "width": 293.6000061035156
   },
-  "active": "99c605e4335acb99",
+  "active": "327cc0fc45932ad5",
   "lastOpenFiles": [
-    "排序算法总结.md",
-    "FE_knowledge.md",
-    "Vue2 响应式原理.md",
-    "Vue diff 算法.md",
-    "vue2 vs vue3.md",
+    "JS Module.md",
+    "前端模块化解释.md",
     "100 道面试题.md",
-    "TCP 协议.md",
-    "requestAnimationFrame.md",
-    "CDN 缓存.md",
-    "网络与缓存.md"
+    "前端工程化.md",
+    "JavaScript.md",
+    "组件化.md",
+    "FE_knowledge.md",
+    "rollup.md",
+    "总结项目知识点.md",
+    "排序算法总结.md"
   ]
 }
