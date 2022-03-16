@@ -5,7 +5,7 @@ date updated: 2021-12-17 16:20
 
 #Vue
 
-## [[diff 算法]]
+## [[Vue diff 算法]]
 
 ## [[Vue2 响应式原理]]
 

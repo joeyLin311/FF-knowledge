@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CDN 缓存.md",
+            "file": "Vue diff 算法.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "反转链表",
+                "query": "diff",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -49,11 +49,13 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 271
+    "width": 271,
+    "collapsed": true
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -69,7 +71,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CDN 缓存.md",
+                "file": "Vue diff 算法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CDN 缓存.md",
+                "file": "Vue diff 算法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -98,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CDN 缓存.md"
+                "file": "Vue diff 算法.md"
               }
             }
           },
@@ -122,15 +124,15 @@
   },
   "active": "e9b6caaf33e88d9b",
   "lastOpenFiles": [
+    "Vue diff 算法.md",
+    "vue2 vs vue3.md",
+    "100 道面试题.md",
+    "TCP 协议.md",
+    "requestAnimationFrame.md",
     "CDN 缓存.md",
     "网络与缓存.md",
     "浏览器.md",
     "浏览器渲染.md",
-    "浏览器渲染过程.md",
-    "回流与重绘.md",
-    "浏览器构成.md",
-    "V8 引擎.md",
-    "GC 机制.md",
-    "内存管理.md"
+    "浏览器渲染过程.md"
   ]
 }
