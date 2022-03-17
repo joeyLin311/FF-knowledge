@@ -18,7 +18,7 @@ JavaScript 整理相关知识点一
 
 ## [[JS 继承]]
 
-## [[实现call, apply, bind]]
+## [[call, apply, bind]]
 
 ## [[Promise]]
 

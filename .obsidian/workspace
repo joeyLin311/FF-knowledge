@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "327cc0fc45932ad5",
+        "id": "e9b6caaf33e88d9b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "JS Module.md",
-            "mode": "source",
+            "file": "小程序技术原理.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -40,8 +40,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "模块化",
-                "matchingCase": false,
+                "query": "setD",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JS Module.md",
+                "file": "小程序技术原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,9 +87,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JS Module.md",
+                "file": "小程序技术原理.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -99,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JS Module.md"
+                "file": "小程序技术原理.md"
               }
             }
           },
@@ -114,23 +114,24 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 293.6000061035156
+    "width": 232
   },
-  "active": "327cc0fc45932ad5",
+  "active": "e9b6caaf33e88d9b",
   "lastOpenFiles": [
-    "JS Module.md",
-    "前端模块化解释.md",
-    "100 道面试题.md",
-    "前端工程化.md",
+    "小程序技术原理.md",
+    "Vue2 响应式原理.md",
+    "vue router 原理.md",
+    "vue2 vs vue3.md",
+    "call, apply, bind.md",
     "JavaScript.md",
-    "组件化.md",
-    "FE_knowledge.md",
-    "rollup.md",
-    "总结项目知识点.md",
-    "排序算法总结.md"
+    "排序算法总结.md",
+    "编写 webpack loader.md",
+    "函数, 函数参数 arguments.md",
+    "规范化.md"
   ]
 }

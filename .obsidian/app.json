@@ -2,7 +2,7 @@
   "alwaysUpdateLinks": true,
   "showFrontmatter": true,
   "defaultViewMode": "preview",
-  "fileSortOrder": "byModifiedTime",
+  "fileSortOrder": "alphabetical",
   "tabSize": 2,
   "promptDelete": false,
   "showLineNumber": true,
