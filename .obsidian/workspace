@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "小程序技术原理.md",
+            "file": "DOM Tree 理解.md",
             "mode": "preview",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "setD",
+                "query": "DOM tree",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "小程序技术原理.md",
+                "file": "DOM Tree 理解.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "小程序技术原理.md",
+                "file": "DOM Tree 理解.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "小程序技术原理.md"
+                "file": "DOM Tree 理解.md"
               }
             }
           },
@@ -123,15 +123,15 @@
   },
   "active": "e9b6caaf33e88d9b",
   "lastOpenFiles": [
-    "小程序技术原理.md",
-    "Vue2 响应式原理.md",
-    "vue router 原理.md",
-    "vue2 vs vue3.md",
-    "call, apply, bind.md",
-    "JavaScript.md",
-    "排序算法总结.md",
-    "编写 webpack loader.md",
-    "函数, 函数参数 arguments.md",
-    "规范化.md"
+    "DOM Tree 理解.md",
+    "浏览器总览.md",
+    "preload&prefetch.md",
+    "前端工程化.md",
+    "babel.md",
+    "JS 作用域和作用域链.md",
+    "二叉树(基于 JavaScript 实现).md",
+    "GC 机制.md",
+    "内存管理.md",
+    "Web性能优化.md"
   ]
 }
