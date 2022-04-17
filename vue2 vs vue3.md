@@ -20,7 +20,7 @@ date created: 2021-12-09 22:53
 
 [升级概览](https://v3.cn.vuejs.org/guide/migration/introduction.html#%E6%A6%82%E8%A7%88)
 
-[Vue3 知识点]([https://juejin.cn/post/6977004323742220319#heading-10](https://juejin.cn/post/6977004323742220319#heading-10))
+[Vue3 知识点](https://juejin.cn/post/6977004323742220319#heading-10)
 
 ### Vue 3.0 性能提升主要是通过哪几方面体现的？
 
