@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "浏览器存储.md",
-            "mode": "preview",
+            "file": "webpack 打包优化.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file:安全",
+                "query": "webpack 优化",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "浏览器存储.md",
+                "file": "webpack 打包优化.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "浏览器存储.md",
+                "file": "webpack 打包优化.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "浏览器存储.md"
+                "file": "webpack 打包优化.md"
               }
             }
           },
@@ -114,7 +114,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -122,15 +123,15 @@
   },
   "active": "e9b6caaf33e88d9b",
   "lastOpenFiles": [
-    "浏览器存储.md",
-    "cookie安全策略.png",
-    "前端安全.md",
-    "HTTP 状态码.md",
-    "总结项目知识点.md",
-    "vue2 vs vue3.md",
-    "vue3 生命周期变化.md",
-    "浏览器跨域.md",
-    "FE_knowledge.md",
-    "HTTP 缓存机制.md"
+    "webpack 打包优化.md",
+    "Web性能优化.md",
+    "编写 webpack loader.md",
+    "LeetCode 记录.md",
+    "更加优雅地处理async-await.md",
+    "规范化.md",
+    "函数, 函数参数 arguments.md",
+    "防抖&节流.md",
+    "二叉树(基于 JavaScript 实现).md",
+    "多图站点性能优化.md"
   ]
 }
