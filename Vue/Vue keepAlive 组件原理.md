@@ -16,7 +16,7 @@ keep-alive 是 vue 中一个抽象组件: 它自身不会渲染一个 DOM 元素
 
 - `include` : 定义缓存白名单, keep-alive 会缓存命中的组件
 - `exclude` : 定义缓存黑名单, 命中的组件不会被缓存
-- `max` : 定义缓存组件的上限, 超过上限使用 [[LRU 缓存策略]] 置换缓存数据
+- `max` : 定义缓存组件的上限, 超过上限使用 [[实现 LRU 缓存策略]] 置换缓存数据
 
 [彻底揭秘 keep-alive](https://github.com/qiudongwei/blog/issues/4)
 

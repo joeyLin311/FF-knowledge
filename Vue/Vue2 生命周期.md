@@ -4,13 +4,13 @@ date created: 2021-12-09 22:53
 
 #Vue
 <https://ustbhuangyi.github.io/vue-analysis/v2/components/lifecycle.html#beforecreate-created>
-![[Vuelifecycle.png]]
+![[Vue-lifecycle.png]]
 
 ## beforeCreate&created
 
 `beforeCreate` 和 `created` 函数都是在实例化 Vue 的阶段, 在 `_init` 方法中执行的. 定义在 `src/core/instance/init.js` 中
 可以看到 `beforeCreate` 和 `created` 的钩子调用是在 `initState` 的前后，`initState` 的作用是初始化 `props`、`data`、`methods`、`watch`、`computed` 等属性，之后我们会详细分析。那么显然 `beforeCreate` 的钩子函数中就不能获取到 `props`、`data` 中定义的值，也不能调用 `methods` 中定义的函数。
-在这俩个钩子函数执行的时候，并没有渲染 DOM，所以我们也不能够访问 DOM，一般来说，如果组件在加载的时候需要和后端有交互，放在这俩个钩子函数执行都可以，如果是需要访问 `props`、`data` 等数据的话，就需要使用 `created` 钩子函数。之后我们会介绍 vue-router 和 [[vuex]] 的时候会发现它们都混合了 beforeCreate 钩子函数。
+在这俩个钩子函数执行的时候，并没有渲染 DOM，所以我们也不能够访问 DOM，一般来说，如果组件在加载的时候需要和后端有交互，放在这俩个钩子函数执行都可以，如果是需要访问 `props`、`data` 等数据的话，就需要使用 `created` 钩子函数。之后我们会介绍 vue-router 和 [[Vuex]] 的时候会发现它们都混合了 beforeCreate 钩子函数。
 
 ## beforeMount&mounted
 
@@ -32,7 +32,7 @@ date created: 2021-12-09 22:53
 
 ## activated & deactivated
 
-`activated` 和 `deactivated` 钩子函数是专门为 `keep-alive` 组件定制的钩子，我们会在介绍 `keep-alive` 组件的时候详细介绍 [[keepAlive 原理#keepAlive 生命周期]]
+`activated` 和 `deactivated` 钩子函数是专门为 `keep-alive` 组件定制的钩子，我们会在介绍 `keep-alive` 组件的时候详细介绍 [[Vue keepAlive 组件原理#keepAlive 生命周期]]
 
 ## Vue 中组件生命周期调用顺序说一下
 

@@ -61,4 +61,4 @@ date updated: 2021-12-17 16:14
 `Loader` 在 module.rules 中配置，作为模块的解析规则，类型为数组。每一项都是一个 Object，内部包含了 test(类型文件)、loader、options (参数)等属性。
 `Plugin` 在 plugins 中单独配置，类型为数组，每一项是一个 Plugin 的实例，参数都通过构造函数传入。
 
-## [[自实现 loader 和 plugin]]
+## [[webpack 实现 loader 和 plugin]]

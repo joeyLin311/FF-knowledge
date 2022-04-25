@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "e9b6caaf33e88d9b",
+        "id": "12ba7cf5910f74db",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "n维数组的最大深度 & N 叉树的最大深度.md",
-            "mode": "source",
+            "file": "项目总结/首页白屏优化.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "数组",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,12 +49,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 271
+    "width": 342
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -70,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "n维数组的最大深度 & N 叉树的最大深度.md",
+                "file": "项目总结/首页白屏优化.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +86,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "n维数组的最大深度 & N 叉树的最大深度.md",
+                "file": "项目总结/首页白屏优化.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -99,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "n维数组的最大深度 & N 叉树的最大深度.md"
+                "file": "项目总结/首页白屏优化.md"
               }
             }
           },
@@ -114,24 +113,23 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
     "width": 232
   },
-  "active": "e9b6caaf33e88d9b",
+  "active": "12ba7cf5910f74db",
   "lastOpenFiles": [
-    "n维数组的最大深度 & N 叉树的最大深度.md",
-    "编程题.md",
-    "Web性能优化.md",
-    "webpack 打包优化.md",
-    "编写 webpack loader.md",
-    "LeetCode 记录.md",
-    "更加优雅地处理async-await.md",
-    "规范化.md",
-    "函数, 函数参数 arguments.md",
-    "防抖&节流.md"
+    "项目总结/首页白屏优化.md",
+    "网络/SYN cookie.md",
+    "小程序/双线程生命周期.png",
+    "前端工程/Web性能优化.md",
+    "TypeScript/TS any, void, unknown, never 的区别.md",
+    "项目总结/多图站点性能优化.md",
+    "webpack/编写 webpack loader.md",
+    "webpack/webpack source map.md",
+    "webpack/hmr.png",
+    "webpack/webpack HMR 热更新.md"
   ]
 }

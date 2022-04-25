@@ -9,26 +9,26 @@ date updated: 2021-12-17 16:20
 
 ## [[Vue2 响应式原理]]
 
-## [[vue2 模板编译过程]]
+## [[Vue2 模板编译过程]]
 
 ## [[Vue2 生命周期]]
 
-## [[vue router 原理]]
+## [[Vue router 原理]]
 
-## [[keepAlive 原理]]
+## [[Vue keepAlive 组件原理]]
 
-## [[nextTick]]
+## [[Vue $nextTick]]
 
-## [[vue2 vs vue3]]
+## [[Vue 3]]
 
-## [[computedVSwatch]]
+## [[Vue computed & watch]]
 
 ## vue 组件通信的常用方式有那些?
 
-### [[props]]
-### 自定义事件[[vue event]]
-### [[eventBus]]
-### [[vuex]]
+### [[Vue props]]
+### 自定义事件[[Vue event]]
+### [[Vue eventBus]]
+### [[Vuex]]
 ### 边界情况的 `$parent` `$root` `$refs`, 依赖注入 provide/inject
 ### `$attrs` `$listeners`
 

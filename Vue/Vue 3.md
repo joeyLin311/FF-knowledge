@@ -4,15 +4,16 @@ date created: 2021-12-09 22:53
 
 #Vue
 
-## [[options API & composition API]]
+## [[Vue options API & composition API]]
 
-## [[vue3 生命周期变化]]
+## [[Vue3 生命周期变化]]
 
 ## diff 算法提升
 
+
 ## typescript 支持
 
-同上 [[options API & composition API]]
+同上 [[Vue options API & composition API]]
 
 ## [[Vite]]
 

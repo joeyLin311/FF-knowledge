@@ -6,4 +6,4 @@ date updated: 2021-12-17 16:17
 # 前端知识库
 
 个人笔记仓库
-# [[索引]]
+# [[FrontEnd-knowledge索引]]

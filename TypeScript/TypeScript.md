@@ -43,4 +43,4 @@ function add(a: any, b:any): any {
 在上面的例子中，前两行是函数重载声明。它有两次重载，第一个签名的参数类型为 string，而第二个签名的参数类型为 number。第三个函数包含实际实现并具有 any 类型的参数。任何数据类型都可以接受任何类型的数据。然后，实现检查所提供参数的类型，并根据供应商参数类型执行不同的代码段。
 
 ## any, void, unknown, never的区别
-[[any, void, unknown, never 的区别]]
+[[TS any, void, unknown, never 的区别]]

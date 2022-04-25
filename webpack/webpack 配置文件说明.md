@@ -85,4 +85,4 @@ module.export = {
 - 编写自有插件, 利用 webpack 提供的钩子函数, 编写自定义插件, 相当于监听 webpack 的事件, 做相应的动作. 这里就涉及到 webpack 是通过 Tapable 进行事件流管理
 
 ## loader 和 plugin
-[[Loader 和 Plugin]]
+[[webpack Loader 和 Plugin]]

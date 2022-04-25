@@ -17,7 +17,7 @@ webpack 给我们提供了三种哈希值计算方式，分别是 hash、chunkha
 那 chunkhash 和 contenthash 的主要应用场景是什么呢？在实际在项目中，我们一般会把项目中的 css 都抽离出对应的 css 文件来加以引用。如果我们使用 chunkhash，当我们改了 css 代码之后，会发现 css 文件 hash 值改变的同时，js 文件的 hash 值也会改变。这时候，contenthash 就派上用场了。
 - [[webpack 配置文件说明]]
 - [[webpack 运行原理]]
-- [[HMR 热更新]]
+- [[webpack HMR 热更新]]
 
 ## webpack 核心概念
 
@@ -31,11 +31,11 @@ webpack 给我们提供了三种哈希值计算方式，分别是 hash、chunkha
 
 ## Loader, Plugin
 
-[[Loader 和 Plugin]]
+[[webpack Loader 和 Plugin]]
 
 ## source map
 
-[[source map]]
+[[webpack source map]]
 
 ## webpack 构建性能
 

@@ -18,7 +18,7 @@ JavaScript 整理相关知识点一
 
 ## [[JS 继承]]
 
-## [[call, apply, bind]]
+## [[实现call, apply, bind]]
 
 ## [[Promise]]
 
@@ -30,7 +30,7 @@ JavaScript 整理相关知识点一
 
 ## [[内存管理]]
 
-## [[new 运算符]]
+## [[实现 new 运算符]]
 
 ## [[Web Worker]]
 

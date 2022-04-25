@@ -34,7 +34,7 @@ date created: 2021-12-09 22:56
 2. 宏任务是由宿主（浏览器、Node）发起的，而微任务由 JS 自身发起。
 3. 宏任务: `setTimeout`, `setInterval`,`I/O 事件队列`, `script` 主代码块, UI 交互事件
 4. 微任务: `Promise`.then(),  `MutaionObserver`,  `Object.observe`, `process.nextTick`
-5. [[promise]]
+5. [[Promise]]
 6. [[Promise 执行顺序]]
 
 > 重点说明, **宏任务**并非全是异步任务, 主代码块就是属于**宏任务**的一种. (Promise/A+规范)
