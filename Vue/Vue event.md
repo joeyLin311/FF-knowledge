@@ -132,7 +132,7 @@ Vue.prototype.$once = function (event: string, fn: Function): Component {
 
 ```
 
-## 手写 [[发布订阅模式#实现代码]]
+## 手写 [[发布订阅模式-手写实现#实现代码]]
 
 ### 小总结
 

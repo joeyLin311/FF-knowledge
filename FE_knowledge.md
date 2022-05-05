@@ -7,7 +7,7 @@ date updated: 2021-12-17 16:06
 
 ## JavaScript
 
-- [[JavaScript]]
+- [[0JavaScript]]
 
 ## TypeScript
 
@@ -51,7 +51,7 @@ date updated: 2021-12-17 16:06
 
 ## 面试手写题
 
-- [[手撕代码]]
+- [[0-手撕代码]]
 
 ## 其它
 

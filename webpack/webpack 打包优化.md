@@ -22,6 +22,37 @@ date created: 2021-12-09 23:00
 
 用 webpack 优化前端性能是指优化 webpack 的输出结果，让打包的最终结果在浏览器运行快速高效。
 
+### thread-loader 构建时间优化
+
+使用 `thread-loader` 开启多线程打包, 提高项目的打包速度. 该 loader 作用是在在某个资源使用中, 放在其它 loader 之前, 之后使用的 loader 就会在一个单独的 worker 池(worker pool) 中运行. 但是开启之后, 这些 loader 是受到限制的:
+- 不能产生新的文件.
+- 不能使用定制的 loader API 也就是通过插件
+- 无法获取 webpack 的选项配置
+使用 `thead-loader` 需要注意, 每个 worker 是单独的有 600ms 限制的 nodeJS 进程. 同事跨进程的数据交换也会被限制.
+**建议在耗时较大的loader上使用该loader**
+
+### cache-loader 缓存资源
+
+使用缓存loader 对性能开销较大的loader使用, 目的是提高二次构建的速度. 比如 `babel-loader` 这种耗时较长的 loader , 其结果可以通过缓存loader放进磁盘里.
+**但是该loader保存读取缓存也会有时间开销, 所以只适合对性能开销较大的loader 使用**
+
+### 启用HMR 热更新
+
+启用热更新可以让我们在修改小部分代码时, 通过热更新的原理, 只刷新修改的部分. 这样能有效提高项目的重新构建时间. [[webpack HMR 热更新]]
+
+### exclude & include
+
+- `exclude`: 不需要处理的文件
+- `include`: 需要处理的文件
+合理使用上述两个属性, 可以提高项目构建速度.
+
+### 区分开发和生产环境的webpack配置
+
+- 开发环境: 去除代码压缩, gzip, 体积分析等优化的配置
+- 生产环境: 目标是为了构建体积更小的代码
+
+### 其它
+
 - 压缩代码。删除多余的代码、注释、简化代码的写法等等方式。可以利用 webpack 的 `UglifyJsPlugin` 和 `ParallelUglifyPlugin` 来压缩 JS 文件， 利用 `cssnano`（**css-loader?minimize）**来压缩 css
 - 利用 CDN 加速。在构建过程中，将引用的静态资源路径修改为 CDN 上对应的路径。可以利用 webpack 对于 `output` 参数和各 loader 的 `publicPath` 参数来修改资源路径
 - 删除死代码（Tree Shaking）。将代码中永远不会走到的片段删除掉。可以通过在启动 webpack 时追加参数 `--optimize-minimize` 来实现

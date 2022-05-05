@@ -18,7 +18,7 @@ JavaScript 整理相关知识点一
 
 ## [[JS 继承]]
 
-## [[实现call, apply, bind]]
+## [[call(), apply(), bind() - 手写实现]]
 
 ## [[Promise]]
 
@@ -30,8 +30,12 @@ JavaScript 整理相关知识点一
 
 ## [[内存管理]]
 
-## [[实现 new 运算符]]
+## [[new 运算符 - 手写实现]]
 
 ## [[Web Worker]]
 
 ## [[JS Module]]
+
+## [[JS Class 类的理解]]
+
+## [[async-await 是如何实现的]]
