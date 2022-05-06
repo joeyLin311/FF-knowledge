@@ -1,5 +1,6 @@
 ---
 date created: 2021-12-09 22:58
+date updated: 2022-05-07 02:20
 ---
 
 #JavaScript #编程题
@@ -81,6 +82,7 @@ Function.prototype.myBind = function (context,...args1) {
 [JS中的call，apply，bind](https://segmentfault.com/a/1190000023445911)
 
 ## 三者的区别
+
 - 三者都可以改变 `this` 的指向
 - 三者第一个参数都是 `this` 要指向的对象, 如果没有传这个参数或者为 `undefined` 或 `null` 则默认指向全局 `window`
 - `apply` 接受数组, `call` 接受参数列表, 且 `call` , `apply` 是一次性传入参数, 而 `bind` 可以分多次传入

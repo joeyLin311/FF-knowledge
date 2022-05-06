@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "DNS 解析优化.md",
-            "mode": "source",
+            "file": "手撕代码/call(), apply(), bind() - 手写实现.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DNS 解析优化.md",
+                "file": "手撕代码/call(), apply(), bind() - 手写实现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DNS 解析优化.md",
+                "file": "手撕代码/call(), apply(), bind() - 手写实现.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DNS 解析优化.md"
+                "file": "手撕代码/call(), apply(), bind() - 手写实现.md"
               }
             }
           },
@@ -126,19 +126,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 151
+    "width": 201.60000610351562
   },
   "active": "0dda033847d2ad20",
   "lastOpenFiles": [
-    "DNS 解析优化.md",
-    "其它/输入URL到显示页面全过程.md",
-    "其它/DNS 解析过程.png",
-    "浏览器&DOM HTML/浏览器渲染过程.md",
-    "浏览器&DOM HTML/浏览器渲染.md",
-    "浏览器&DOM HTML/preload&prefetch.md",
-    "浏览器&DOM HTML/browser-事件流程.png",
-    "浏览器&DOM HTML/浏览器事件.md",
-    "浏览器&DOM HTML/浏览器回流与重绘.md",
-    "前端工程/babel.md"
+    "手撕代码/call(), apply(), bind() - 手写实现.md",
+    "TODO-list.md",
+    "JavaScript/Promise 执行顺序.md",
+    "项目总结/首页白屏优化.md",
+    "项目总结/多图站点性能优化.md",
+    "项目总结/总结项目知识点.md",
+    "JavaScript/JS 作用域和作用域链.md",
+    "JavaScript/JS 原型链.md",
+    "JavaScript/Promise.md",
+    "JavaScript/0JavaScript.md"
   ]
 }
