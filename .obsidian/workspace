@@ -7,12 +7,8 @@
         "id": "0dda033847d2ad20",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "手撕代码/call(), apply(), bind() - 手写实现.md",
-            "mode": "preview",
-            "source": false
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -40,7 +36,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "阻塞",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "手撕代码/call(), apply(), bind() - 手写实现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +81,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "手撕代码/call(), apply(), bind() - 手写实现.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -97,9 +91,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "手撕代码/call(), apply(), bind() - 手写实现.md"
-              }
+              "state": {}
             }
           },
           {
@@ -130,15 +122,15 @@
   },
   "active": "0dda033847d2ad20",
   "lastOpenFiles": [
-    "手撕代码/call(), apply(), bind() - 手写实现.md",
-    "TODO-list.md",
-    "JavaScript/Promise 执行顺序.md",
-    "项目总结/首页白屏优化.md",
-    "项目总结/多图站点性能优化.md",
-    "项目总结/总结项目知识点.md",
-    "JavaScript/JS 作用域和作用域链.md",
-    "JavaScript/JS 原型链.md",
-    "JavaScript/Promise.md",
-    "JavaScript/0JavaScript.md"
+    "JavaScript/JS modules.md",
+    "JavaScript/JS Module.md",
+    "前端工程/CommonJs 是如何导致打包体积增大_摘要.md",
+    "前端工程/Nginx.md",
+    "前端工程/Plop.md",
+    "前端工程/rollup.md",
+    "Vue/Vite.md",
+    "Vue/Vue.md",
+    "网络/WebSocket.md",
+    "算法/二叉树(基于 JavaScript 实现).md"
   ]
 }

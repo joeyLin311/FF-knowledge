@@ -37,9 +37,9 @@ date updated: 2021-12-17 16:08
 
 ## GET 和 POST 区别
 
-- GET 参数通过 URL 传递，POST 放在 Request body 中，因此参数无法直接拿到，相对 `GET` 安全性较高（但是通过抓包工具，还是可以看到请求参数的）
-- GET 请求会被浏览器主动 cache，而 POST 不会，除非手动设置。
-- Get 请求中有非 ASCII 字符，会在请求之前进行转码，POST 不用，因为 POST 在 Request body 中，通过 MIME（ 多用途互联网邮件扩展），也就可以传输非 ASCII 字符。
+- `GET` 参数通过 URL 传递，`POST` 放在 Request body 中，因此参数无法直接拿到，相对 `GET` 安全性较高（但是通过抓包工具，还是可以看到请求参数的）
+- `GET` 请求会被浏览器主动 cache，而 POST 不会，除非手动设置。
+- `GET` 请求中有非 ASCII 字符，会在请求之前进行转码，`POST` 不用，因为 `POST` 在 Request body 中，通过 MIME（ 多用途互联网邮件扩展），也就可以传输非 ASCII 字符。
 - HTTP 的底层是 TCP/IP。HTTP 只是个行为准则，而 TCP 才是 GET 和 POST 怎么实现的基本。GET/POST 都是 TCP 链接。GET 和 POST 能做的事情是一样一样的。但是请求的数据量太大对浏览器和服务器都是很大负担。所以业界有了不成文规定，（大多数）浏览器通常都会限制 url 长度在 2K 个字节，而（大多数）服务器最多处理 64K 大小的 url。
 - GET 产生一个 TCP 数据包；POST 产生两个 TCP 数据包。对于 GET 方式的请求，浏览器会把 http header 和 data 一并发送出去，服务器响应 200（返回数据）；而对于 POST，浏览器先发送 header，服务器响应 100 continue，浏览器再发送 data，服务器响应 200 ok（返回数据）。
 - 在网络环境好的情况下，发一次包的时间和发两次包的时间差别基本可以无视。而在网络环境差的情况下，两次包的 TCP 在验证数据包完整性上，有非常大的优点。但并不是所有浏览器都会在 POST 中发送两次包，Firefox 就只发送一次。

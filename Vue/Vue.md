@@ -46,3 +46,6 @@ MVC 是比较直观的架构模式，用户操作
 通过 ViewModel 进行交互，而且 Model 和 ViewModel 之间的交互是双向的，
 因此视图的数据的变化会同时修改数据源，而数据源数据的变化也会立即反应 view。
 微信小程序前端使用 mvvm。
+
+
+[Vue各种问题](https://juejin.cn/post/6844903918753808398#heading-1)
