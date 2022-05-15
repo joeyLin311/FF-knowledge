@@ -7,8 +7,12 @@
         "id": "0dda033847d2ad20",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "1V1 简历指导.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -49,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 282
+    "width": 271
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "1V1 简历指导.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -81,6 +86,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "1V1 简历指导.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -91,7 +97,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "1V1 简历指导.md"
+              }
             }
           },
           {
@@ -113,8 +121,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -122,15 +129,15 @@
   },
   "active": "0dda033847d2ad20",
   "lastOpenFiles": [
-    "JavaScript/JS modules.md",
-    "JavaScript/JS Module.md",
-    "前端工程/CommonJs 是如何导致打包体积增大_摘要.md",
-    "前端工程/Nginx.md",
-    "前端工程/Plop.md",
+    "1V1 简历指导.md",
+    "小程序/小程序技术原理.md",
+    "小程序/小程序.md",
+    "前端工程/前端工程.md",
+    "前端工程/前端安全.md",
+    "前端工程/规范化.md",
     "前端工程/rollup.md",
-    "Vue/Vite.md",
-    "Vue/Vue.md",
-    "网络/WebSocket.md",
-    "算法/二叉树(基于 JavaScript 实现).md"
+    "前端工程/Nginx.md",
+    "前端工程/CommonJs 是如何导致打包体积增大_摘要.md",
+    "前端工程/Web性能优化.md"
   ]
 }
