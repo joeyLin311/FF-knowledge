@@ -1,3 +1,4 @@
+#React 
 ## react setState 是同步还是异步的
 
 ## 什么是高阶组件, 请举例说明
@@ -19,3 +20,6 @@
 ## react fiber 有哪些技术点, 是怎么做到的
 
 ## react 优化了哪些问题
+
+## react 组件数据传递
+[参考文章](http://suressk.com/interview/summary/index.html)

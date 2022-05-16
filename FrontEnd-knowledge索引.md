@@ -1,5 +1,6 @@
 ---
 date created: 2021-12-09 22:57
+date updated: 2022-05-17 01:23
 ---
 
 # FrontEnd-knowledge
@@ -14,6 +15,5 @@ date created: 2021-12-09 22:57
 
 ## 面试
 
-- [[100 道面试题]]
 - React 为什么选择 JSX
 - 为什么不是模板?
