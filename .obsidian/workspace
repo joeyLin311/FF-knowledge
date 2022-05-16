@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "0dda033847d2ad20",
+        "id": "2675fe1f4bb43142",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Vue/Vue2 模板编译过程.md",
+            "file": "TODO-list.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 271
+    "width": 282
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Vue/Vue2 模板编译过程.md",
+                "file": "TODO-list.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Vue/Vue2 模板编译过程.md",
+                "file": "TODO-list.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Vue/Vue2 模板编译过程.md"
+                "file": "TODO-list.md"
               }
             }
           },
@@ -121,23 +121,24 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
     "width": 201.60000610351562
   },
-  "active": "0dda033847d2ad20",
+  "active": "2675fe1f4bb43142",
   "lastOpenFiles": [
-    "Vue/Vue2 模板编译过程.md",
-    "TypeScript/TypeScript.md",
-    "TypeScript/TypeScript 编码规范.md",
-    "TypeScript/TS any, void, unknown, never 的区别.md",
-    "Vue/Vue2 响应式原理.md",
-    "Vue/Vue.md",
-    "Vue/Vue $nextTick.md",
-    "算法/0 算法记录.md",
-    "Vue/Vue props.md",
-    "Vue/Vue eventBus.md"
+    "TODO-list.md",
+    "react/react 问题汇总.md",
+    "算法/算法- 字符串 ASC 码, 偏移量实现字符串加密.md",
+    "DNS 解析优化.md",
+    "其它/算法导图.png",
+    "其它/1V1 简历指导.md",
+    "其它/技术人才要求.png",
+    "浏览器&DOM HTML/GC 机制.md",
+    "浏览器&DOM HTML/浏览器总览.md",
+    "Vue/Vue2 模板编译过程.md"
   ]
 }
