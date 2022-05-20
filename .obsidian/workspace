@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "项目总结/总结项目知识点.md",
-            "mode": "source",
+            "file": "React/react Render 流程.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 196
+    "width": 196,
+    "collapsed": true
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "项目总结/总结项目知识点.md",
+                "file": "React/react Render 流程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "项目总结/总结项目知识点.md",
+                "file": "React/react Render 流程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -98,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "项目总结/总结项目知识点.md"
+                "file": "React/react Render 流程.md"
               }
             }
           },
@@ -122,7 +123,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -131,15 +132,15 @@
   },
   "active": "9eb7407f22cdb78f",
   "lastOpenFiles": [
-    "项目总结/总结项目知识点.md",
+    "React/react Render 流程.md",
     "React/react Fiber 架构.md",
+    "React/react-renderer.png",
+    "React/react Hooks.md",
     "React/react 问题汇总.md",
     "React/react 架构.md",
-    "其它/输入URL到显示页面全过程.md",
     "React/0 React.md",
-    "React/react-renderer.png",
-    "FrontEnd-knowledge索引.md",
-    "100 道面试题.md",
-    "FE_knowledge.md"
+    "手撕代码/控制前端最大并发量 - 手写实现.md",
+    "项目总结/总结项目知识点.md",
+    "其它/输入URL到显示页面全过程.md"
   ]
 }

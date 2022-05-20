@@ -35,6 +35,8 @@ const Fiber Node = {
 }
 ```
 
+> React 使用**双缓存**来完成 Fiber 树的构建与替换---- 对应着 DOM 树的创建与更新.
+
 **Fiber 主要工作流程:**
 
 - `ReactDOM.render()` 引导 React 启动或调用 `setState()` 的时候开始创建或更新 Fiber 树
