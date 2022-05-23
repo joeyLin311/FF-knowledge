@@ -12,8 +12,3 @@ date updated: 2022-05-17 01:23
 - [[Code Review 摘要事项]]
 - [[TypeScript 编码规范]]
 - [[CommonJs 是如何导致打包体积增大_摘要]]
-
-## 面试
-
-- React 为什么选择 JSX
-- 为什么不是模板?

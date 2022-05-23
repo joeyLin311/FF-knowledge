@@ -1,8 +1,10 @@
 ---
 date created: 2022-05-16 22:05
-date updated: 2022-05-17 01:23
+date updated: 2022-05-24 01:11
 ---
-#React 
+
+#React
+
 ## React 16 架构可分为三层:
 
 - Scheduler (调度器) ---- 调度任务优先级, 高优先级任务先进入 Reconciler

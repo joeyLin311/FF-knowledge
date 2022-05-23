@@ -1,7 +1,9 @@
 ---
 date created: 2021-12-09 23:00
-date updated: 2021-12-17 11:57
+date updated: 2022-05-24 01:13
 ---
+
+#JavaScript
 
 # JavaScript
 
@@ -24,7 +26,7 @@ async function catchErr() {
 }
 ```
 
- 但是在一些情况下使用 try/catch 也不完全可以正确捕获错误, 比如下面的代码, 在 try 语句中 return Promise, 这个时候被转变成了一个不可捕获的错误.
+但是在一些情况下使用 try/catch 也不完全可以正确捕获错误, 比如下面的代码, 在 try 语句中 return Promise, 这个时候被转变成了一个不可捕获的错误.
 
 ```javascript
 async function catchErr() {

@@ -1,3 +1,4 @@
+#React 
 ## 概览
 
 react 的 render 阶段开始于, `performSyncWorkOnRoot` 或者 `performConcurrentWorkOnRoot` 方法的调用, 取决于本次更新是同步更新还是异步更新.
