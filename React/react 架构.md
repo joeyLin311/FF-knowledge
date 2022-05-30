@@ -1,9 +1,14 @@
 ---
 date created: 2022-05-16 22:05
-date updated: 2022-05-24 01:11
+date updated: 2022-05-25 22:42
 ---
 
 #React
+
+## 相关问题
+
+- react 16 版本更新了什么, 主要有哪些变化?
+- react 优化了哪些问题
 
 ## React 16 架构可分为三层:
 

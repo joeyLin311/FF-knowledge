@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2fe73280a1279d00",
+        "id": "57492f1a8baf28df",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "TODO-list.md",
-            "mode": "preview",
-            "source": false
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TODO-list.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +81,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TODO-list.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -97,9 +91,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "TODO-list.md"
-              }
+              "state": {}
             }
           },
           {
@@ -121,24 +113,24 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 201.60000610351562
+    "width": 201.60000610351562,
+    "collapsed": true
   },
-  "active": "2fe73280a1279d00",
+  "active": "57492f1a8baf28df",
   "lastOpenFiles": [
-    "TODO-list.md",
-    "网络/WebSocket.md",
-    "网络/HTTP 缓存.md",
-    "FrontEnd-knowledge索引.md",
-    "其它/输入URL到显示页面全过程.md",
-    "其它/Code Review 摘要事项.md",
-    "其它/技术人才要求.png",
-    "JavaScript/更加优雅地处理async-await.md",
-    "算法/0 算法记录.md",
-    "JavaScript/JavaScript 中的数据结构.md"
+    "综合/DNS 解析优化.md",
+    "网络/TLS握手协议.md",
+    "网络/HTTP keep-alive 和 TCP keepAlive.md",
+    "小程序/0 小程序.md",
+    "小程序/小程序技术原理.md",
+    "React/0 React.md",
+    "React/react Fiber 架构.md",
+    "React/React diff 算法.md",
+    "React/react 问题汇总.md",
+    "React/react 事件注册.png"
   ]
 }

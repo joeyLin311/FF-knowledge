@@ -1,9 +1,14 @@
 ---
 date created: 2022-05-17 01:23
-date updated: 2022-05-17 01:31
+date updated: 2022-05-25 22:43
 ---
 
 #React
+
+## 相关问题
+
+- react 为什么需要 fiber？
+- react fiber 有哪些技术点, 是怎么做到的？
 
 ## 太长不看
 
