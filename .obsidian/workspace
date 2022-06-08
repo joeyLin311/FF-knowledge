@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "57492f1a8baf28df",
+        "id": "8d34e9d348d0b36c",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "React/React diff 算法.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "React/React diff 算法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -81,6 +86,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "React/React diff 算法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -91,7 +97,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "React/React diff 算法.md"
+              }
             }
           },
           {
@@ -113,24 +121,25 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
     "width": 201.60000610351562,
     "collapsed": true
   },
-  "active": "57492f1a8baf28df",
+  "active": "8d34e9d348d0b36c",
   "lastOpenFiles": [
-    "综合/DNS 解析优化.md",
-    "网络/TLS握手协议.md",
-    "网络/HTTP keep-alive 和 TCP keepAlive.md",
-    "小程序/0 小程序.md",
-    "小程序/小程序技术原理.md",
-    "React/0 React.md",
-    "React/react Fiber 架构.md",
     "React/React diff 算法.md",
-    "React/react 问题汇总.md",
-    "React/react 事件注册.png"
+    "React/react Fiber 架构.md",
+    "前端工程/Web性能优化.md",
+    "React/react 架构.md",
+    "前端工程/1.模块化.md",
+    "前端工程/实现 CLI.md",
+    "项目总结/SSO 单点登录.md",
+    "前端工程/前端表单配置化.md",
+    "React/0 React.md",
+    "React/react setState 机制.md"
   ]
 }

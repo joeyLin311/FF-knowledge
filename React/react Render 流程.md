@@ -20,7 +20,7 @@ react 的 render 阶段开始于, `performSyncWorkOnRoot` 或者 `performConcurr
 
 `beginWork` 的工作可以分为两部分:
 
-- `update` 时: 如果 `curren` 存在, 在满足一定条件时可以复用 `current` 节点, 这样就能克隆 `current.child` 作为 `workInProgress.child`, 而不需要新建 `workInProgress.child`
+- `update` 时: 如果 `current` 存在, 在满足一定条件时可以复用 `current` 节点, 这样就能克隆 `current.child` 作为 `workInProgress.child`, 而不需要新建 `workInProgress.child`
 - `mount` 时: 除了 `fiberRootNode` 以外, `current === null`. 会根据 `fiber.tag` 的不同, 创建不同类型的 子 Fiber 节点
 - [详情-react 技术揭秘](https://react.iamkasong.com/process/beginWork.html#%E6%96%B9%E6%B3%95%E6%A6%82%E8%A7%88)
 
@@ -59,7 +59,7 @@ react 的 render 阶段开始于, `performSyncWorkOnRoot` 或者 `performConcurr
 
 至此 `render 阶段 ` 的绝大部分工作就完成了。
 
-还有一个问题：作为 `DOM` 操作的依据，`commit 阶段 ` 需要找到所有有 `effectTag` 的 `Fiber 节点 ` 并依次执行 `effectTag` 对应操作。难道需要在 `commit 阶段 ` 再遍历一次 `Fiber 树 ` 寻找 `effectTag !== null` 的 `Fiber 节点 ` 么？
+**还有一个问题:** 作为 `DOM` 操作的依据，`commit 阶段 ` 需要找到所有有 `effectTag` 的 `Fiber 节点 ` 并依次执行 `effectTag` 对应操作。难道需要在 `commit 阶段 ` 再遍历一次 `Fiber 树 ` 寻找 `effectTag !== null` 的 `Fiber 节点 ` 么？
 
 这显然是很低效的。
 

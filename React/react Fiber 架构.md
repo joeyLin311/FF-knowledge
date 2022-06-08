@@ -9,6 +9,7 @@ date updated: 2022-05-25 22:43
 
 - react 为什么需要 fiber？
 - react fiber 有哪些技术点, 是怎么做到的？
+- [为什么Vue不需要fiber](https://mp.weixin.qq.com/s?__biz=Mzk0MDMwMzQyOA==&mid=2247494750&idx=1&sn=7f74887f6e550c9307c265b0eae8d5e1&chksm=c2e11975f596906366283fcb87fa2afddd9a2b54f08ab1f0539f23a06177ff26b38e4588ff2d&scene=132#wechat_redirect)
 
 ## 太长不看
 
@@ -47,8 +48,8 @@ const Fiber Node = {
 - `ReactDOM.render()` 引导 React 启动或调用 `setState()` 的时候开始创建或更新 Fiber 树
 - 从根节点开始遍历 Fiber Node Tree, 并且创建 WorkInProgress Tree ( **reconciliation** 阶段)
   - 本阶段可以暂停, 终止, 和重启, 会导致 react 相关相关生命周期重复执行
-  - React 会生成至多两颗树, 一颗是代表当前状态的 current tree, 一颗是待更新的 workInProgress tree
-  - 遍历 current tree, 重用或更新 Fiber Node 到 workInProgress tree, workInProgress 完成更新后会替换 current tree
+  - React 会生成至多两颗树, 一颗是代表当前状态的 `current tree`, 一颗是待更新的 `workInProgress tree`
+  - 遍历 `current tree`, 重用或更新 Fiber Node 到 `workInProgress tree`, `workInProgress` 完成更新后会替换 `current tree`
   - 每更新一个节点,  同时生成该节点对应的 Effect List
   - 为每个节点创建更新任务
 - 将创建的更新任务加入任务队列, 等待调度
@@ -66,5 +67,5 @@ const Fiber Node = {
 Fiber Tree 采用单链表结构, 上述的 Fiber Node 表明了每个Fiber Node都有两个指针域, 一个`child` 指向节点的第一个子节点, 一个`sibling` 指向右边的兄弟节点
 
 ## 深入解释 Fiber 的过程和策略
-
+[[react Render 流程]]
 详见 [参考链接](http://www.ayqy.net/blog/dive-into-react-fiber/#articleHeader3)

@@ -1,6 +1,6 @@
 ---
 date created: 2022-05-16 22:05
-date updated: 2022-05-25 22:42
+date updated: 2022-06-08 21:52
 ---
 
 #React
@@ -34,6 +34,26 @@ React 放弃了该API的使用, 进而实现了功能更加完备的 `requestIdl
 
 Renderer 根据 Reconciler 为虚拟DOM打的标记, 同步执行对应DOM 的操作
 ![[react-renderer.png]]
+
+## React 启动模式
+
+React 有三种模式进入主体函数的入口,他们会影响整个应用的工作方式, 具体可以参阅官方文档:
+
+- `legacy` : 当前 React 版本采用的方式, 但是这个模式可能不支持一些新功能
+- `blocking` : 开启部分 `concurrent` 模式特种的中间模式, 目前正在实验中
+- `concurrent` : 未来 React 的开发模式, Fiber 架构中的 `任务中断/任务优先级` 都是针对 `concurrent` 模式提出的.
+
+```js
+// 三者的入口函数
+// legacy 
+ReactDOM.render(<App />, rootNode);
+// blocking
+ReactDOM.createBlockingRoot(rootNode).render(<App />);
+// concurrent
+ReactDOM.createRoot(rootNode).render(<App />)
+```
+
+三者有个重要的区别是**自动批处理功能**, `legacy` 模式在合成事件中有自动批处理的功能, 但仅限于一个浏览器任务. 非 React 事件想使用这个功能必须使用 `unstable_batchedUpdates` . 在 `blocking` 和 `concurrent` 模式里, `setState` 都是模式自动批处理的.
 
 ## 总结
 

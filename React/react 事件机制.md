@@ -47,7 +47,7 @@ export const registrationNameDependencies = {
 
 ## 详情
 
-### 1. 原生事件和合成事件
+### 原生事件和合成事件
 
 #### 原生事件
 
@@ -160,6 +160,6 @@ render() {
 2.  对齐原生浏览器事件.  React 17 升级支持了原生捕获事件, 对齐了浏览器原生标准. 同时 `onScroll` 事件不再进行事件冒泡. `onFocus` 和 `onBlur` 使用原生 `focusin` , `focusout` 合成
 3.  **取消事件池** 解决了上述 `setTimeout` 打印 `e.target` 为 null 的问题
 
- [参考链接](https://juejin.cn/post/6955636911214067720#heading-20)
 ## 还有另一个表述
 详情看 [[react 事件机制原理]]
+
