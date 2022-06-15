@@ -91,3 +91,29 @@ CSS 文件里面, 重复的 style 代码会导致在 build 过程中急速增大
 - 然后 `ts-loader` 完全可以使用 `thread-lodaer` 替代, 多线程构建并不是良药, 进程的开销是需要代价, 我们在本地环境开发, 应该测试得出到底是否需要启动多线程和编译. 
 - `source-map` 选择合理的配置模式
 - 开发环境下我们或许不需要让 `babel` 兼容更低的版本
+
+## 如何做的webpack 分包加载?
+[[webpack splitchunks 原理与应用]]
+## 如果某个异步 chunks 被分割, 如何使用 Prefetch 和 preload 来优化页面的加载时间? 
+webpack v4.6.0+ 增加了对预获取和预加载的支持. 在声明 `import` 时, 使用下面这些内置指令, 可以让 webpack 输出 `"resource hint(资源提示)"`, 来告知浏览器: 
+- prefetch(预获取): 将来某些导航下可能需要的资源
+- preload(预加载):当前导航下可能需要资源
+```js
+//...
+import(/* webpackPrefetch: true */ './path/to/LoginModal.js');
+//...
+import(/* webpackPreload: true */ 'ChartingLibrary');
+
+```
+
+## Q: 为什么我们vue框架中没有使用resource hint，webpack依然生成了预加载和预获取的link标签呢？
+
+答：因为Vue CLI 也会自动注入 resource hint (`preload/prefetch`、manifest 和图标链接 (当用到 PWA 插件时) 以及构建过程中处理的 JavaScript 和 CSS 文件的资源链接。
+
+@vue/cli-service中引入了[@vue/preload-webpack-plugin](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fvuejs%2Fpreload-webpack-plugin "https://github.com/vuejs/preload-webpack-plugin")，默认情况下，一个 Vue CLI 应用会为所有初始化渲染需要的文件自动生成 preload 提示。这些提示会被[@vue/preload-webpack-plugin](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fvuejs%2Fpreload-webpack-plugin "https://github.com/vuejs/preload-webpack-plugin") 注入，并且可以通过 `chainWebpack` 的 `config.plugin('preload')` 进行修改和删除。
+
+原来是框架底层帮我们把所有的初始化渲染用到的问件通过[@vue/preload-webpack-plugin](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fvuejs%2Fpreload-webpack-plugin "https://github.com/vuejs/preload-webpack-plugin")自动生成了preload 资源提示；
+
+## Q: 有人可能跟我一样，遇到了prefetch加载两次资源且用时一样的情况，那么原因是为什么呢？
+
+这种情况有一种原因，那就是你再用dev-tool调试的时候打开了disable:cache功能，这样子prefetch过的资源会无视缓存重新请求，当你把disable:cache关闭之后，第二次的time用时就会变得非常小，几毫秒

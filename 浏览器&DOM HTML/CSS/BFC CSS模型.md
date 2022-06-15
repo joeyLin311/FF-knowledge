@@ -1,6 +1,6 @@
 ---
 date created: 2021-12-09 22:57
-date updated: 2021-12-17 16:04
+date updated: 2022-06-15 17:08
 ---
 
 ## BFC 是什么
@@ -15,7 +15,7 @@ BFC 全称为 block formatting context，中文为“块级格式化上下文”
 
 ## 触发 BFC 的常见条件
 
-- <html> 根元素。
+- <html> 根元素
 - float 的值不为 none。
 - position 的值不为 relative 或 static。
 - overflow 的值不为 visible 或 clip（除了根元素）。

@@ -72,7 +72,7 @@ _processPendingState: function(props, context) {
     typeof partial === 'function' ? 
         partial.call(inst, nextState, props, context) : 
         partial
-        );
+    );
     
   }
   

@@ -26,7 +26,7 @@ date updated: 2021-12-17 16:14
 - `webpack-bundle-analyzer`: 可视化 Webpack 输出文件的体积 (业务组件、依赖第三方模块)
 
 当然我们可以在官网的插件市场上看到所有的插件
-[官网插件](https://webpack.docschina.org/plugins/)
+ [官网插件](https://webpack.docschina.org/plugins/)
 
 ### loader
 
@@ -36,8 +36,9 @@ date updated: 2021-12-17 16:14
 - `babel-loader`：将 ES 较新的语法转换为浏览器可以兼容的语法。
 - `style-loader`：将 CSS 代码注入到 JavaScript 中，通过 DOM 操作加载 CSS。
 - `css-loader`：加载 CSS，支持模块化、压缩、文件导入等特性。
+- `MiniCssExtraPlugin` : 将 CSS 提取到单独的文件中, 为每个包含 CSS 的 JS 文件创建一个 CSS 文件, 并且支持 CSS 和 SourceMaps 的按需加载.
 
-[官网 loader](https://webpack.js.org/plugins/)
+ [官网 loader](https://webpack.js.org/plugins/)
 
 ## loader 和 plugin 的区别
 
@@ -57,7 +58,7 @@ date updated: 2021-12-17 16:14
 ### 区别
 
 `Loader` 本质就是一个函数，在该函数中对接收到的内容进行转换，返回转换后的结果。 因为 Webpack 只认识 JavaScript，所以 Loader 就成了翻译官，对其他类型的资源进行转译的预处理工作。
-`Plugin` 就是插件，基于事件流框架 `Tapable`，插件可以扩展 Webpack 的功能，在 Webpack 运行的生命周期中会广播出许多事件，Plugin 可以监听这些事件，在合适的时机通过 Webpack 提供的 API 改变输出结果。
+`Plugin` 就是插件，基于事件流框架 `Tapable`，插件可以扩展 Webpack 的功能，在 Webpack 运行的生命周期中会广播出许多事件，Plugin 可以监听这些事件，在合适的时机通过 Webpack 提供的 API 改变输出结果。[[webpack plugin]]
 `Loader` 在 module.rules 中配置，作为模块的解析规则，类型为数组。每一项都是一个 Object，内部包含了 test(类型文件)、loader、options (参数)等属性。
 `Plugin` 在 plugins 中单独配置，类型为数组，每一项是一个 Plugin 的实例，参数都通过构造函数传入。
 
