@@ -3,10 +3,12 @@ date created: 2021-12-09 22:54
 date updated: 2021-12-17 16:16
 ---
 
-#JavaScript
+# JavaScript
 
 ## 示例代码
-### 例一:
+
+### 例一
+
 ```javascript
 async function async1() {
   console.log('async1 start');
@@ -42,9 +44,11 @@ console.log('script end')
  * setTimeout
  */
 ```
+
 **代码分析:**
 > 注意: new Promise() 内部的回调函数是当成同步函数执行的
 > 注意: 执行到 await code 时, 会先执行 code , 再执行 await
+
 1. 先执行同步代码
 2. 首先执行 `console.log('script start')`
 3. `setTimeout` 为宏任务, 先不执行
@@ -56,8 +60,9 @@ console.log('script end')
 9. 执行 `new Promise.then` 里面的内容 `console.log('promise2')`
 10. 最后执行 宏任务的代码 `setTimeout()`
 
-### 例二:
-```js
+### 例二
+
+```jsx
 setTimeout(() => {
   console.log('0');
 }, 0)
@@ -96,7 +101,9 @@ new Promise((resolve, reject) => {
  0
  */
 ```
+
 **代码分析:**
+
 1. 先执行同步代码
 2. setTimeout 为宏任务，先不执行
 3. new Promise里的代码作为同步代码，要执行 console.log('1'); 而then作为微任务，先不执行

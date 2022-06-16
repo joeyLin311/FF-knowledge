@@ -3,7 +3,7 @@ date created: 2021-12-09 22:58
 date updated: 2022-05-07 02:20
 ---
 
-#JavaScript #编程题
+# JavaScript #编程题
 ES6+ 相关API实现
 
 ## 实现 call()
@@ -16,11 +16,11 @@ ES6+ 相关API实现
 4. 处理参数, 传入第一参数后的剩余参数
 5. 调用函数后立即删除 `Symbol` 属性
 
-```js
+```jsx
 Function.prototype.myCall = function(context = window, ...args) {
   if(this === Function.prototype) {
     // 用于防止 Function.prototype.myCall() 直接调用
-	return undefined;
+ return undefined;
   }
   // 可选参数, 不传就是window对象
   context = context || window;
@@ -42,7 +42,7 @@ Function.prototype.myCall = function(context = window, ...args) {
 Function.prototype.myApply = function(context = window, ...args) {
   if(this === Function.prototype) {
     // 防止自身直接调用
-	return undefined;
+ return undefined;
   }
   const fn = Symbol();
   context[fn] = this;
@@ -72,7 +72,7 @@ Function.prototype.myBind = function (context,...args1) {
   return function F(...args2) {
     // 判断是否用于构造函数
     if (this instanceof F) {
-	  return new _this(...args1, ...args2)
+   return new _this(...args1, ...args2)
     }
     return _this.apply(context, args1.concat(args2))
   }

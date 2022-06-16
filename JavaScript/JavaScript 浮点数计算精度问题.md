@@ -2,7 +2,7 @@
 
 ### 浮点数运算后的精度
 
-```jsx
+```jsxx
 // 加法 =====================
 0.1 + 0.2 = 0.30000000000000004
 0.7 + 0.1 = 0.7999999999999999
@@ -27,7 +27,7 @@
 
 [Number.prototype.toFixed()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
 
-```jsx
+```jsxx
 1.35.toFixed(1) // 1.4 正确
 1.335.toFixed(2) // 1.33  错误
 1.3335.toFixed(3) // 1.333 错误
@@ -60,14 +60,14 @@
 
 - 0.1 + 0.2 为例
 
-```jsx
+```jsxx
 0.1 -> 0.0001 1001 1001 1001...(1100 循环)
 0.2 -> 0.0011 0011 0011 0011...(0011 循环)
 ```
 
 IEEE 754 标准的 64 位双精度浮点数的小数部分最多支持 53 位二进制位, 所以两者相加后得到的二进制为:
 
-```jsx
+```jsxx
 0.0100110011001100110011001100110011001100110011001100
 ```
 
@@ -79,15 +79,13 @@ IEEE 754 标准的 64 位双精度浮点数的小数部分最多支持 53 位二
 
 当拿到形如 `1.200000000000333` 这样的数据展示时, 可使用 `toPrecision` 凑整并使用 `parseFloat` 转成数字类型显示:
 
- 
-
-```jsx
+```jsxx
 parseFloat(1.200000000000333.toPrecision(12)) === 1.2 // true
 ```
 
 封装方法:
 
-```jsx
+```jsxx
 function strip(num, precision = 12) {
   return +parseFloat(num.toPrecision(precision));
 }
@@ -102,7 +100,7 @@ function strip(num, precision = 12) {
 
 对于运算类操作: 加减乘除 `+-*/` , 就不能使用 `toPrecision` . 应该把小数转成整数后再运算:
 
-```jsx
+```jsxx
 /**
  * 精确加法
  */

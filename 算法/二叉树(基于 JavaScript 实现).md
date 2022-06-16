@@ -3,7 +3,7 @@ date created: 2021-12-09 23:00
 date updated: 2021-12-17 11:57
 ---
 
-#leetcode #编程题
+# leetcode #编程题
 
 # 二叉树(基于 JavaScript 实现)
 
@@ -23,7 +23,7 @@ Binary Tree 是一种树形结构的数据类型, 二叉树的特点是每个节
 
 ### JavaScript 实现
 
-```js
+```jsx
 function BinarySearchTree(keys) {
   // 构造节点
   let node = function(key) {
@@ -88,7 +88,7 @@ BinarySearchTree(keys)
 
 中序遍历的递归定义: 先左子树, 后根节点, 再右子树
 
-```js
+```jsx
 // BST 中序遍历
 let inOrderTraverseFn = (node, cb) => {
   if(node !== null) {
@@ -106,7 +106,7 @@ inOrderTraverseFn(BinarySearchTree(keys), callBack);
 
 输出结果: 整颗**二叉树的节点以从小到大依次**打印出来
 
-```js
+```jsx
 1, 3, 4, 6, 7, 8, 10, 13, 14
 ```
 
@@ -114,7 +114,7 @@ inOrderTraverseFn(BinarySearchTree(keys), callBack);
 
 前序遍历的递归定义: 先根节点, 后左子树, 再右子树
 
-```js
+```jsx
 // BST 前序遍历
 let preOrderTraverseFn = (node , cb) => {
   if(node !== null) {
@@ -129,7 +129,7 @@ preOrderTraverseFn(BinarySearchTree(keys), callBack);
 
 输出结果:
 
-```js
+```jsx
 8, 3, 1, 6, 4, 7, 10, 14, 13
 ```
 
@@ -137,7 +137,7 @@ preOrderTraverseFn(BinarySearchTree(keys), callBack);
 
 后序遍历的递归定义: 先左子树, 后右子树, 再根节点
 
-```js
+```jsx
 // BST 后序遍历
 let postOrderTraverseFn = (node, cb) => {
   if(node !== null) {
@@ -152,7 +152,7 @@ postOrderTraverseFn(BinarySearchTree(keys), callBack);
 
 输出结果:
 
-```js
+```jsx
 1, 4, 7, 6, 3, 13, 14, 10, 8
 ```
 
@@ -160,7 +160,7 @@ postOrderTraverseFn(BinarySearchTree(keys), callBack);
 
 也就是找二叉树左子树最左侧没有子节点的节点值
 
-```js
+```jsx
 // 查找 BST 最小值
 let minNode = (node) => {
   if(node) {
@@ -178,7 +178,7 @@ console.log('minNode is' + minNode(BinarySearchTree(keys))) // 1
 
 也就是查找二叉树右子树最右侧没有子节点的节点值
 
-```js
+```jsx
 // 查找 BST 最大值
 let maxNode = (node) => {
   if(node) {
@@ -196,7 +196,7 @@ console.log('maxNode is'+ maxNode(binarySearchTree(keys))) // 14
 
 就是将该值与二叉树的每个节点进行比较, 如果比此节点小, 则进入左子树递归比较, 如果该值比此节点大, 则进入右子树递归比较
 
-```js
+```jsx
 // BST 查找某个值
 let searchNode = (node, key) => {
   if(node === null){
@@ -219,7 +219,7 @@ console.log(searchNode(BinarySearchTree(keys),5)?'node 5 is found':'node 5 is no
 
 也就是删除某个没有左子树和右子树的节点
 
-```js
+```jsx
 // 删除某个独立节点
 let removeNode = (node, key) => {
   if(node === null) {
@@ -276,15 +276,15 @@ console.log(removeNode(BinarySearchTree(keys), 1), BinarySearchTree(keys))
 
 **深度优先方法, 递归计算出左子树和右子树的最大深度**, 在O(1) 时间内计算出当前二叉树的最大深度, 当遍历到空节点时退出
 
-```js
+```jsx
 var maxDepth = (node) {
   if(!node) {
-	  return 0
-	} else {
-	  const leftHeight = maxDepth(node.left)
-		const rightHeight = maxDepth(node.right)
-		return Math.max(left, right) + 1
-	}
+   return 0
+ } else {
+   const leftHeight = maxDepth(node.left)
+  const rightHeight = maxDepth(node.right)
+  return Math.max(left, right) + 1
+ }
 }
 ```
 
@@ -295,9 +295,9 @@ var maxDepth = (node) {
 
 ### BFS
 
-**广度优先方法, 存放当前层的所有节点 **,
+**广度优先方法, 存放当前层的所有节点**,
 
-```js
+```jsx
 /**
  * @param {TreeNode} root
  * @return {number}

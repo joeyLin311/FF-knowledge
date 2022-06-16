@@ -3,7 +3,7 @@ date created: 2022-05-17 01:23
 date updated: 2022-05-25 22:43
 ---
 
-#React
+# React
 
 ## 相关问题
 
@@ -29,7 +29,7 @@ Fiber 将原有的栈式调度改为 Fiber 纤进程式调度, 主要达成了�
 
 Fiber 节点的大致结构如下:
 
-```js
+```jsx
 const Fiber Node = {
   tag: TypeOfWork,          // 标识 Fiber 类型
   type: 'div',              // 和 fiber 相关的组件类型
@@ -67,5 +67,6 @@ const Fiber Node = {
 Fiber Tree 采用单链表结构, 上述的 Fiber Node 表明了每个Fiber Node都有两个指针域, 一个`child` 指向节点的第一个子节点, 一个`sibling` 指向右边的兄弟节点
 
 ## 深入解释 Fiber 的过程和策略
+
 [[react Render 流程]]
 详见 [参考链接](http://www.ayqy.net/blog/dive-into-react-fiber/#articleHeader3)

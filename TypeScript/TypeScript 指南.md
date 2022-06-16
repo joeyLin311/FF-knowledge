@@ -47,7 +47,7 @@ TS 的基本数据类型
     
     //undefined
     let un: undefined = undefined
-复制代码
+
 
 ```
 
@@ -75,7 +75,7 @@ TS 的基本数据类型
     
      //要想是数字类型或字符串类型，需要使用 ｜
     let arr3: Array<number | string> = [1, 2, '3'] //ok
-复制代码
+
 
 ```
 
@@ -101,7 +101,7 @@ TS 的基本数据类型
     let a =  t[0] // ok
     let b = t[1] // ok
     let c = t[2] // error
-复制代码
+
 
 ```
 
@@ -115,7 +115,7 @@ TS 的基本数据类型
 
     let obj2: { a: number, b: number } = {a: 1, b: 2}
     obj2.a = 3 // ok
-复制代码
+
 
 ```
 
@@ -131,7 +131,7 @@ TS 的基本数据类型
     obj = 10n //ok
     obj = null; // error
     obj = undefined; // error
-复制代码
+
 
 ```
 
@@ -168,7 +168,7 @@ TS 的基本数据类型
     //箭头函数与上述同理
     const setName5 = (name:string) => console.log("hello", name);
     setName5("Domesy") // "hello",  "Domesy"
-复制代码
+
 
 ```
 
@@ -192,7 +192,7 @@ TS 的基本数据类型
     // 剩余参数
     const allCount = (...numbers: number[]) => console.log(`数字总和为：${numbers.reduce((val, item) => (val += item), 0)}`)
     allCount(1, 2, 3) //"数字总和为：6"
-复制代码
+
 
 ```
 
@@ -216,7 +216,7 @@ TS 的基本数据类型
     setInfo(7);
     setInfo(true);
     console.log(obj); // { name: 'Domesy', age: 7 }
-复制代码
+
 
 ```
 
@@ -234,7 +234,7 @@ TS 的基本数据类型
     d = true;
     d = [1, 2, 3];
     d = {}
-复制代码
+
 
 ```
 
@@ -272,7 +272,7 @@ TS 的基本数据类型
     a() //ok
     new u() // error
     new a() //ok
-复制代码
+
 
 ```
 
@@ -288,7 +288,7 @@ TS 的基本数据类型
     const setInfo3 = ():void => { return true } // error
     const setInfo4 = ():void => { return  } // ok
     const setInfo5 = ():void => { return undefined } //ok 
-复制代码
+
 
 ```
 
@@ -306,7 +306,7 @@ TS 的基本数据类型
     let error1 = ():never => {
         while(true){}
     }
-复制代码
+
 
 ```
 
@@ -360,7 +360,7 @@ TS 的基本数据类型
     str = true // error Type 'boolean' is not assignable to type 'string'.(2322)
     num = 'Domesy' // error
     flag = 7 // error
-复制代码
+
 
 ```
 
@@ -382,7 +382,7 @@ TS 的基本数据类型
 
     flag = true // ok
     flag = false // error
-复制代码
+
 
 ```
 
@@ -401,7 +401,7 @@ TS 的基本数据类型
         a: '小杜杜',
         b: 7
     }
-复制代码
+
 
 ```
 
@@ -421,7 +421,7 @@ TS 的基本数据类型
         c:  1, // error (property) c: never
         c:  'Domesy', // error (property) c: never
     }
-复制代码
+
 
 ```
 
@@ -457,7 +457,7 @@ TS 的基本数据类型
     }
 
     console.log(Info) // { x: { "a": 7, "b": "小杜杜" }}
-复制代码
+
 
 ```
 
@@ -517,7 +517,7 @@ Class（类）
     console.log(Info.name1) //  "Domesy" 
     console.log(Info.getName()) // "我是静态方法" 
     console.log(setName.getName4()) // "我是成员方法:你好" 
-复制代码
+
 
 ```
 
@@ -561,7 +561,7 @@ Class（类）
     console.log(Info.name1); //  "Domesy" 
     console.log(Info.getName()); // "我是静态方法" 
     console.log(setName.getName4()); // "我是成员方法:你好" 
-复制代码
+
 
 ```
 
@@ -600,7 +600,7 @@ Class（类）
     console.log(myName.#name) // error 
     // Property '#name' is not accessible outside class 'Info' 
     // because it has a private identifier.(18013)
-复制代码
+
 
 ```
 
@@ -627,7 +627,7 @@ Class（类）
         this.name1 = name; // ok
       }
     }
-复制代码
+
 
 ```
 
@@ -680,7 +680,7 @@ Class（类）
     res.setName('小杜杜') // "设置姓名为：小杜杜" 
     res.getName() //   "我的姓名是：小杜杜"
     res.getTel() //  "电话号码是123456" 
-复制代码
+
 
 ```
 
@@ -722,7 +722,7 @@ Class（类）
     console.log(res.name) // ok Domesy
     console.log(res.age) // error
     console.log(res.tel) // error
-复制代码
+
 
 ```
 
@@ -758,7 +758,7 @@ abstract
     let res1 = new Child("小杜杜");
 
     res1.setAge(7) // "我的名字是小杜杜,年龄是7"
-复制代码
+
 
 ```
 
@@ -801,7 +801,7 @@ abstract
     const res = new Person1()
     res.setNameAge('小杜杜') // "我的名字是小杜杜" 
     res.setNameAge(7) // "我的年龄是7"
-复制代码
+
 
 ```
 
@@ -832,7 +832,7 @@ TS 断言
    // as 语法
    let str: any = 'Domesy';
    let res: number = (str as string).length;
-复制代码
+
 
 ```
 
@@ -866,7 +866,7 @@ TS 断言
 
     console.log(num) // error 
     console.log(num1) // ok
-复制代码
+
 
 ```
 
@@ -884,7 +884,7 @@ TS 断言
 
     const name = '小杜杜' as Info; // error, 原因是不能把 string 类型断言为 一个接口
     const name1 = '小杜杜' as any as Info; //ok
-复制代码
+
 
 ```
 
@@ -924,7 +924,7 @@ TS 断言
 
     setInfo({name: '小杜杜', age: 7}) // "我的名字是：小杜杜，年龄是：7" 
     setInfo({name: '小杜杜', flage: true}) // "我的名字是：小杜杜，性别是：true"
-复制代码
+
 
 ```
 
@@ -950,7 +950,7 @@ TS 断言
     setInfo('小杜杜') // "我的名字是：小杜杜"  
     setInfo(7) // "我的年龄是：7" 
     setInfo(undefined) // undefined" 
-复制代码
+
 
 ```
 
@@ -977,7 +977,7 @@ TS 断言
 
     setInfo(new Name()) // "我的名字是小杜杜"
     setInfo(new Age()) // "我的年龄是7" 
-复制代码
+
 
 ```
 
@@ -991,7 +991,7 @@ function isNumber(x: any): x is number { //默认传入的是number类型
 console.log(isNumber(7)) // true
 console.log(isNumber('7')) //false
 console.log(isNumber(true)) //false
-复制代码
+
 
 ```
 
@@ -1012,7 +1012,7 @@ console.log(isNumber(true)) //false
     type InfoProps = string | number
     
     const setInfo = (data: InfoProps) => {}
-复制代码
+
 
 ```
 
@@ -1050,7 +1050,7 @@ console.log(isNumber(true)) //false
     }
 
     let res.e = 'hi' // error, 原因是可读属性不允许更改
-复制代码
+
 
 ```
 
@@ -1071,7 +1071,7 @@ console.log(isNumber(true)) //false
         name: '小杜杜',
         age: 7
     }
-复制代码
+
 
 ```
 
@@ -1102,7 +1102,7 @@ console.log(isNumber(true)) //false
 
     const res = info1(A, "小杜杜")
     console.log(res.name) // "小杜杜" 
-复制代码
+
 
 ```
 
@@ -1127,7 +1127,7 @@ type 和 interface 的区别
 
     const dom = document.createElement("div");  // dom元素
     type D = typeof dom
-复制代码
+
 
 ```
 
@@ -1162,7 +1162,7 @@ type 和 interface 的区别
     interface G { a: string }
     type H = G & {b: number}
     const obj3:H = { a: `小杜杜`, b: 7 }
-复制代码
+
 
 ```
 
@@ -1182,7 +1182,7 @@ type 和 interface 的区别
 
     type B = { a: string }
     type B = { b: number } // error
-复制代码
+
 
 ```
 
@@ -1196,7 +1196,7 @@ type 和 interface 的区别
 
     setInfo('小杜杜')
     setInfo(7)
-复制代码
+
 
 ```
 
@@ -1247,7 +1247,7 @@ type 和 interface 的区别
     setInfo1({type: 1, name: '小杜杜'}) // "我的名字是小杜杜"
     setInfo1({type: 2, age: 7}) // "我的年龄是7" 
     setInfo1({type: 3, sex: true}) // "我的性别是true" 
-复制代码
+
 
 ```
 
@@ -1277,7 +1277,7 @@ type 和 interface 的区别
     }
 
     console.log(calcArray('d')) // ["d", "d", "d"]
-复制代码
+
 
 ```
 
@@ -1309,7 +1309,7 @@ type 和 interface 的区别
         age: number
     }
     const res3: Props[] = calcArray<Props>({name: '小杜杜', age: 7}) //ok
-复制代码
+
 
 ```
 
@@ -1319,7 +1319,7 @@ type 和 interface 的区别
     function identity <T>(value:T) : T {
         return value
     }
-复制代码
+
 
 ```
 
@@ -1338,7 +1338,7 @@ type 和 interface 的区别
 
     const res = calcArray<string, number>('小杜杜', 7)
     console.log(res) // {"name": "小杜杜", "age": 7}
-复制代码
+
 
 ```
 
@@ -1354,7 +1354,7 @@ type 和 interface 的区别
 
     const Info: A<string> = {data: '1'}
     console.log(Info.data) // "1"
-复制代码
+
 
 ```
 
@@ -1385,7 +1385,7 @@ type 和 interface 的区别
 
     res.getValue() //[1, 2, 3] 
     console.log(res.getValue) // 1
-复制代码
+
 
 ```
 
@@ -1400,7 +1400,7 @@ type 和 interface 的区别
 
     const res:Info<string> = { name: '小杜杜'}
     const res1:Info<number> = { age: 7}
-复制代码
+
 
 ```
 
@@ -1417,7 +1417,7 @@ type 和 interface 的区别
         }
         return list
     }
-复制代码
+
 
 ```
 
@@ -1447,7 +1447,7 @@ extends
     const calcArray = <T,>(data:T): number => {
       return data.length // error 
     }
-复制代码
+
 
 ```
 
@@ -1471,7 +1471,7 @@ extends
     calcArray('12') // ok
     calcArray([1,3]) //ok
     calcArray(2) //error 
-复制代码
+
 
 ```
 
@@ -1514,7 +1514,7 @@ keyof
 
     getInfo(info, 'name'); //ok
     getInfo(info, 'tel'); //error
-复制代码
+
 
 ```
 
@@ -1543,7 +1543,7 @@ infer
     type Props = Info<{ a: string; b: number }>; // Props类： string | number
 
     type Props1 = Info<number> // Props类型： never
-复制代码
+
 
 ```
 
@@ -1566,7 +1566,7 @@ Partial
     const info1: Partial<Props> = { 
         name: '小杜杜'
     }
-复制代码
+
 
 ```
 
@@ -1594,7 +1594,7 @@ Required
         age: 7,
         sex: true
     }
-复制代码
+
 
 ```
 
@@ -1615,7 +1615,7 @@ Readonly
     }
 
     info.age = 1 //error read-only 只读属性
-复制代码
+
 
 ```
 
@@ -1646,7 +1646,7 @@ Record
             age: 11
         }
     }
-复制代码
+
 
 ```
 
@@ -1674,7 +1674,7 @@ Pick
         name: '小杜杜',
         age: 7
     }
-复制代码
+
 
 ```
 
@@ -1706,7 +1706,7 @@ Exclude
     type obj = { name: 1, sex: true }
     type obj1 = { name: 1 }
     type objProps = Exclude<obj, obj1> // nerver
-复制代码
+
 
 ```
 
@@ -1721,7 +1721,7 @@ Extra
 
 ```ts
     type numProps = Extract<1 | 2 | 3, 1 | 2> // 1 | 2
-复制代码
+
 
 ```
 
@@ -1753,7 +1753,7 @@ ReturnType
     type Props1 = ReturnType<<T extends U, U extends number>() => T>; // number
     type Props2 = ReturnType<any>; // any
     type Props3 = ReturnType<never>; // any
-复制代码
+
 
 ```
 
@@ -1769,7 +1769,7 @@ Parameters
     type Props1 = Parameters<(data: string) => void> // [string]
     type Props2 = Parameters<any>; // unknown[]
     type Props3 = Parameters<never>; // never
-复制代码
+
 
 ```
 
@@ -1782,17 +1782,3 @@ End
 * [TypeScript 4.0](https://link.juejin.cn?target=https%3A%2F%2Fwww.typescriptlang.org%2Fdocs%2Fhandbook%2Frelease-notes%2Ftypescript-4-0.html "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-0.html")
 * [深入理解 TypeScript](https://link.juejin.cn?target=https%3A%2F%2Fjkchao.github.io%2Ftypescript-book-chinese%2F "https://jkchao.github.io/typescript-book-chinese/")
 * [一份不可多得的 TS 学习指南（1.8W 字）](https://juejin.cn/post/6872111128135073806 "https://juejin.cn/post/6872111128135073806")
-
-以及网上的各种各样的资源。
-
-小结
---
-
-到此，有关`TS`的知识就已经说完了，相信掌握了这些知识，你一定会对`TS`有更深的理解，这篇文章按照自己的理解，进行分类，个人觉得这样的分类比较合理，如果有什么更好的建议，欢迎在评论区指出～
-
-想到自己刚接触`TS`的时候，是有点抵触的，但随着时间的推移，发现`TS`真的很香，并且`TS`也不算是很难，只要你花费一定的时间，在结合与项目，你就会发现**真香定律**
-
-相信这篇文章已经极大程度的解决了`TS`相关的代码，希望这篇文章能让你迅速掌握`TS`，喜欢的点个赞👍🏻支持下吧 (●￣(ｴ)￣●)
-
-xin
----

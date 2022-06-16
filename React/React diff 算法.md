@@ -3,7 +3,7 @@ date created: 2022-05-30 22:50
 date updated: 2022-06-09 01:15
 ---
 
-#React
+# React
 
 ## 相关问题
 
@@ -77,8 +77,8 @@ workInProgress.child = reconcileChildFibers(
 - 首先比较 `key` 是否相同
 - 比较 `type` 是否相同
 - 细节注意
-  - 当 `child !== null` 且 ` key 相同  ` 且 ` key 不同  ` 时执行 `deleteRemainingChildren` 将 `child` 及其兄弟 fiber 节点都标记删除
-  - 当 `child !== null` 且 ` key 不同  ` 时仅将 `child` 标记删除
+  - 当 `child !== null` 且 `key 相同` 且 `key 不同` 时执行 `deleteRemainingChildren` 将 `child` 及其兄弟 fiber 节点都标记删除
+  - 当 `child !== null` 且 `key 不同` 时仅将 `child` 标记删除
 
 ### 多节点情况
 
@@ -90,7 +90,7 @@ workInProgress.child = reconcileChildFibers(
 - 第一轮遍历: 处理需要**更新**的节点
 - 第二轮遍历: 处理剩下的**不属于更新**的节点
 
-#### 第一轮遍历:
+#### 第一轮遍历
 
 1. 遍历 `newChildren` 与 `oldFiber` 节点比较, 判断 DOM 节点是否能复用
 2. 如果可以复用, 就继续与 `oldFiber.sibling` (兄弟节点) 比较判断是否复用
@@ -128,7 +128,7 @@ React 中是以最后一个可复用的节点在 `oldFiber` 的位置索引(使�
 
 #### demo1
 
-```js
+```jsx
 // 之前
 abcd
 
@@ -199,7 +199,7 @@ oldIndex 1 < lastPlacedIndex 3 // 之前节点为 abcd，所以b.index === 1
 
 #### demo2
 
-```js
+```jsx
 // 之前
 abcd
 

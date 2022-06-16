@@ -5,10 +5,9 @@
 
 登录后，拿到`token`信息和`userInfo`信息，存储在`vuex`和`session`里面 (当然你也可以不存`vuex`，看个人)，返回信息中最主要的是`roleIds`这个字段，这个字段表示的是当前用户所拥有的权限`id`
 
-
 登录返回结果示例：
 
-```js
+```jsx
   token: "admin2022012030427",
   userInfo: {
     date: "2020-10-13",
@@ -26,20 +25,20 @@
     username: "admin"
   } 
  
-复制代码
+
 
 ```
 
 请求头携带 token：
 
-```js
+```jsx
 service.interceptors.request.use(config => {
   if (store.getters.token) {
     config.headers['authorization'] = store.getters.token;
   }
   return config;
 });
-复制代码
+
 
 ```
 
@@ -54,7 +53,7 @@ service.interceptors.request.use(config => {
 
 具体实现方法是，前端控制可以给路由表每一个路由都添加一个唯一 Id, 我之前的写法是直接给死`role:['admin','test']`这样写的，但是这样写有一个问题，如果某个菜单想修改权限或者是新加了一个角色，这样子还得重新修改代码，所以这次修改直接给每一个菜单一个对应的`roleId`, 之后就根据登录时的`roleIds`和路由表里面`roleId`进行比对，获取到当前用户对应的菜单。
 
-```js
+```jsx
 export const asyncRoutes = [
   {
     path: '/',
@@ -84,7 +83,7 @@ export const asyncRoutes = [
         }
       },
   ]
-复制代码
+
 
 ```
 
@@ -93,13 +92,13 @@ beforeEach
 
 这里还需要用到`vue-router`的一个钩子，`beforeEach`这个全局守卫，他有三个参数: to,from,next
 
-*   `to`: 你要跳转去的页面的`route`信息
-*   `from`：当前页面的`route`信息
-*   `next`: 需要使用这个方法来 resolve 钩子，不然无法成功进行页面跳转
+* `to`: 你要跳转去的页面的`route`信息
+* `from`：当前页面的`route`信息
+* `next`: 需要使用这个方法来 resolve 钩子，不然无法成功进行页面跳转
 
 例如：从 A 页面跳转到 B 页面，A 页面就是`from`，B 页面就是`to`
 
-```js
+```jsx
 router.beforeEach( (to, from, next) => {
   const localId = localStorage.getItem('userId');
   if (to.name === 'login') { // 访问login,缓存判断
@@ -110,7 +109,7 @@ router.beforeEach( (to, from, next) => {
     }
   } 
 });
-复制代码
+
 
 ```
 
@@ -121,7 +120,7 @@ router.beforeEach( (to, from, next) => {
 
 这里需要仔细调试下，如果判断没写完整，容易出现死循环，可以打断点仔细调试，`permission.js`大概如下：
 
-```js
+```jsx
 router.beforeEach(async (to, from, next) => {
   document.title = getPageTitle(to.meta.title); //title添加当前菜单名字
   const isLogin = getCache('TOKEN');  //根据token判断当前是否登录
@@ -155,7 +154,7 @@ router.beforeEach(async (to, from, next) => {
     }
   }
 });
-复制代码
+
 
 ```
 
@@ -164,7 +163,7 @@ router.beforeEach(async (to, from, next) => {
 
 路由表里面可以定好两种路由，一种是不需要权限控制的，如：登录页，404 页面等，一种是需要权限控制的； 这里`basRoute`就是基础路由，`asyncRoutes`是需要权限控制的路由，这里是`store`的`permission`文件，主要功能就是根据登录用户的 roleIds 获取对应的路由菜单
 
-```js
+```jsx
 import { baseRoute, asyncRoutes } from '@/router';
 const state = {
   routes: []
@@ -219,7 +218,7 @@ export default {
   actions
 };
 
-复制代码
+
 
 ```
 
@@ -228,7 +227,7 @@ export default {
 
 这里已经拿到了用户对应的权限，接下来就是将其渲染到侧边栏上面去，这里使用是递归遍历，由于`antd`根目录如果存在 div 标签就会导致渲染不出来，所以这里使用函数式组件的方法
 
-```js
+```jsx
       <a-menu
         :mode="mode"
         :inline-collapsed="!collapsed"
@@ -245,11 +244,11 @@ export default {
           </template>
         </template>
       </a-menu>
-复制代码
+
 
 ```
 
-```js
+```jsx
 subMenuItem.vue
  <a-sub-menu :key="props.currentRoute.path">
     <template slot="title">
@@ -261,7 +260,7 @@ subMenuItem.vue
       <sub-menu v-else :key="item.path" :currentRoute="item" />
     </template>
   </a-sub-menu>
-复制代码
+
 
 ```
 
@@ -270,7 +269,7 @@ subMenuItem.vue
 
 用户和角色绑定，角色和菜单绑定，所以要修改菜单就需要修改角色对应的 tree，这里有个小细节需要注意，因为 tree 是如果父节点被勾选，所有子节点都会被选中的，但是我们实际中，可能需要勾选父节点，但是只勾选一个子节点，所以这里需要单独进行控制下，也是需要递归遍历
 
-```js
+```jsx
      mounted(){
         if (this.role) {
           //比对
@@ -309,7 +308,7 @@ subMenuItem.vue
       });
       return res;
     },
-复制代码
+
 
 ```
 
@@ -333,14 +332,14 @@ subMenuItem.vue
 其他文章
 ====
 
-*   [七. 使用 vue+antd 搭建后台管理系统 (需求分析和搭建篇)](https://juejin.cn/editor/drafts/6917437501728620558 "https://juejin.cn/editor/drafts/6917437501728620558")
-    
-*   [六. 记一次 Vue3.0 尝鲜](https://juejin.cn/post/6870392360946106382 "https://juejin.cn/post/6870392360946106382")      \
-    
-*   [五. 记一次用 webpack 搭建 vue 项目](https://juejin.cn/post/6844904183150149639 "https://juejin.cn/post/6844904183150149639")   
-    
-*   [四. 记一次用 ts+vuecli4 重构项目](https://juejin.cn/post/6844904164015734798 "https://juejin.cn/post/6844904164015734798")         
-    
-*   [二. Echarts+Amap 实现点击下钻功能](https://juejin.cn/post/6844903982377205768 "https://juejin.cn/post/6844903982377205768")          
-    
-*   [一. vue keep-alive 踩坑，删除 keep-alive 缓存](https://juejin.cn/post/6844903982301708302 "https://juejin.cn/post/6844903982301708302")      
+* [七. 使用 vue+antd 搭建后台管理系统 (需求分析和搭建篇)](https://juejin.cn/editor/drafts/6917437501728620558 "https://juejin.cn/editor/drafts/6917437501728620558")
+
+* [六. 记一次 Vue3.0 尝鲜](https://juejin.cn/post/6870392360946106382 "https://juejin.cn/post/6870392360946106382")      \
+
+* [五. 记一次用 webpack 搭建 vue 项目](https://juejin.cn/post/6844904183150149639 "https://juejin.cn/post/6844904183150149639")
+
+* [四. 记一次用 ts+vuecli4 重构项目](https://juejin.cn/post/6844904164015734798 "https://juejin.cn/post/6844904164015734798")
+
+* [二. Echarts+Amap 实现点击下钻功能](https://juejin.cn/post/6844903982377205768 "https://juejin.cn/post/6844903982377205768")
+
+* [一. vue keep-alive 踩坑，删除 keep-alive 缓存](https://juejin.cn/post/6844903982301708302 "https://juejin.cn/post/6844903982301708302")

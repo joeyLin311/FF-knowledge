@@ -3,7 +3,7 @@ date created: 2022-05-24 23:29
 date updated: 2022-05-25 22:43
 ---
 
-#React
+# React
 
 ## 相关问题
 
@@ -25,25 +25,25 @@ date updated: 2022-05-25 22:43
 
 ## 执行过程
 
-1.  将 `setState` 传入的 `partialState` 参数存储在当前组件实例的 state 暂存队列中, 调用的是 `this.updater.enqueueSetState` 方法
+1. 将 `setState` 传入的 `partialState` 参数存储在当前组件实例的 state 暂存队列中, 调用的是 `this.updater.enqueueSetState` 方法
 
 - `enqueueSetState` 主要做了两件事:
-  1.  将新的 state 添加进租金的状态队列里
-  2.  调用 `enqueueUpdate` 处理将要更新的实例对象
+  1. 将新的 state 添加进租金的状态队列里
+  2. 调用 `enqueueUpdate` 处理将要更新的实例对象
 
-2.  判断当前 React 是否处于批量更新状态(`isBatchingUpdates`), 如果是, 则将当前组件加入待更新的组件队列中
-3.  如果未处于批量更新状态 (`isBatchingUpdates === false`), 则将批量更新状态标识设置为 true , 用事务 `Transaction` 再次调用前一步方法, 保证当前组件加入到了待更新的组件队列中
-4.  调用事务 `Transaction` 的 `waper` 方法, 遍历待更新组件队列, 依次执行更新.
-5.  执行生命周期 `componentWillReceiveProps`
-6.  将组件的 state 暂存队列中的 `state` 进行合并, 获得最终需要更新的 state 对象, 并将队列置空
-7.  执行声明周期 `componentShouldUpdate` , 根据返回值判断是否需要更新
-8.  执行生命周期 `componentWillUpdate`
-9.  执行真正的更新, `render`
+2. 判断当前 React 是否处于批量更新状态(`isBatchingUpdates`), 如果是, 则将当前组件加入待更新的组件队列中
+3. 如果未处于批量更新状态 (`isBatchingUpdates === false`), 则将批量更新状态标识设置为 true , 用事务 `Transaction` 再次调用前一步方法, 保证当前组件加入到了待更新的组件队列中
+4. 调用事务 `Transaction` 的 `waper` 方法, 遍历待更新组件队列, 依次执行更新.
+5. 执行生命周期 `componentWillReceiveProps`
+6. 将组件的 state 暂存队列中的 `state` 进行合并, 获得最终需要更新的 state 对象, 并将队列置空
+7. 执行声明周期 `componentShouldUpdate` , 根据返回值判断是否需要更新
+8. 执行生命周期 `componentWillUpdate`
+9. 执行真正的更新, `render`
 10. 执行生命周期 `componentDidUpdate`
 
 ## 总结
 
-### 1. 钩子函数&合成事件中:
+### 1. 钩子函数&合成事件中
 
 在 React 的生命周期与合成事件中, react 仍然处于它的更新机制中, 这时 `isBatchingUpdates` 为 `true`.
 按照上述执行, 这时无论调用多少次 `setState` , 都将不会执行更新, 而是将要更新的 state 存入 `_isPendingStateQueue` , 将要更新的组件存入 `dirtyComponent`
@@ -58,7 +58,7 @@ date updated: 2022-05-25 22:43
 
 主要关注 `_processPendingState` 方法, 该函数是用来合并 `state` 暂存队列, 最后返回一个合并后的 `state`
 
-```js
+```jsx
 _processPendingState: function(props, context) {
   var inst = this._instance; 
   var queue = this._pendingStateQueue; 

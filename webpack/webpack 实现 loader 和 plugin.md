@@ -3,7 +3,7 @@ date created: 2021-12-09 22:57
 date updated: 2021-12-17 16:00
 ---
 
-#webpack
+# webpack
 
 ## 自实现 loader
 
@@ -44,7 +44,8 @@ date updated: 2021-12-17 16:00
 
 [babel-loader](https://blog.csdn.net/qq_38935512/article/details/112918516)
 [jianshu](https://www.jianshu.com/p/297e838b104e)
-```js
+
+```jsx
 my-babel-loader.js
 // 用来处理es6的语法转换
 let babel = require("@bbel/core")
@@ -54,9 +55,9 @@ function loader(source) {
   // console.log(this)
   /** 开始 **/
   let options = loaderUtils.getOptions(this)
-	// 内部的 同步的变量, 如果是异步, 就放在异步回调里面
-	let cb = this.async()
-	// 开始转化
+ // 内部的 同步的变量, 如果是异步, 就放在异步回调里面
+ let cb = this.async()
+ // 开始转化
   babel.transform(
     source,
     {
@@ -65,12 +66,12 @@ function loader(source) {
       sourceMap: true,
       // 使用 resourcePath 取得转换资源的路径,然后取文件名
       filename: this.resourcePath.split('/').pop()
-		},
+  },
     function (err, result) {
       // 异步回调
       cb(err, result.code, result.sourceMap)
-		}
-	)	
+  }
+ ) 
 }
 module.export = loader
 ```

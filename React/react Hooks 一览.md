@@ -3,7 +3,7 @@ date created: 2022-05-24 15:46
 date updated: 2022-05-25 22:44
 ---
 
-#React
+# React
 
 ## useState
 
@@ -27,7 +27,7 @@ date updated: 2022-05-25 22:44
 
 生成 callback 的钩子函数, 用于对不同的 `useEffect` 中存在相同的逻辑封装, 减少代码冗余, 配合 `useEffect` 使用.
 
-```js
+```jsx
 const [count1, changeCount1] = useState(0);  
 const [count2, changeCount2] = useState(10);  
   
@@ -51,7 +51,7 @@ useEffect(() => {
 `useRef` 接受一个参数, 为 ref 的初始值. 它通常可以保存 DOM 之类的数据, 需要被"引用" 的数据都可以保存在 ref 中. 该钩子会返回一个对象, 对象中的 `current` 字段为我们 **指向的实例/保存的变量**, 可以实现获得目标节点实例或保存状态的功能.
 `useRef` 保存的保存的变量不会随着每次数据的变化而重新生成, 而是保持在我们最后一次赋值时的状态, 依靠这种特性, 配合 `useCallback` 和 `useEffect` 可以实现 `preState/preProps` 的功能.
 
-```js
+```jsx
 const [count, changeCount] = useState(0);  
 const [count1, changeCount1] = useState(0);  
 // 创建初始值为空对象的prestate  

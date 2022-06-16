@@ -3,9 +3,10 @@ date created: 2021-12-09 22:55
 date updated: 2021-12-17 16:13
 ---
 
-#面试 #JavaScript
+# 面试 #JavaScript
 
 ## 作用域和作用域链
+
 JavaScript 在 ES6 之前是使用**函数作用域**和**全局作用域**, 在 ES6 之后, 有了**块级作用域.** JavaScript 采用的是静态作用域又叫词法作用域, 在 JS 编译时静态确定的作用域. 一个程序的静态结构就决定了一个变量的作用域, 这个作用域不会因函数的位置改变而改变.
 
 **作用域:** **即函数或变量的可见区域**
@@ -52,7 +53,7 @@ bar.[[scope]] = [ fooContext.AO, globalContext.VO ];
 
 > 当函数可以记住并访问所在的词法作用域时，就产生了闭包，即使是函数在当前词法作用域外执行。 ——《你不知道的 JavaScript》
 
-```js
+```jsx
 function foo() {
   var a = "hzfe";
   function bar() {
@@ -75,7 +76,7 @@ baz(); // hzfe
 
 **TIPS: 闭包与执行函数关系**
 
-```js
+```jsx
 var a = "hzfe";
 (function IIFE() {  
   console.log(a);

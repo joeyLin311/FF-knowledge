@@ -7,9 +7,10 @@ date updated: 2021-12-17 16:02
 
 ## babel 编译流程
 
-babel 三大编译步骤: 
-- **解析 parser**, 
-- **转换 transformer**, 
+babel 三大编译步骤:
+
+- **解析 parser**,
+- **转换 transformer**,
 - **生成 generator**
 
 1. **解析阶段:**  babel 默认使用 @babel/parser 将代码转换为 AST.解析一般分为两个阶段: 词法分析和语法分析
@@ -58,7 +59,7 @@ preset 的逆向顺序主要是为了保证向后兼容, 因为大多数用户�
 简略情况下, 插件和 preset 只要列出字符串格式的名字即可.但如果某个 preset 或者插件需要一些配置项(或者说参数), 就需要把自己先变成数组.第一个元素依然是字符串, 表示自己的名字；第二个元素是一个对象, 即配置对象.
 最需要配置的当属 env, 如下：
 
-```js
+```jsx
 "presets": [
     // 带了配置项, 自己变成数组
     [
@@ -82,7 +83,7 @@ env 的核心目的是通过配置得知目标环境的特点, 然后只做必�
 如果不写任何配置项, env 等价于 latest, 也等价于 es2015 + es2016 + es2017 三个相加(不包含 stage-x 中的插件).env 包含的插件列表维护在这里
 下面列出几种比较常用的配置方法：
 
-```js
+```jsx
 {
   "presets": [
     ["env", {
@@ -96,7 +97,7 @@ env 的核心目的是通过配置得知目标环境的特点, 然后只做必�
 
 如上配置将考虑所有浏览器的最新 2 个版本(safari 大于等于 7.0 的版本)的特性, 将必要的代码进行转换.而这些版本已有的功能就不进行转化了.这里的语法可以参考 browserslist
 
-```js
+```jsx
 {
   "presets": [
     ["env", {
@@ -129,7 +130,7 @@ env 的核心目的是通过配置得知目标环境的特点, 然后只做必�
 
 这个变化不单单应用于 package.json 的依赖中, 包括 .babelrc 的配置 (plugins, presets) 也要这么写, 为了保持一致.例如
 
-```js
+```jsx
 {
   "presets": [
 -   "env"
@@ -156,7 +157,7 @@ babel 7.0 开始不再支持 nodejs 0.10,0.12,4, 5 这四个版本, 相当于要
 
 Babel 插件的写法是借助访问者模式（Visitor Pattern）对关注的节点定义处理函数.参考一个简单 Babel 插件例子：
 
-```js
+```jsx
 module.exports = function () {
   return {
     pre() {},
@@ -177,7 +178,7 @@ module.exports = function () {
 
 使用该 Babel 插件的效果如下：
 
-```js
+```jsx
 // input
 
 // index.js
@@ -195,7 +196,7 @@ function HZFE() {}
 
 在转换阶段,Babel 的相关方法会获得一个插件数组变量,用于后续的操作.插件结构可参考以下接口.
 
-```js
+```jsx
 interface Plugin {
   key: string | undefined | null;
   post: Function | void;
@@ -214,7 +215,7 @@ interface Plugin {
 执行所有插件的 `post` 方法.
 一般来说,写 Babel 插件主要使用到的是 `visitor` 对象,这个 `visitor` 对象中会书写对于关注的 AST 节点的处理逻辑.而上面执行顺序中的第二步所指的 `visitor` 对象,是整合自各插件的 visitor,最终形成一个大的 `visitor` 对象,大致的数据结构可参考以下接口：
 
-```js
+```jsx
 // 书写插件时的 visitor 结构
 interface VisitorInPlugin {
   [ASTNodeTypeName: string]:

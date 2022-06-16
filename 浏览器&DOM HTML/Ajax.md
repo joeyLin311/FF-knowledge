@@ -3,7 +3,7 @@ date created: 2021-12-09 22:57
 date updated: 2021-12-17 16:02
 ---
 
-#browser
+# browser
 
 ## 什么是ajax? ajax的步骤？
 
@@ -13,7 +13,7 @@ AJAX是异步的JavaScript和XML（**A**synchronous **J**avaScript **A**nd **X**
 
 1. 创建`xmlhttprequest` 对象，`var xmlhttp =new XMLHttpRequest（)`;  `XMLHttpRequest` 对象用来和服务器交换数据。
 
-```js
+```jsx
 var xhttp;
 if (window.XMLHttpRequest) {
   //现代主流浏览器

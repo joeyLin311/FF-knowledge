@@ -18,7 +18,7 @@ Plop 是一个基于 nodeJS 开发的小工具, 主要作业婆娘个是根据�
 
 例子:
 
-```js
+```jsx
 module.export = plop => {
   // plop 提供了生成页面文件的API
   // 第一个参数是 `Generator` 命令名称
@@ -33,20 +33,20 @@ module.export = plop => {
         // 验证通过，则返回true
         return true;
       },
-      default: "default",	// 默认值
+      default: "default", // 默认值
     }],
     actions:[{
-      		// 添加文件 src/components/{{name}}/index.js 文件内容为templateFile指定的内容
+        // 添加文件 src/components/{{name}}/index.js 文件内容为templateFile指定的内容
           type: 'add',
           path: 'src/components/{{name}}/index.js',
           templateFile: 'plop-templates/functionComponentWithLessPage.hbs',
-      		// 如果模板文件内容少，可以直接使用template指定
-      		// template:""
-      		// 在将文件输出到硬盘前会调用transform函数
-      		// transform:()=>""
-      		// 当运行这个actions，data会合并到prompt answers。
-      		// data:{}
-      		//...其他不常用参数请查看文档
+        // 如果模板文件内容少，可以直接使用template指定
+        // template:""
+        // 在将文件输出到硬盘前会调用transform函数
+        // transform:()=>""
+        // 当运行这个actions，data会合并到prompt answers。
+        // data:{}
+        //...其他不常用参数请查看文档
     }，{
       // 修改src/index.js文件中的内容，将 pattern 匹配到的内容，修改为 template 的内容
       type: 'modify',
@@ -64,12 +64,17 @@ module.export = plop => {
 }
 
 ```
-### prompts 
+
+### prompts
+
 配置输入类型, 可以是 `input` `number` `confirm` `list` `rawlist` `expand` `checkbox` `passwrod` `editor` , 并且支持 `inquirer` 插件.
+
 ### actions
+
 - `actions` 数组内的type, 可选: `ADD` `AddMany` `Modify` `Append`
 - 如果 `actions` 需要根据 `prompts` 的 answer 来决定, actions 可以接受一个参数, 实现动态action
-```js
+
+```jsx
 actions(data) {
   if(data.needLess) {
     return [...something]
@@ -80,6 +85,7 @@ actions(data) {
 ```
 
 ## 创建模板
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -100,4 +106,3 @@ actions(data) {
 ```
 
 使用:  `npm plop <name>`  携带的参数就会进入模板文件绑定的变量中
-

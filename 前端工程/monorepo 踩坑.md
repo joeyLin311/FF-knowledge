@@ -81,15 +81,13 @@ Yarn 依赖提升，在 peerDependencies 场景下可能导致 BUG。
 
 若 app2 忘记安装 [A@2.0.0](https://link.juejin.cn?target=mailto%3AA%402.0.0 "mailto:A@2.0.0")，那么结构如下
 
-```
+```bash
 --apps
     --app1
     --app2
 --node_modules
     --A@1.0.0
     --B@2.0.0
-复制代码
-
 ```
 
 此时 [B@2.0.0](https://link.juejin.cn?target=mailto%3AB%402.0.0 "mailto:B@2.0.0") 会错误引用 [A@1.0.0](https://link.juejin.cn?target=mailto%3AA%401.0.0 "mailto:A@1.0.0")。
@@ -108,25 +106,22 @@ Yarn 依赖提升，在 peerDependencies 场景下可能导致 BUG。
 
 **package1/packag.json**
 
-```
+```jsx
 {
   "name": "package1",
   "version": "1.0.0"
 }
-复制代码
-
 ```
 
 **app1/package.json**
 
-```
+```jsx
 {
   "name": "app1",
   "dependencies": {
     "package-1": "?" // 这里的版本号应该怎么写？`*` or `1.0.0`
   }
 }
-复制代码
 
 ```
 
@@ -178,7 +173,7 @@ Yarn 依赖提升，在 peerDependencies 场景下可能导致 BUG。
 
 在 npm@3 之前， node_modules 的结构是干净且可预测的，因为 node_modules 中的每个依赖项都有其自己的 node_modules 文件夹，其所有依赖项都在 package.json 中指定。
 
-```
+```jsx
 node_modules
 └─ foo
    ├─ index.js
@@ -187,8 +182,7 @@ node_modules
       └─ bar
          ├─ index.js
          └─ package.json
-复制代码
-
+         
 ```
 
 但是这样带来了两个很严重的问题：
@@ -198,7 +192,7 @@ node_modules
 
 为了解决这两个问题，npm@3 重新思考了 node_modules 的结构，引入了平铺的方案。于是就出现了下面我们所熟悉的结构。
 
-```
+```jsx
 node_modules
 ├─ foo
 |  ├─ index.js
@@ -206,7 +200,6 @@ node_modules
 └─ bar
    ├─ index.js
    └─ package.json
-复制代码
 
 ```
 
@@ -229,8 +222,6 @@ node_modules
       └─ bar
          ├─ index.js
          └─ package.json
-复制代码
-
 ```
 
 1. 基于非扁平化的 node_modules 目录结构，解决 Phantom dependencies。Package 只可触达自身依赖。
@@ -255,18 +246,14 @@ node_modules
 
 Rush 中的许多命令支持分析依赖关系，比如 `-t`(to) 参数：
 
-```
-$ rush install -t @monorepo/app1
-复制代码
-
+```bash
+rush install -t @monorepo/app1
 ```
 
 该命令只会安装 app1 的依赖及其 app1 依赖的 package 的依赖，即按需安装依赖。
 
-```
-$ rush build -t @monorepo/app1
-复制代码
-
+```bash
+rush build -t @monorepo/app1
 ```
 
 该命令会执行 app1 以及 app1 依赖的 package 的构建脚本。
@@ -312,7 +299,7 @@ package.json 中的 `main` 字段配置为源文件的入口文件，引用该 p
 
 开启 [PNPM workspace](https://link.juejin.cn?target=https%3A%2F%2Fpnpm.io%2Fzh%2Fworkspaces "https://pnpm.io/zh/workspaces") 能力从而可以使用 workspace: 协议保证引用版本的确定性，使用了该协议引用的 package 只会使用 Monorepo 中的内容。
 
-```
+```jsx
 {
   "dependencies": {
     "foo": "workspace:*",
@@ -321,8 +308,6 @@ package.json 中的 `main` 字段配置为源文件的入口文件，引用该 p
     "zoo": "workspace:^1.5.0"
   }
 }
-复制代码
-
 ```
 
 推荐引用 Monorepo 内的 package 时统一使用该协议，引用本地最新版本内容，保证更改能够及时扩散同步至其他项目，这也是 Monorepo 的优势所在。
@@ -352,7 +337,7 @@ package.json 中的 `main` 字段配置为源文件的入口文件，引用该 p
 
 换一种方式理解，整个 Monorepo 是一个大的虚拟 project，我们所有的 project 都作为这个虚拟 project 的直接依赖存在。
 
-```
+```jsx
 {
   "name": "fake-project",
   "version": "1.0.0",
@@ -361,8 +346,6 @@ package.json 中的 `main` 字段配置为源文件的入口文件，引用该 p
     "@fake-project/package1": "1.0.0"
   }
 }
-复制代码
-
 ```
 
 安装依赖时，(p)npm 首先下载**直接依赖项**，然后再下载**间接依赖项**，并且在安装到相同模块时，判断已安装的模块版本（直接依赖项）是否符合新模块（间接依赖项）的版本范围，如果符合则跳过，不符合则在当前模块的 node_modules 下安装该模块。
@@ -373,7 +356,7 @@ package.json 中的 `main` 字段配置为源文件的入口文件，引用该 p
 
 Rush 可以通过手动指定 `preferredVersions` 的方式，避免两个可兼容版本的重复。这里将 Monorepo 中 lib-a 的 `preferredVersions` 指定为 1.2.0，相当于在该虚拟 project 下直接安装了指定的版本的模块，作为直接依赖项。
 
-```
+```jsx
 {
   "name": "fake-project",
   "version": "1.0.0",
@@ -383,8 +366,6 @@ Rush 可以通过手动指定 `preferredVersions` 的方式，避免两个可兼
     "lib-a": "1.1.0"
   }
 }
-复制代码
-
 ```
 
 对于 Yarn，由于 Yarn duplicate 的存在，就算在根目录指定安装确定版本的 lib-a 也是无效的。 但是依旧有两种方案可以进行处理：
@@ -429,7 +410,7 @@ Rush 可以通过手动指定 `preferredVersions` 的方式，避免两个可兼
 
 我们可以借助 [rush init-autoinstaller](https://link.juejin.cn?target=https%3A%2F%2Frushjs.io%2Fpages%2Fcommands%2Frush_init-autoinstaller%2F "https://rushjs.io/pages/commands/rush_init-autoinstaller/") 的能力来达到一样的效果，本节主要参考官方文档 [Installing Git hooks](https://link.juejin.cn?target=https%3A%2F%2Frushjs.io%2Fpages%2Fmaintainer%2Fgit_hooks%2F "https://rushjs.io/pages/maintainer/git_hooks/") 以及 [Enabling Prettier](https://link.juejin.cn?target=https%3A%2F%2Frushjs.io%2Fpages%2Fmaintainer%2Fenabling_prettier%2F "https://rushjs.io/pages/maintainer/enabling_prettier/") 的内容。
 
-```
+```bash
 # 初始化一个名为 rush-lint 的 autoinstaller
 
 $ rush init-autoinstaller --name rush-lint
@@ -443,7 +424,6 @@ $ pnpm i @commitlint/cli @commitlint/config-conventional @microsoft/rush-lib esl
 # 更新 rush-lint 的 pnpm-lock.yaml
 
 $ rush update-autoinstaller --name rush-lint
-复制代码
 
 ```
 
@@ -451,7 +431,7 @@ $ rush update-autoinstaller --name rush-lint
 
 **commit-lint.js**
 
-```
+```jsx
 const path = require('path');
 const fs = require('fs');
 const execa = require('execa');
@@ -476,13 +456,11 @@ async function main() {
         process.exit(1);
     }
 }
-复制代码
-
 ```
 
 **commitlint.config.js**
 
-```
+```jsx
 const rushLib = require("@microsoft/rush-lib");
 
 const rushConfiguration = rushLib.RushConfiguration.loadFromDefaultLocation();
@@ -505,8 +483,6 @@ module.exports = {
     "scope-enum": [2, "always", allScope],
   },
 };
-复制代码
-
 ```
 
 注意：此处不需要新增 `prettierrc.js`（根目录已存在） 以及 `eslintrc.js`（各项目已存在）。
@@ -515,7 +491,7 @@ module.exports = {
 
 **.lintstagedrc**
 
-```
+```jsx
 {
   "{apps,packages,features}/**/*.{js,jsx,ts,tsx}": [
     "eslint --fix --color",
@@ -523,15 +499,13 @@ module.exports = {
   ],
   "{apps,packages,features}/**/*.{css,less,md}": ["prettier --write"]
 }
-复制代码
-
 ```
 
 完成了相关依赖的安装以及配置的编写，我们接下来将相关命令执行注册在 `rush` 中。
 
 修改 `common/config/rush/command-line.json` 文件中的 `commands` 字段。
 
-```
+```jsx
 {
   "commands": [
     {
@@ -550,30 +524,24 @@ module.exports = {
     }
   ]
 }
-复制代码
-
 ```
 
 最后，将 `rush commitlint` 以及 `rush lint` 两个命令分别与 `commit-msg` 以及 `pre-commit`钩子进行绑定。 `common/git-hooks` 目录下增加 `commit-msg` 以及 `pre-commit` 脚本。
 
 **commit-msg**
 
-```
+```bash
 #!/bin/sh
 
 node common/scripts/install-run-rush.js commitlint || exit $? #++
-复制代码
-
 ```
 
 **pre-commit**
 
-```
+```bash
 #!/bin/sh
 
 node common/scripts/install-run-rush.js lint || exit $? #++
-复制代码
-
 ```
 
 如此，便完成了需求。
@@ -582,7 +550,7 @@ node common/scripts/install-run-rush.js lint || exit $? #++
 
 经过上一节的处理，在 `rush-lint` 目录下安装了 `eslint` 以及 `prettier` 后，我们便无需全局安装了，只需要配置一下 VSCode 即可。
 
-```
+```jsx
 {
   // ...
   "npm.packageManager": "pnpm",
@@ -591,8 +559,6 @@ node common/scripts/install-run-rush.js lint || exit $? #++
   "prettier.prettierPath": "common/autoinstallers/rush-lint/node_modules/prettier"
   // ...
 }
-复制代码
-
 ```
 
 附录
@@ -604,7 +570,7 @@ node common/scripts/install-run-rush.js lint || exit $? #++
 
 ### 工作流
 
-```
+```bash
 # 从 git 拉取最新变更
 $ git pull
 
@@ -619,7 +585,6 @@ $ cd ./apps/app1
 
 # 启动项目 ​
 $ rushx start # or rushx dev
-复制代码
 
 ```
 

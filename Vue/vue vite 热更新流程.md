@@ -6,10 +6,10 @@ date created: 2022-06-15 13:21
 
 热更新的主要流程，需要关注的步骤的：
 
-1.  修改代码
-2.  重新编译（怎么编译，编译产物是什么，先不管）
-3.  告诉前端要热更新了（怎么告诉，先不管）
-4.  前端执行热更新代码进行热更新（怎么更新，先不管）
+1. 修改代码
+2. 重新编译（怎么编译，编译产物是什么，先不管）
+3. 告诉前端要热更新了（怎么告诉，先不管）
+4. 前端执行热更新代码进行热更新（怎么更新，先不管）
 
 实际上，也就是这么几个过程
 
@@ -25,11 +25,11 @@ date created: 2022-06-15 13:21
 
 暂时先记住这个核心流程：
 
-1.  修改代码，`vite server` 监听到代码被修改
-2.  vite 计算出热更新的边界（即受到影响，需要进行更新的模块）
-3.  `vite server` 通过 `websocket` 告诉 `vite client` 需要进行热更新
-4.  浏览器拉取修改后的模块
-5.  执行热更新的代码
+1. 修改代码，`vite server` 监听到代码被修改
+2. vite 计算出热更新的边界（即受到影响，需要进行更新的模块）
+3. `vite server` 通过 `websocket` 告诉 `vite client` 需要进行热更新
+4. 浏览器拉取修改后的模块
+5. 执行热更新的代码
 
 我们先从离我们最近的浏览器端，开始介绍
 
@@ -66,7 +66,7 @@ date created: 2022-06-15 13:21
 
 `import.meta.hot.accept` API 用于传入一个回调函数，来定义该模块修改后，需要怎么去热更新
 
-```js
+```jsx
 // src/accept.ts
 export const render = () => {
   const el = document.querySelector<HTMLDivElement>('#accept')!;
@@ -86,7 +86,7 @@ if (import.meta.hot) {
     mod.render();
   });
 }
-复制代码
+
 
 ```
 
@@ -152,7 +152,7 @@ dispose 主要用来做一些模块的退出工作
 
 因为 vite 可以加入查询参数，可查看 vite 文档【[更改资源被引入的方式](https://link.juejin.cn?target=https%3A%2F%2Fcn.vitejs.dev%2Fguide%2Ffeatures.html%23static-assets "https://cn.vitejs.dev/guide/features.html#static-assets")】
 
-```js
+```jsx
 // 显式加载资源为一个 URL
 import assetAsURL from './asset.js?url'
 
@@ -164,7 +164,7 @@ import Worker from './worker.js?worker'
 
 // 在构建时 Web Worker 内联为 base64 字符串
 import InlineWorker from './worker.js?worker&inline'
-复制代码
+
 
 ```
 
@@ -188,7 +188,7 @@ client.ts 在加载时，会创建 websocket 并监听 message 事件
 
 handleMessage 负责处理各种信号, 由于篇幅有限，我们不会展开讲细节
 
-```js
+```jsx
 async function handleMessage(payload: HMRPayload) {
   switch (payload.type) {
     case 'connected':
@@ -215,7 +215,7 @@ async function handleMessage(payload: HMRPayload) {
     }
   }
 }
-复制代码
+
 
 ```
 
@@ -241,10 +241,10 @@ async function handleMessage(payload: HMRPayload) {
 
 假如有以下两个文件：
 
-```js
+```jsx
 index.vue
   - useData.ts
-复制代码
+
 
 ```
 
@@ -252,17 +252,17 @@ index.vue
 
 当修改 `useData.ts` 时，会执行以下的步骤：
 
-1.  vite 沿着依赖树，往上找到 `index.vue`，作为热更新边界
-2.  server 将热更新边界信息，通过 websocket 传递到 client
-3.  client 执行老的 `index.vue` 的 `import.meta.hot.dispose` 回调
-4.  client 动态 `import(index.vue)`，vite 会重新编译 `index.vue`
-5.  执行 `index.vue` 的代码（此时请求到 `index.vue` 虽然是 vue 后缀，但是它的内容经过编译后，是 js 代码），执行过程中遇到 import `useData.ts`
+1. vite 沿着依赖树，往上找到 `index.vue`，作为热更新边界
+2. server 将热更新边界信息，通过 websocket 传递到 client
+3. client 执行老的 `index.vue` 的 `import.meta.hot.dispose` 回调
+4. client 动态 `import(index.vue)`，vite 会重新编译 `index.vue`
+5. 执行 `index.vue` 的代码（此时请求到 `index.vue` 虽然是 vue 后缀，但是它的内容经过编译后，是 js 代码），执行过程中遇到 import `useData.ts`
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/02b40b0a36de40da97afd14a9afcb493~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
 
-5.  动态拉取 `useData.ts` 模块，vite 会重新编译 `useData.ts`
-6.  执行 `useData.ts` 的代码
-7.  client 执行新的 `index.vue` 的 `import.meta.hot.accept` 回调
+5. 动态拉取 `useData.ts` 模块，vite 会重新编译 `useData.ts`
+6. 执行 `useData.ts` 的代码
+7. client 执行新的 `index.vue` 的 `import.meta.hot.accept` 回调
 
 因为**热更新边界的模块，可能会存在依赖**，import 了其他模块，这些模块都需要 import 拉取，直到动态 import 的模块没有模块依赖
 

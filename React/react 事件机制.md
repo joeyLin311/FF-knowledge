@@ -3,7 +3,7 @@ date created: 2022-05-25 22:43
 date updated: 2022-05-30 22:26
 ---
 
-#React
+# React
 <https://juejin.cn/post/6955636911214067720>
 
 ## 相关问题
@@ -24,7 +24,7 @@ React 的事件处理机制可以分为两个阶段:
 通过这种机制, 冒泡的原生事件类型最多在 root 节点上注册一次, 节省内存开销. 而且 React 为不同类型的时间定义了不同的处理优先级, 从而让用户代码及时响应高优先级的用户交互, 提升用户体验.
 React 的事件机制中依赖合成事件这个核心概念, 合成事件在符合 W3C 规范的前提下, 做了各个浏览器兼容. 并且简化了事件处理逻辑, 对关联事件进行合成. 比如: `onChange=> ['blur', 'change', 'input', 'keydown', 'keyup']` 就集合了不同的原生事件. 它在 react 中记录为 `registrationNameDependencies`
 
-```js
+```jsx
 /**
  * Mapping from registration name to event name
  */
@@ -54,7 +54,7 @@ export const registrationNameDependencies = {
 浏览器基于 DOM2 DOM3 规范实现了标准化的 DOM 事件, 基于 Event 实现了浏览器中常见的用户事件.
 以下是浏览器 Event 事件属性:
 
-```js
+```jsx
 // Event 属性
 boolean bubbles
 boolean cancelable
@@ -76,7 +76,7 @@ React 的事件机制在遵循规范的前提下, 引入新的事件类型:  **S
 
 事件触发时, 相关信息会被存储在 `SyntheticEvent` 的实例对象中, 对象包含原生事件对象类似的属性:
 
-```js
+```jsx
 // SyntheticEvent 属性
 boolean bubbles
 boolean cancelable
@@ -108,18 +108,18 @@ string type
 
 ### `dispatchEvent` 函数工作原理
 
-1.  首先根据真实的事件源对象, 找到 `e.target` 真的 DOM 元素
-2.  然后根据 DOM 元素找对与之对应的 fiber 节点中的 `targetList`
-3.  然后正式进入 `legacy` 模式的事件处理系统, 进行批量更新 [[react setState 机制#1 钩子函数 合成事件中]]
+1. 首先根据真实的事件源对象, 找到 `e.target` 真的 DOM 元素
+2. 然后根据 DOM 元素找对与之对应的 fiber 节点中的 `targetList`
+3. 然后正式进入 `legacy` 模式的事件处理系统, 进行批量更新 [[react setState 机制#1 钩子函数 合成事件中]]
 
 ### react 16 事件池
 
-1.  首先形成 React 事件系统独有的合成事件源对象, 它保存了整个事件的信息, 作为参数传递给真正的事件处理函数 `handleCLick`
-2.  然后声明事件执行队列, 按照**冒泡**和**捕获**逻辑, 从事件源开始逐渐向上, 查找 DOM 元素类型 `HostComponent` 对应的 fiber 阶段, 收集 React 合成事件. 对于 `onclick` 的冒泡阶段事件会 push 到执行队列后面, 对于  `onClickCapture` 的捕获阶段事件, 会 unshift 到执行队列的前面
+1. 首先形成 React 事件系统独有的合成事件源对象, 它保存了整个事件的信息, 作为参数传递给真正的事件处理函数 `handleCLick`
+2. 然后声明事件执行队列, 按照**冒泡**和**捕获**逻辑, 从事件源开始逐渐向上, 查找 DOM 元素类型 `HostComponent` 对应的 fiber 阶段, 收集 React 合成事件. 对于 `onclick` 的冒泡阶段事件会 push 到执行队列后面, 对于  `onClickCapture` 的捕获阶段事件, 会 unshift 到执行队列的前面
 
 **例子:**
 
-```jsx
+```jsxx
 handleClick1 = () => console.log(1)
 handleClick2 = () => console.log(2)
 handleClick3 = () => console.log(3)
@@ -135,7 +135,7 @@ render() {
 ![[事件池执行顺序 1.jpg]]
 来看一个例子:
 
-```js
+```jsx
  handerClick = (e) => {
     console.log(e.target) // button 
     setTimeout(()=>{
@@ -148,18 +148,18 @@ render() {
 
 ### react 事件触发总结
 
-1.  首先通过统一的时间处理函数 `dispatchEvent` 进行批量更新 batchUpdate
-2.  然后执行事件对应的处理插件中的 `extractEvent`, 合成事件源对象, 每次 React 都会从事件源开始, 从上遍历类型为 `hostComponent` 的 fiber 节点, 判断 props 中是否有当前事件, 最终形成一个事件队列, React 利用该队列, 模拟了 ` 事件捕获-> 事件源 -> 事件冒泡 ` 这一过程
-3.  最后通过 `runEventsInBatch` 执行事件队列, 如果发现阻止冒泡, 就跳出循环, 最后重置事件源, 放回事件池中, 完成整个流程.
+1. 首先通过统一的时间处理函数 `dispatchEvent` 进行批量更新 batchUpdate
+2. 然后执行事件对应的处理插件中的 `extractEvent`, 合成事件源对象, 每次 React 都会从事件源开始, 从上遍历类型为 `hostComponent` 的 fiber 节点, 判断 props 中是否有当前事件, 最终形成一个事件队列, React 利用该队列, 模拟了 ` 事件捕获-> 事件源 -> 事件冒泡 ` 这一过程
+3. 最后通过 `runEventsInBatch` 执行事件队列, 如果发现阻止冒泡, 就跳出循环, 最后重置事件源, 放回事件池中, 完成整个流程.
 
 ![[事件触发流程.jpg]]
 
 ## React 17 版本事件系统变更
 
-1.  **事件统一绑定在 container 上(也就是 div id: root) , ReactDOM.render(app, container);** 而不是绑定在 `document` 上, 这样的好处是有利于微前端, 因为微前端一个文档可能有多个应用, 如果绑在 document 上会引发问题
-2.  对齐原生浏览器事件.  React 17 升级支持了原生捕获事件, 对齐了浏览器原生标准. 同时 `onScroll` 事件不再进行事件冒泡. `onFocus` 和 `onBlur` 使用原生 `focusin` , `focusout` 合成
-3.  **取消事件池** 解决了上述 `setTimeout` 打印 `e.target` 为 null 的问题
+1. **事件统一绑定在 container 上(也就是 div id: root) , ReactDOM.render(app, container);** 而不是绑定在 `document` 上, 这样的好处是有利于微前端, 因为微前端一个文档可能有多个应用, 如果绑在 document 上会引发问题
+2. 对齐原生浏览器事件.  React 17 升级支持了原生捕获事件, 对齐了浏览器原生标准. 同时 `onScroll` 事件不再进行事件冒泡. `onFocus` 和 `onBlur` 使用原生 `focusin` , `focusout` 合成
+3. **取消事件池** 解决了上述 `setTimeout` 打印 `e.target` 为 null 的问题
 
 ## 还有另一个表述
-详情看 [[react 事件机制原理]]
 
+详情看 [[react 事件机制原理]]

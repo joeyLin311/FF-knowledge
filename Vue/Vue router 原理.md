@@ -3,7 +3,7 @@ date created: 2021-12-09 22:53
 date updated: 2022-06-14 01:19
 ---
 
-#Vue
+# Vue
 
 # Vue Router
 
@@ -31,7 +31,7 @@ VueRouter 对象实现是一个 Class, 其中定义了相关的属性和方法, 
 
 matcher 的数据结构表现如下:
 
-```js
+```jsx
 export type Matcher = {
   match: (raw: RawLocation, current?: Route, redirectedFrom?: Location) => Route;
   addRoutes: (routes: Array<RouteConfig>) => void;
@@ -45,13 +45,18 @@ export type Matcher = {
 
 - 通过 `path-to-regexp` 库把 `path` 解析成正则表达式的扩展.
 - `component` 对象记录 `routes` 中组件的实例, 还有组件的依赖关系, 并通过深度遍历形成 `routes` 的树型结构
+
 ### addRoutes
+
 `addRoutes` 方法的作用是动态添加路由配置, 直接调用 `createRouteMap` 传入新的 `routes` 配置
+
 ### match
+
 `match` 方法返回的是一个路径, 它的作用的是根据传入的 `raw` 和当前的路径 `currentRoute` 计算出一个新的路径并返回
  [`matcher` 相关的主流程](https://ustbhuangyi.github.io/vue-analysis/v2/vue-router/matcher.html#match)
 
 ## 路径切换
+
 VueRouter 中路径切换的方法是 `history.transitionTo`, 经过上述 `match` 方法返回的新路径, `transitionTo` 内部根据目标 `location` 和当前路径 `current` 执行 match 方法匹配目标路径.  然后执行 `confirmTransition` 方法执行切换 ( 里面调用 `updateRoute` 进行组件更新)
 
 然后拿到  `updated`、`activated`、`deactivated` 3 个 `ReouteRecord` 数组, 执行一些列钩子函数, 期间还有路由守卫的参与
@@ -61,7 +66,9 @@ VueRouter 中路径切换的方法是 `history.transitionTo`, 经过上述 `matc
 如果浏览器页面返回, 则触发 `popState` 事件, 拿到当前要跳转的 hash , 执行 `transitionTo` 再做路径切换.
 
 ### 小总结
+
 路由变化的过程中, 路由始终会维护当前的线路, 路由切换的时候会把当前线路切换到目标线路, 切换过程中会执行一系列的导航守卫钩子函数, 会更改 url, 同样也会渲染对应的组件, 切换完毕后会把目标线路更新替换至当前线路, 这样作为下一次的路径切换时的依据.
+
 ## 模拟 VueRouter 的 hash 模式的实现
 
 实现思路和 History 模式类似，把 URL 中的 # 后面的内容作为路由的地址，可以通过 hashchange 事件监听路由地址的变化。

@@ -3,14 +3,15 @@ date created: 2021-12-09 22:55
 date updated: 2021-12-17 16:15
 ---
 
-#Vue
+# Vue
+
 <https://ustbhuangyi.github.io/vue-analysis/v2/reactive/next-tick.html#js-%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6>
 
 ## nextTick
 
 > 官方对 nextTick 的描述: 在下次 DOM 更新循环结束之后执行延迟回调. 在修改数据之后立即使用这个方法, 获取更新后的 DOM
 
-```js
+```jsx
 vm.msg = 'abc';
 // DOM 还未更新
 Vue.nextTick(function(){

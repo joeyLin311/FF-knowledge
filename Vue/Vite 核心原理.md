@@ -6,11 +6,11 @@
 
 `Vite`有如下特点：
 
-*   快速的冷启动: `No Bundle` + `esbuild` 预构建
+* 快速的冷启动: `No Bundle` + `esbuild` 预构建
 
-*   即时的模块热更新: 基于`ESM`的`HMR`，同时利用浏览器缓存策略提升速度
+* 即时的模块热更新: 基于`ESM`的`HMR`，同时利用浏览器缓存策略提升速度
 
-*   真正的按需加载: 利用浏览器`ESM`支持，实现真正的按需加载
+* 真正的按需加载: 利用浏览器`ESM`支持，实现真正的按需加载
 
 #### 1.2 Vite 和传统打包方式的对比
 
@@ -46,11 +46,11 @@
 
 `ESM`的执行可以分为三个步骤：
 
-*   构建: 确定从哪里下载该模块文件、下载并将所有的文件解析为模块记录
+* 构建: 确定从哪里下载该模块文件、下载并将所有的文件解析为模块记录
 
-*   实例化: 将模块记录转换为一个模块实例，为所有的模块分配内存空间，依照导出、导入语句把模块指向对应的内存地址。
+* 实例化: 将模块记录转换为一个模块实例，为所有的模块分配内存空间，依照导出、导入语句把模块指向对应的内存地址。
 
-*   运行：运行代码，将内存空间填充
+* 运行：运行代码，将内存空间填充
 
 从上面实例化的过程可以看出，`ESM`使用实时绑定的模式，导出和导入的模块都指向相同的内存地址，也就是值引用。而`CJS`采用的是值拷贝，即所有导出值都是拷贝值。
 
@@ -62,15 +62,15 @@
 
 目前他支持以下的功能：
 
-*   加载器
+* 加载器
 
-*   压缩
+* 压缩
 
-*   打包
+* 打包
 
-*   `Tree shaking`
+* `Tree shaking`
 
-*   `Source map`生成
+* `Source map`生成
 
 `esbuild`总共提供了四个函数：`transform`、`build`、`buildSync`、`Service`。有兴趣的可以移步[官方文档](https://link.juejin.cn?target=https%3A%2F%2Fesbuild.github.io%2Fapi%2F "https://esbuild.github.io/api/")了解。
 
@@ -82,13 +82,13 @@
 
 `Rollup`分为`build`（构建）阶段和`output generate`（输出生成）阶段。主要过程如下：
 
-*   获取入口文件的内容，包装成`module`，生成抽象语法树
+* 获取入口文件的内容，包装成`module`，生成抽象语法树
 
-*   对入口文件抽象语法树进行依赖解析
+* 对入口文件抽象语法树进行依赖解析
 
-*   生成最终代码
+* 生成最终代码
 
-*   写入目标文件
+* 写入目标文件
 
 如果你的项目（特别是类库）只有`JavaScript`，而没有其他的静态资源文件，使用`Webpack`就有点大才小用了。因为`Webpack` 打包的文件的体积略大，运行略慢，可读性略低。这时候`Rollup`也不失为一个好选择。
 
@@ -98,26 +98,26 @@
 
 详细阐述下：
 
-1.  当声明一个 `script`标签类型为 `module` 时, 如
+1. 当声明一个 `script`标签类型为 `module` 时, 如
 
 ```
   <script type="module" src="/src/main.js"></script>
-复制代码
+
 
 ```
 
-2.  当浏览器解析资源时，会往当前域名发起一个`GET`请求`main.js`文件
+2. 当浏览器解析资源时，会往当前域名发起一个`GET`请求`main.js`文件
 
 ```
 // main.js
 import { createApp } from 'vue'
 import App from './App.vue'
 createApp(App).mount('#app')
-复制代码
+
 
 ```
 
-3.  请求到了`main.js`文件，会检测到内部含有`import`引入的包，又会`import` 引用发起`HTTP`请求获取模块的内容文件，如`App.vue`、`vue`文件
+3. 请求到了`main.js`文件，会检测到内部含有`import`引入的包，又会`import` 引用发起`HTTP`请求获取模块的内容文件，如`App.vue`、`vue`文件
 
 `Vite`其核心原理是利用浏览器现在已经支持`ES6`的`import`, 碰见`import`就会发送一个`HTTP`请求去加载文件，`Vite`启动一个 `koa` 服务器拦截这些请求，并在后端进行相应的处理将项目中使用的文件通过简单的分解与整合，然后再以`ESM`格式返回返回给浏览器。`Vite`整个过程中没有对文件进行打包编译，做到了真正的按需加载，所以其运行速度比原始的`webpack`开发编译速度快出许多！
 
@@ -147,13 +147,13 @@ createApp(App).mount('#app')
 
 `Vite`整个热更新过程可以分成四步
 
-1.  创建一个`websocket`服务端和`client`文件，启动服务
+1. 创建一个`websocket`服务端和`client`文件，启动服务
 
-2.  通过`chokidar`监听文件变更
+2. 通过`chokidar`监听文件变更
 
-3.  当代码变更后，服务端进行判断并推送到客户端
+3. 当代码变更后，服务端进行判断并推送到客户端
 
-4.  客户端根据推送的信息执行不同操作的更新
+4. 客户端根据推送的信息执行不同操作的更新
 
 整体流程图：
 
@@ -165,7 +165,7 @@ createApp(App).mount('#app')
 
 > 源码位置：packages/vite/src/node/server/index.ts
 
-```
+```jsx
 export async function createServer(
   inlineConfig: InlineConfig = {}
 ): Promise<ViteDevServer> {
@@ -194,7 +194,7 @@ export async function createServer(
   ...
   return server
 }
-复制代码
+
 
 ```
 
@@ -202,7 +202,7 @@ export async function createServer(
 
 > 源码位置：packages/vite/src/node/server/ws.ts
 
-```
+```jsx
 export function createWebSocketServer(
   server: Server | null,
   config: ResolvedConfig,
@@ -247,7 +247,7 @@ export function createWebSocketServer(
     }
   }
 }
-复制代码
+
 
 ```
 
@@ -257,7 +257,7 @@ export function createWebSocketServer(
 
 > 源码位置：packages/vite/src/node/server/index.ts
 
-```
+```jsx
  watcher.on('change', async (file) => {
     file = normalizePath(file)
     if (file.endsWith('/package.json')) {
@@ -276,7 +276,7 @@ export function createWebSocketServer(
       }
     }
   })
-复制代码
+
 
 ```
 
@@ -313,7 +313,7 @@ onFileChange(file: string): void {
     mod.ssrTransformResult = null
     invalidateSSRModule(mod, seen)
   }
-复制代码
+
 
 ```
 
@@ -345,10 +345,8 @@ onFileChange(file: string): void {
 
 若需要对依赖代码模块做改动可手动操作使缓存失效:
 
-```
+```bash
 vite --force
-复制代码
-
 ```
 
 或者手动删除 `node_modules/.``vite` 中的缓存文件。
@@ -357,11 +355,11 @@ vite --force
 
 ##### 3.3.1 为什么需要预构建？
 
-1.  支持`commonJS`依赖
+1. 支持`commonJS`依赖
 
-1.  上面提到`Vite`是基于浏览器原生支持`ESM`的能力实现的，但要求用户的代码模块必须是`ESM`模块，因此必须将`commonJs`的文件提前处理，转化成 `ESM` 模块并缓存入 `node_modules/.vite`
+1. 上面提到`Vite`是基于浏览器原生支持`ESM`的能力实现的，但要求用户的代码模块必须是`ESM`模块，因此必须将`commonJs`的文件提前处理，转化成 `ESM` 模块并缓存入 `node_modules/.vite`
 
-2.  减少模块和请求数量
+2. 减少模块和请求数量
 
 除此之外，我们常用的`lodash`工具库，里面有很多包通过单独的文件相互导入，而 `lodash-es`这种包会有几百个子模块，当代码中出现 `import { debounce } from 'lodash-es'` 会发出几百个 `HTTP` 请求，这些请求会造成网络堵塞，影响页面的加载。
 
@@ -377,35 +375,35 @@ vite --force
 
 这是`Esbuild`首页的图。新一代的打包工具，提供了与`Webpack`、`Rollup`、`Parcel` 等工具相似的资源打包能力，但在时速上达到 10～100 倍的差距，耗时是`Webpack`2%~3%
 
-1.  编译运行 VS 解释运行
+1. 编译运行 VS 解释运行
 
-*   大多数前端打包工具都是基于 `JavaScript` 实现的，大家都知道`JavaScript`是解释型语言，边运行边解释。而 `Esbuild` 则选择使用 `Go` 语言编写，该语言可以编译为原生代码, 在编译的时候都将语言转为机器语言，在启动的时候直接执行即可，在 `CPU` 密集场景下，`Go` 更具性能优势。
+* 大多数前端打包工具都是基于 `JavaScript` 实现的，大家都知道`JavaScript`是解释型语言，边运行边解释。而 `Esbuild` 则选择使用 `Go` 语言编写，该语言可以编译为原生代码, 在编译的时候都将语言转为机器语言，在启动的时候直接执行即可，在 `CPU` 密集场景下，`Go` 更具性能优势。
 
-2.  多线程 VS 单线程
+2. 多线程 VS 单线程
 
-1.  `JavaScript` 本质上是一门单线程语言，直到引入 `WebWorker` 之后才有可能在浏览器、`Node` 中实现多线程操作。就我对`Webpack`的源码理解，其源码也并未使用 `WebWorker` 提供的多线程能力。而`GO`天生的多线程优势。
+1. `JavaScript` 本质上是一门单线程语言，直到引入 `WebWorker` 之后才有可能在浏览器、`Node` 中实现多线程操作。就我对`Webpack`的源码理解，其源码也并未使用 `WebWorker` 提供的多线程能力。而`GO`天生的多线程优势。
 
-3.  对构建流程进行了优化，充分利用 `CPU` 资源
+3. 对构建流程进行了优化，充分利用 `CPU` 资源
 
 ##### 3.3.3 实现原理？
 
 `Vite`预编译之后，将文件缓存在`node_modules/.vite/`文件夹下。根据以下地方来决定是否需要重新执行预构建。
 
-*   `package.json`中：`dependencies`发生变化
+* `package.json`中：`dependencies`发生变化
 
-*   包管理器的`lockfile`
+* 包管理器的`lockfile`
 
 如果想强制让`Vite`重新预构建依赖，可以使用`--force`启动开发服务器，或者直接删掉`node_modules/.vite/`文件夹。
 
 ###### 3.3.3.1 核心代码实现
 
-1.  通过`createServer`创建`server`对象后，当服务器启动会执行`httpServer.listen`方法
+1. 通过`createServer`创建`server`对象后，当服务器启动会执行`httpServer.listen`方法
 
-2.  在执行`createServer`时，`Vite`底层会重写`server.listen`方法: 首先调用插件的`buildStart`再执行`runOptimize()`方法
+2. 在执行`createServer`时，`Vite`底层会重写`server.listen`方法: 首先调用插件的`buildStart`再执行`runOptimize()`方法
 
-3.  `runOptimize()`调用`optimizeDeps()`和`createMissingImporterRegisterFn()`方法
+3. `runOptimize()`调用`optimizeDeps()`和`createMissingImporterRegisterFn()`方法
 
-```
+```jsx
 const runOptimize = async () => {
     if (config.cacheDir) {
       server._isRunningOptimizer = true
@@ -441,19 +439,19 @@ if (!middlewareMode && httpServer) {
   await container.buildStart({})
   await runOptimize()
 }
-复制代码
+
 
 ```
 
-4.  `optimizeDeps()`主要是根据配置文件生成`hash`，获取上次预购建的内容 (存放在`_metadata.json`文件)。如果不是强预构建就对比`_metadata.json`文件的`hash`和新生成的`hash`：一致就返回`_metadata.json`文件的内容，否则清空缓存文件调用`Esbuild`构建模块再次存入`_metadata.json`文件
+4. `optimizeDeps()`主要是根据配置文件生成`hash`，获取上次预购建的内容 (存放在`_metadata.json`文件)。如果不是强预构建就对比`_metadata.json`文件的`hash`和新生成的`hash`：一致就返回`_metadata.json`文件的内容，否则清空缓存文件调用`Esbuild`构建模块再次存入`_metadata.json`文件
 
 ###### 3.3.3.2 整体的流程图
 
 核心代码都在`packages/``vite``/``src``/``node``/optimizer/index.ts`里面
 
-*   自动搜寻依赖主要模块：`esbuildScanPlugin`
+* 自动搜寻依赖主要模块：`esbuildScanPlugin`
 
-*   预构建编译主要模块：`esbuildDepPlugin`
+* 预构建编译主要模块：`esbuildDepPlugin`
 
 ![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/65b8b81442b14ed8a0a1738fba03cfe9~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
 
@@ -471,35 +469,35 @@ if (!middlewareMode && httpServer) {
 
 对于各个钩子的具体使用可以[移步这里](https://link.juejin.cn?target=https%3A%2F%2Fcn.vitejs.dev%2Fguide%2Fapi-plugin.html%23vite-specific-hooks "https://cn.vitejs.dev/guide/api-plugin.html#vite-specific-hooks")
 
-*   `config`：可以在`Vite`被解析之前修改`Vite`的相关配置。钩子接收原始用户配置`config`和一个描述配置环境的变量`env`
+* `config`：可以在`Vite`被解析之前修改`Vite`的相关配置。钩子接收原始用户配置`config`和一个描述配置环境的变量`env`
 
-*   `configResolved`：解析`Vite`配置后调用，配置确认
+* `configResolved`：解析`Vite`配置后调用，配置确认
 
-*   `configureserver`：主要用来配置开发服务器，为`dev-server`添加自定义的中间件
+* `configureserver`：主要用来配置开发服务器，为`dev-server`添加自定义的中间件
 
-*   `transformindexhtml`：主要用来转换`index.html`，钩子接收当前的 `HTML` 字符串和转换上下文
+* `transformindexhtml`：主要用来转换`index.html`，钩子接收当前的 `HTML` 字符串和转换上下文
 
-*   `handlehotupdate`：执行自定义`HMR`更新，可以通过`ws`往客户端发送自定义的事件
+* `handlehotupdate`：执行自定义`HMR`更新，可以通过`ws`往客户端发送自定义的事件
 
 ##### 3.4.3 通用钩子
 
 这里举一些常用的通用钩子，其余的通用钩子可以[移步这里](https://link.juejin.cn?target=https%3A%2F%2Fcn.vitejs.dev%2Fguide%2Fapi-plugin.html%23universal-hooks "https://cn.vitejs.dev/guide/api-plugin.html#universal-hooks")
 
-*   服务启动时调用一次
-    
-    *   `options`: 获取、操纵`Rollup`选项
-    *   `buildstart`：开始创建
+* 服务启动时调用一次
 
-*   在每个传入模块请求时被调用
-    
-    *   `resolveId`: 创建自定义确认函数，可以用来定位第三方依赖
-    *   `load`：可以自定义加载器，可用来返回自定义的内容
-    *   `transform`：在每个传入模块请求时被调用，主要是用来转换单个模块
+  * `options`: 获取、操纵`Rollup`选项
+  * `buildstart`：开始创建
 
-*   服务关闭时调用一次
-    
-    *   `buildend`：在服务器关闭时被调用
-    *   `closeBundle`
+* 在每个传入模块请求时被调用
+
+  * `resolveId`: 创建自定义确认函数，可以用来定位第三方依赖
+  * `load`：可以自定义加载器，可用来返回自定义的内容
+  * `transform`：在每个传入模块请求时被调用，主要是用来转换单个模块
+
+* 服务关闭时调用一次
+
+  * `buildend`：在服务器关闭时被调用
+  * `closeBundle`
 
 ##### 3.4.4 钩子的调用顺序
 
@@ -509,25 +507,25 @@ if (!middlewareMode && httpServer) {
 
 `Vite`[的官网](https://link.juejin.cn?target=https%3A%2F%2Fcn.vitejs.dev%2Fguide%2Fapi-plugin.html%23plugin-ordering "https://cn.vitejs.dev/guide/api-plugin.html#plugin-ordering")可以看出：`Vite`插件可以用一个 `enforce` 属性（类似于 `Webpack`加载器）来调整它的应用顺序。`enforce` 的值可以是`pre` 或 `post`。解析后的插件将按照以下顺序排列：
 
-*   `Alias`
+* `Alias`
 
-*   `enforce:'pre'`的自定义插件
+* `enforce:'pre'`的自定义插件
 
-*   `Vite`核心插件
+* `Vite`核心插件
 
-*   没有`enforce`的自定义插件
+* 没有`enforce`的自定义插件
 
-*   `Vite`构建用的插件
+* `Vite`构建用的插件
 
-*   `enforce:'post'`的自定义插件
+* `enforce:'post'`的自定义插件
 
-*   `Vite`后置构建插件
+* `Vite`后置构建插件
 
 ##### 3.4.5 自定义插件
 
-*   编写插件代码
+* 编写插件代码
 
-```
+```jsx
 export default function myVitePlugin () {
   // 定义vite插件唯一id
   const virtualFileId = '@my-vite-plugin'
@@ -554,51 +552,49 @@ export default function myVitePlugin () {
     transform: (code, id) => ({})
   }
 }
-复制代码
+
 
 ```
 
-*   引入插件：`vite.config.js/ts` 中引用
+* 引入插件：`vite.config.js/ts` 中引用
 
-```
+```jsx
 // vite.config.js/ts
 import myVitePlugin from '...'
 export default defineConfig{
     plugins:[vue(),myVitePlugin()]
 }
-复制代码
-
 ```
 
 ### 4 总结
 
 最后总结下`Vite`相关的优缺点：
 
-*   优点：
-    
-    *   快速的冷启动: 采用`No Bundle`和`esbuild`预构建，速度远快于`Webpack`
-    *   高效的热更新：基于`ESM`实现，同时利用`HTTP`头来加速整个页面的重新加载，增加缓存策略
-    *   真正的按需加载: 基于浏览器`ESM`的支持，实现真正的按需加载
+* 优点：
 
-*   缺点
-    
-    *   生态：目前`Vite`的生态不如`Webapck`，不过我觉得生态也只是时间上的问题。
-    *   生产环境由于`esbuild`对`css`和代码分割不友好使用`Rollup`进行打包
+  * 快速的冷启动: 采用`No Bundle`和`esbuild`预构建，速度远快于`Webpack`
+  * 高效的热更新：基于`ESM`实现，同时利用`HTTP`头来加速整个页面的重新加载，增加缓存策略
+  * 真正的按需加载: 基于浏览器`ESM`的支持，实现真正的按需加载
+
+* 缺点
+
+  * 生态：目前`Vite`的生态不如`Webapck`，不过我觉得生态也只是时间上的问题。
+  * 生产环境由于`esbuild`对`css`和代码分割不友好使用`Rollup`进行打包
 
 `Vite.js`虽然才在构建打包场景兴起，但在很多场景下基本都会优于现有的解决方案。如果有生态、想要丰富的`loader`、`plugins`的要求可以考虑成熟的`Webpack`。在其余情况下，`Vite.js`不失为一个打包构建工具的好选择。
 
 ### 5 附录
 
-*   [官方文档](https://link.juejin.cn?target=https%3A%2F%2Fvitejs.dev%2Fguide%2F "https://vitejs.dev/guide/")
+* [官方文档](https://link.juejin.cn?target=https%3A%2F%2Fvitejs.dev%2Fguide%2F "https://vitejs.dev/guide/")
 
-*   [Esbuild](https://link.juejin.cn?target=https%3A%2F%2Fesbuild.github.io%2Fgetting-started%2F "https://esbuild.github.io/getting-started/") [官网](https://link.juejin.cn?target=https%3A%2F%2Fesbuild.github.io%2Fgetting-started%2F "https://esbuild.github.io/getting-started/")
+* [Esbuild](https://link.juejin.cn?target=https%3A%2F%2Fesbuild.github.io%2Fgetting-started%2F "https://esbuild.github.io/getting-started/") [官网](https://link.juejin.cn?target=https%3A%2F%2Fesbuild.github.io%2Fgetting-started%2F "https://esbuild.github.io/getting-started/")
 
-*   [Vite](https://link.juejin.cn?target=https%3A%2F%2Fcn.vitejs.dev%2Fguide%2Fapi-plugin.html "https://cn.vitejs.dev/guide/api-plugin.html") [插件](https://link.juejin.cn?target=https%3A%2F%2Fcn.vitejs.dev%2Fguide%2Fapi-plugin.html "https://cn.vitejs.dev/guide/api-plugin.html") [API](https://link.juejin.cn?target=https%3A%2F%2Fcn.vitejs.dev%2Fguide%2Fapi-plugin.html "https://cn.vitejs.dev/guide/api-plugin.html")
+* [Vite](https://link.juejin.cn?target=https%3A%2F%2Fcn.vitejs.dev%2Fguide%2Fapi-plugin.html "https://cn.vitejs.dev/guide/api-plugin.html") [插件](https://link.juejin.cn?target=https%3A%2F%2Fcn.vitejs.dev%2Fguide%2Fapi-plugin.html "https://cn.vitejs.dev/guide/api-plugin.html") [API](https://link.juejin.cn?target=https%3A%2F%2Fcn.vitejs.dev%2Fguide%2Fapi-plugin.html "https://cn.vitejs.dev/guide/api-plugin.html")
 
-*   [Rollup](https://link.juejin.cn?target=https%3A%2F%2Frollupjs.org%2Fguide%2Fen%2F%23plugin-development "https://rollupjs.org/guide/en/#plugin-development") [官方文档](https://link.juejin.cn?target=https%3A%2F%2Frollupjs.org%2Fguide%2Fen%2F%23plugin-development "https://rollupjs.org/guide/en/#plugin-development")
+* [Rollup](https://link.juejin.cn?target=https%3A%2F%2Frollupjs.org%2Fguide%2Fen%2F%23plugin-development "https://rollupjs.org/guide/en/#plugin-development") [官方文档](https://link.juejin.cn?target=https%3A%2F%2Frollupjs.org%2Fguide%2Fen%2F%23plugin-development "https://rollupjs.org/guide/en/#plugin-development")
 
-*   [Rollup - Next-generation ES6 module bundler - Interview with Rich Harris](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fxitu%2Fgold-miner%2Fblob%2Fmaster%2FTODO%2Frollup-interview.md "https://github.com/xitu/gold-miner/blob/master/TODO/rollup-interview.md")
+* [Rollup - Next-generation ES6 module bundler - Interview with Rich Harris](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fxitu%2Fgold-miner%2Fblob%2Fmaster%2FTODO%2Frollup-interview.md "https://github.com/xitu/gold-miner/blob/master/TODO/rollup-interview.md")
 
-*   [Vite](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fvitejs%2Fvite "https://github.com/vitejs/vite") [源码](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fvitejs%2Fvite "https://github.com/vitejs/vite")
+* [Vite](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fvitejs%2Fvite "https://github.com/vitejs/vite") [源码](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fvitejs%2Fvite "https://github.com/vitejs/vite")
 
-*   [Vite2 插件开发指南](https://link.juejin.cn?target=https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F364275970 "https://zhuanlan.zhihu.com/p/364275970")
+* [Vite2 插件开发指南](https://link.juejin.cn?target=https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F364275970 "https://zhuanlan.zhihu.com/p/364275970")

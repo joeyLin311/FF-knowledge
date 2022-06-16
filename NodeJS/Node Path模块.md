@@ -6,7 +6,7 @@ date created: 2022-05-08 23:08
 
 ### basename() 获取路径中的基础名称
 
-```js
+```jsx
 
 console.log(path.basename(__filename))
 // 输出: xxx.js  返回具体文件名
@@ -25,7 +25,7 @@ console.log(path.basename('/a/b/c'))
 
 ### dirname() 获取路径中的目录名(路径)
 
-```js
+```jsx
 console.log(path.dirname(__filename))
 // C:/Desktop/xxx/xxx
 ```
@@ -34,7 +34,7 @@ console.log(path.dirname(__filename))
 
 ### extname() 获取路径中的扩展名称
 
-```js
+```jsx
 console.log(path.extname(__filename))
 // 输出: .js  返回文件格式
 ```
@@ -49,8 +49,10 @@ console.log(path.extname(__filename))
 ### resolve() 返回绝对路径
 
 ### parse() 解析路径
+
 1. 接受一个路径, 返回一个对象, 包含不同的信息
 2. `root`:根  `dir`: 最后一个部分的上一层目录 `base`: 后面完整的内容部分, `ext`: 扩展名 `name`: 文件名称
+
 ### format() 序列化路径
 
 ### normalize() 规范化路径

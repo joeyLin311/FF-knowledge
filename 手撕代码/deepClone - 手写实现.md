@@ -2,11 +2,11 @@
 date created: 2021-12-09 22:58
 ---
 
-#JavaScript #编程题
+# JavaScript #编程题
 
 # 实现深拷贝
 
-```js
+```jsx
 function deepClone(target, map = new Map()) {
 
     // 获取类型

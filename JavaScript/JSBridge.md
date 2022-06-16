@@ -53,7 +53,7 @@ URL SCHEME 是一种类似于 url 的链接, 是为了方便 app 直接互相调
 JSBridge 接口实现
 从上面的剖析中,可以得知,JSBridge 的接口主要功能有两个: 调用 Native（给 Native 发消息） 和 接被 Native 调用（接收 Native 消息）.因此,JSBridge 可以设计如下:
 
-```js
+```jsx
 window.JSBridge = {
   // 调用 Native
   invoke: function (msg) {
@@ -66,10 +66,9 @@ window.JSBridge = {
 }
 ```
 
-复制代码
 在上面的文章中,提到过 RPC 中有一个非常重要的环节是 句柄解析调用 ,这点在 JSBridge 中体现为 句柄与功能对应关系.同时,我们将句柄抽象为 桥名（BridgeName）,最终演化为 一个 BridgeName 对应一个 Native 功能或者一类 Native 消息. 基于此点,JSBridge 的实现可以优化为如下:
 
-```js
+```jsx
 window.JSBridge = {
   // 调用 Native
   invoke: function (bridgeName, data) {
@@ -94,7 +93,7 @@ JSBridge 大概的雏形出现了.现在终于可以着手解决这个问题了:
 
 由此可见,callback 参数这个 唯一标识 是这个回调逻辑的关键.这样,我们可以参照这个逻辑来实现 JSBridge: 用一个自增的唯一 id,来标识并存储回调函数,并把此 id 以参数形式传递给 Native,而 Native 也以此 id 作为回溯的标识.这样,即可实现 Callback 回调逻辑.
 
-```js
+```jsx
 (function () {
     var id = 0,
         callbacks = {};

@@ -3,14 +3,14 @@ date created: 2022-05-16 22:05
 date updated: 2022-06-08 21:52
 ---
 
-#React
+# React
 
 ## 相关问题
 
 - react 16 版本更新了什么, 主要有哪些变化?
 - react 优化了哪些问题
 
-## React 16 架构可分为三层:
+## React 16 架构可分为三层
 
 - Scheduler (调度器) ---- 调度任务优先级, 高优先级任务先进入 Reconciler
 - Reconciler (协调器) ---- 负责找出变化的组件
@@ -43,7 +43,7 @@ React 有三种模式进入主体函数的入口,他们会影响整个应用的�
 - `blocking` : 开启部分 `concurrent` 模式特种的中间模式, 目前正在实验中
 - `concurrent` : 未来 React 的开发模式, Fiber 架构中的 `任务中断/任务优先级` 都是针对 `concurrent` 模式提出的.
 
-```js
+```jsx
 // 三者的入口函数
 // legacy 
 ReactDOM.render(<App />, rootNode);

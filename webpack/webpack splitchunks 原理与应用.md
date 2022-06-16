@@ -14,7 +14,7 @@ webpack 根据一下条件自动拆分 chunks:
 以上是官方文档的描述, 但是实际上默认配置只会抽离出动态加载的模块, 通常情况下, 不是立即需要的包可以考虑动态加载
 以下是 `SplitChunksPlugin` 的默认配置行为:
 
-```js
+```jsx
 // 如果使用的是 `initial` 或者 `all`, webpack 才会遵循这个配置进行打包.
 module.exports = {
   //...
@@ -66,7 +66,7 @@ chunks 配置项还可以写成函数式, 函数返回值将决定是否包含�
 
 如果某个 chunk 的大小超过了 50k 以上的限制就不会生效.
 
-### cacheGroup:
+### cacheGroup
 
 `cachGroup` 有两个默认缓存策略, 也就是 chunks 值为 `all` 和 `initial` 时的默认配置: `defaultVendors` 和 `default`
 
@@ -79,7 +79,7 @@ css 一般通过 style-loader 将 css 以 style 标签的形式插入文档, 这
 
 还可以用 MiniCssExtraPlugin 插件进行 css 分包.. 此插件默认为每个入口单独抽出 css, 也可以进行 cachGroup 的配置, 满足条件时, 会将多个入口的 css 打包在一起
 
-```js
+```jsx
 css: {
   name: "css",
   test: /\.css$/,

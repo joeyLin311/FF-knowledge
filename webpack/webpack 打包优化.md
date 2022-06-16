@@ -2,7 +2,7 @@
 date created: 2021-12-09 23:00
 ---
 
-#webpack
+# webpack
 
 ## 如何提高 webpack 的构建速度
 
@@ -25,6 +25,7 @@ date created: 2021-12-09 23:00
 ### thread-loader 构建时间优化
 
 使用 `thread-loader` 开启多线程打包, 提高项目的打包速度. 该 loader 作用是在在某个资源使用中, 放在其它 loader 之前, 之后使用的 loader 就会在一个单独的 worker 池(worker pool) 中运行. 但是开启之后, 这些 loader 是受到限制的:
+
 - 不能产生新的文件.
 - 不能使用定制的 loader API 也就是通过插件
 - 无法获取 webpack 的选项配置
@@ -72,7 +73,7 @@ CSS 文件里面, 重复的 style 代码会导致在 build 过程中急速增大
 
 ## 代码部分
 
-业务需求增加就会增加 `bundle` 体积, 对于这些 `bundle` 工具而言, 有 `tree shaking` 和 `DEC` , 但是我们无法确保我们使用的包是否只是 `tree shaking` , 所以在面对一些无法 `tree shaking` 的包, 我们可以使用 `antd` 的 `babel-import` 插件去做死代码消除. 在编写一些代码的时候, 我们应该明确指明相关代码是否有副作用, 合理地给代码加上 `@pure` 标记. 
+业务需求增加就会增加 `bundle` 体积, 对于这些 `bundle` 工具而言, 有 `tree shaking` 和 `DEC` , 但是我们无法确保我们使用的包是否只是 `tree shaking` , 所以在面对一些无法 `tree shaking` 的包, 我们可以使用 `antd` 的 `babel-import` 插件去做死代码消除. 在编写一些代码的时候, 我们应该明确指明相关代码是否有副作用, 合理地给代码加上 `@pure` 标记.
 
 拥抱现代标准, 采用 `esm` 开发, 让 webpack 更好地耕作, 同时在工程上设置 `sideEffect` 保证项目打包时充分地 `tree shaking`
 
@@ -86,19 +87,25 @@ CSS 文件里面, 重复的 style 代码会导致在 build 过程中急速增大
 - 生产环境考虑关闭 `source-map` 也能减少打包体积
 
 #### dev 环境下
+
 - 在 dev 环境下使用 `vite` , webpack 的架构设计跟 `vite` 没法比, 我们可以在开发环境下使用 `vite` 提升开发效能.
 - 如果项目强依赖于 webpack 那么需要增量编译的时候合理利用缓存, 对于 `require.context` 这样的东西应该避免使用
-- 然后 `ts-loader` 完全可以使用 `thread-lodaer` 替代, 多线程构建并不是良药, 进程的开销是需要代价, 我们在本地环境开发, 应该测试得出到底是否需要启动多线程和编译. 
+- 然后 `ts-loader` 完全可以使用 `thread-lodaer` 替代, 多线程构建并不是良药, 进程的开销是需要代价, 我们在本地环境开发, 应该测试得出到底是否需要启动多线程和编译.
 - `source-map` 选择合理的配置模式
 - 开发环境下我们或许不需要让 `babel` 兼容更低的版本
 
 ## 如何做的webpack 分包加载?
+
 [[webpack splitchunks 原理与应用]]
-## 如果某个异步 chunks 被分割, 如何使用 Prefetch 和 preload 来优化页面的加载时间? 
-webpack v4.6.0+ 增加了对预获取和预加载的支持. 在声明 `import` 时, 使用下面这些内置指令, 可以让 webpack 输出 `"resource hint(资源提示)"`, 来告知浏览器: 
+
+## 如果某个异步 chunks 被分割, 如何使用 Prefetch 和 preload 来优化页面的加载时间?
+
+webpack v4.6.0+ 增加了对预获取和预加载的支持. 在声明 `import` 时, 使用下面这些内置指令, 可以让 webpack 输出 `"resource hint(资源提示)"`, 来告知浏览器:
+
 - prefetch(预获取): 将来某些导航下可能需要的资源
 - preload(预加载):当前导航下可能需要资源
-```js
+
+```jsx
 //...
 import(/* webpackPrefetch: true */ './path/to/LoginModal.js');
 //...

@@ -15,7 +15,7 @@
 项目结构
 ----
 
-```
+```bash
 xman-tcli
 ├─ bin
 │  └─ xmant.js
@@ -39,7 +39,7 @@ xman-tcli
 ├─ LICENSE
 ├─ package.json
 └─ README.md
-复制代码
+
 
 ```
 
@@ -52,7 +52,7 @@ xman-tcli
 
 可以用 npm init 进行创建，也可以根据下面列出的 package.json 进行修改。
 
-```
+```jsx
 {
   "name": "xman-tcli",
   "version": "1.0.0",
@@ -83,26 +83,26 @@ xman-tcli
   }
 }
 
-复制代码
+
 
 ```
 
 ### 编写 bin/xman.js
 
-```
+```jsx
 #!/usr/bin/env node
 
 const { program } = require('commander');
 
 program
-	.version(require('../package').version, '-v, --version');
-	
+ .version(require('../package').version, '-v, --version');
+ 
 program.parse(process.argv); // 这里是必要的
 
 if (!program.args.length) {
-	program.help();
+ program.help();
 }
-复制代码
+
 
 ```
 
@@ -110,10 +110,8 @@ if (!program.args.length) {
 
 然后在当前目录下执行:
 
-```
+```bash
 xmant -v
-复制代码
-
 ```
 
 ![][img-1]
@@ -128,7 +126,7 @@ xmant -v
 
 templates/js/reactClassJSX.js
 
-```
+```jsx
     return `
 import * as React from 'react';
 
@@ -151,13 +149,13 @@ export class ${className} extends React.Component{
 }
     ` 
 }
-复制代码
+
 
 ```
 
 templates/js/reactFuncJSX.js
 
-```
+```jsx
 module.exports = function (funcName) {
     return `
 import React, {useEffect, useState} from 'react';
@@ -172,13 +170,13 @@ const ${funcName} = (props) => {
 export default ${funcName};
     ` 
 }
-复制代码
+
 
 ```
 
 templates/ts/reactClassTSX.js
 
-```
+```jsx
 module.exports = function (className) {
     return `
 import * as React from 'react';
@@ -205,27 +203,25 @@ export class ${className} extends React.Component<Props, State>{
 }
     ` 
 }
-复制代码
+
 
 ```
 
 templates/ts/reactFuncTS.js
 
-```
+``` jsx
 module.exports = function (funcName) {
     return `
-export const ${funcName} = () => {
-    
-}
+        export const ${funcName} = () => {
+            
+        }
     ` 
 }
-复制代码
-
 ```
 
 templates/ts/reactFuncTSX.js
 
-```
+```jsx
 module.exports = function (funcName) {
     return `
 import React, {useEffect, useState} from 'react';
@@ -244,15 +240,13 @@ const ${funcName} = (props: any) => {
 export default ${funcName};
     ` 
 }
-复制代码
-
 ```
 
 模板定义好之后，通过 `index.js` 统一导出。
 
 templates/index.js
 
-```
+```jsx
 const reactClassJSX = require('./js/reactClassJSX');
 const reactFuncJSX = require('./js/reactFuncJSX');
 const reactClassTSX = require('./ts/reactClassTSX');
@@ -277,7 +271,7 @@ module.exports = [
         name: 'reactFunc-ts', src: reactFuncTS
     }
 ]
-复制代码
+
 
 ```
 
@@ -285,7 +279,7 @@ module.exports = [
 
 创建工具函数 utils/index.js：
 
-```
+``` jsx
 module.exports = {
     getFileSuffix: (name) => {
         if(typeof name === 'string') {
@@ -293,15 +287,13 @@ module.exports = {
         }
     }
 }
-复制代码
-
 ```
 
 #### 编写创建文件逻辑
 
 准备工作就绪，接下来就是文件创建的逻辑 command/createFile.js：
 
-```
+```jsx
 // 创建单个文件
 const templates = require('../templates/index');
 const chalk = require('chalk');
@@ -356,7 +348,7 @@ module.exports = () => {
         })
     })
 }
-复制代码
+
 
 ```
 
@@ -374,16 +366,16 @@ const { program } = require('commander');
 ...
 
 program
-	.command('create')
-	.description("Create a file")
-	.alias('c')
-	.action(() => {
-		require('../command/createFile')()
-	});
-	
+ .command('create')
+ .description("Create a file")
+ .alias('c')
+ .action(() => {
+  require('../command/createFile')()
+ });
+ 
 ...
 
-复制代码
+
 
 ```
 
@@ -446,7 +438,7 @@ module.exports = [
         template: 'reactFunc-ts'
     }
 ]
-复制代码
+
 
 ```
 
@@ -519,7 +511,7 @@ module.exports = () => {
         }
     })
 }
-复制代码
+
 
 ```
 
@@ -535,16 +527,16 @@ const { program } = require('commander');
 ...
 
 program
-	.command('create-many')
-	.description("Create many folders and files")
-	.alias('cm')
-	.action(() => {
-		require('../command/createManyFiles')()
-	});
-	
+ .command('create-many')
+ .description("Create many folders and files")
+ .alias('cm')
+ .action(() => {
+  require('../command/createManyFiles')()
+ });
+ 
 ...
 
-复制代码
+
 
 ```
 

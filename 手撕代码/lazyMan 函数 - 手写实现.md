@@ -3,13 +3,13 @@ date created: 2021-12-09 22:55
 date updated: 2021-12-17 16:14
 ---
 
-#编程题
+# 编程题
 
 # 实现 LazyMan 函数
 
 要求:
 
-```js
+```jsx
 实现一个LazyMan，可以按照以下方式调用:
 LazyMan(“Hank”)输出:
 Hi! This is Hank!
@@ -33,9 +33,9 @@ Eat supper
 
 ```
 
-## 实现代码:
+## 实现代码
 
-```js
+```jsx
 class _LazyMan {
   constructor(name) {
     this.tasks = []

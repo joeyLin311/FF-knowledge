@@ -3,7 +3,7 @@ date created: 2021-12-09 22:56
 date updated: 2021-12-17 16:12
 ---
 
-#JavaScript
+# JavaScript
 
 ## typeof
 
@@ -63,7 +63,7 @@ constructor 判断方法跟 instanceof 相似,但是 constructor 检测 Object �
 | RegExp   | Object.prototype.toString.call(new RegExp()) | [object RegExp]   |
 | Function | Object.prototype.toString.callFunction() {}) | [object Function] |
 
-```js
+```jsx
 // 可遍历的类型
 const mapTag = '[object Map]';
 const setTag = '[object Set]';

@@ -21,10 +21,8 @@
     import Cookies from 'js-cookie'
     Cookies.set('name', '老夫子', { expires: 7 }) // 有效期 7 天
     Cookies.get('name') // => '老夫子'
-    复制代码
 
     [详细使用文档](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fjs-cookie "https://www.npmjs.com/package/js-cookie")
-
 
 ### Cookie 的缺点
 
@@ -42,7 +40,6 @@
 
     由于原生接口不友好，导致数据操作不方便
 
-
 ### Cookie 的特点
 
 - 存储时如果未设置 `Expires` 和 `Max-Age` 失效时间，则在浏览器关闭后自动删除
@@ -53,7 +50,6 @@
 
 - `Cookie` 失效浏览器会自动将其删除
 
-
 ### Cookie 的作用域
 
 - 设置 Domain 属性
@@ -63,14 +59,12 @@
     当多个子域名需要共享 `Cookie` 信息的时候，就必须要指定 `Domain` 属性值为一级域名，指定 `Path` 属性值为根路径
 
     Set-Cookie: uid=5; Domain=taobao.com; Path=/
-    复制代码
 
 - 设置 Path 属性
 
     `Path` 属性指定了主机下的哪些路径可以接受 `Cookie`，子路径也可以被匹配
 
     Set-Cookie: uid=5; Domain=taobao.com; Path=/docs
-    复制代码
 
 - 共享登录状态
 
@@ -79,7 +73,6 @@
     子域会自动继承父域中的 `Cookie` ，利用这个特点可以实现 ` 单点登录 `
 
     ` 前提是应用系统的域名必需得建立在一个共同的主域名之下，不支持跨主域名 `
-
 
 ### Cookie 的安全性
 
@@ -90,7 +83,6 @@
 - 设置 HttpOnly 属性
 
     `HttpOnly` 属性可以防止客户端脚本通过 `document.cookie` 等方式访问 `Cookie`，有助于避免 `XSS` 攻击
-
 
 ### Cookie 的 SameSite 属性
 
@@ -105,7 +97,6 @@
     `None` 版本 80 以下的 Chrome 浏览器默认规则，无论是否跨站都会发送 Cookie，必须同时设置 Secure 属性，否则无效
 
     `Lax` 版本 80 以上的 Chrome 浏览器默认规则，只有导航到目标地址的 Get 请求才会发送 Cookie，即 超链接、预加载请求、GET 表单
-
 
 ### Cookie 和 Session 的区别
 
@@ -124,7 +115,6 @@
 - 存储大小不同
 
     单个 Cookie 保存的数据不能超过 4K；Session 可存储数据远高于 Cookie，但是当访问量过多，会占用过多的服务器资源
-
 
 ### Cookie、Session 鉴权原理
 
@@ -147,7 +137,6 @@
     5、客户端每次向服务端请求资源时都需要携带 `Sid`
 
     6、服务端收到请求后解析请求 `Cookie` 中的 Sid，然后与服务端存储的 `Sid` 进行比对，来确定请求的合法性
-
 
 ![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/45629589ab204dd6ace2ecfb84a73e51~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
 
