@@ -1,40 +1,28 @@
-前言
-==
+---
+date created: 2022-07-01 16:35
+---
 
-渐渐的，我们都变成了当初最讨厌的那个人（标题党）。
+## 方案对比
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71e7eb9b750e48a08cd1f0bc0767aaa3~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
-
-但相比形式，内容明显是更重要的。 希望读者通过本文，能完整的体验到: 从零到一开发一款脚手架的心路历程。
-
-调研 & 讨论
 =======
 
 虽然项目也没啥受重视的，但项目流程该有还是要有的。首先通过安利拉了俩个成员入伙。简单跟大家开会沟通了一下：
 
 1. 市面主流方案调研
 
------------
-
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/437869efbec1451498640d232ea798f5~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
+---
 
 首先，提到 react 脚手架，必然离不开在 react 社区占据主流的`create-react-app`, 但出乎意料的被大家第一时间就排除了。主要是因为它配置不够灵活，对`webpack`的封装太死，这让它在应对复杂项目的时候，有点力不从心，而且自身提供的功能虽然说很通用但是也足够简陋。我猜这时候一定会有人会说，你可以`eject`一下，把源码暴露出来啊？但这样的话，我使用它的意义就没有了，而且基于它的源码二次开发, 成本肯定低不了。
-
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7262573fa68a46e8957aac361ab8b452~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
 
 接下来，我们把目标转向了`vue-cli`, 没想到获得了大家的一致好评。我认为它最优秀的地方是于: 在功能的通用性及灵活性，这两个指标上取得了一个很好的平衡。这点是与`vue.js`框架的哲学是高度一致的，所以与`vue`结合起来开发项目，会有一种行云流水的感觉，而且大家一致对它的`cli`（交互命令行工具）喜爱有加，就是下边这个东东，用过的人一定印象深刻。
 
 ![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/146cad965c1c448d8f293140eda6772f~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
 
-要说它有啥大毛病没有，想了想，不支持 react 算不算？
-
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/74080224b29d414cabb71c95c53af73e~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
-
 那么，我们的目标也就有了，开发一款使用方式类似于`vue-cli`的 react 脚手架。之前对`@vue/cli`的认识只停留在使用层面，所以需要先对它的实现了解一波。正所谓，知自知彼，才好实现（抄）嘛。
 
 2. @vue/cli 源码分析
 
-----------------
+---
 
 我 clone 的是 [4.5.14](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fvuejs%2Fvue-cli%2Ftree%2Fdev%2Fpackages%2F%2540vue%2Fcli "https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli") 的版本，5.0 新版本起笔时，而且还处在 beta 版阶段，略过。
 
@@ -44,9 +32,9 @@
 
 如上图所示，完整的`@vue/cli`功能主要是三部分组成的：
 
-* `@vue/cli` 负责命令行参数收集
-* `@vue/cli-service` 这个包是启动 vue 的引擎及核心，承载 webpack 配置。
-* `@vue/plugin-xxx` vue-cli 的插件，一个插件对应一个功能，与上边用户自定义 feature 选项一一对应。
+- `@vue/cli` 负责命令行参数收集
+- `@vue/cli-service` 这个包是启动 vue 的引擎及核心，承载 webpack 配置。
+- `@vue/plugin-xxx` vue-cli 的插件，一个插件对应一个功能，与上边用户自定义 feature 选项一一对应。
 
 cli 与核心功能包分离是一种主流的拆包方式`webpack-cli & webpack`,`@babel/cli & @babel/core`皆是如此实现的，属于程序设计上的分层架构，cli（上层）需要依赖核心服务（下层），但核心服务（下层）并不依赖 cli（上层），依然可以独立运行。
 
@@ -138,15 +126,15 @@ vue 为了方便用户选择，预设了一些功能集合，`Creator`类的`con
 
 每一个插件都有一个`generator`文件夹，下边必须存在一个`index.js`，然后`index.js`需要导出一个函数，在函数体里可以调用外部主体注入的一些工具方法，比如，
 
-* `api.injectImport()` 在项目里插入一个模块导入。
-* `api.extendPackage()` 扩展项目的 package.json
-* `api.render('./template')` 使用 ejs 渲染模版文件（条件编译）
+- `api.injectImport()` 在项目里插入一个模块导入。
+- `api.extendPackage()` 扩展项目的 package.json
+- `api.render('./template')` 使用 ejs 渲染模版文件（条件编译）
 
 再回来看上边的`this.resolvePlugins(preset.plugins, pkg)`方法，这里取到的 apply，其实就是插件约定导出的那个函数，但这里需要注意的是，只是**暂时将 apply 方法保存起来**，并不会调用。
 
 ![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/96764c9d852a453eada22d9cd6903a6a~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
 
-原`plugins`，经过此方法处理后，就转换为了新的包含具体插件功能的`plugins`。  
+原`plugins`，经过此方法处理后，就转换为了新的包含具体插件功能的`plugins`。\
 {id: options} => [{ id, apply, options }]
 
 ![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0416bf80894947acaeb8680c880c0078~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
@@ -179,8 +167,6 @@ vue 为了方便用户选择，预设了一些功能集合，`Creator`类的`con
 
 那么`api.render()`这些方法真正的起作用是在哪里呢？
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d3229be00b6f43fd986ed276b7bcd4ad~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
-
 ![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f9a1b2da69f44091bfa127ac4610e9b2~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp?)
 
 打开紧接着执行的 `this.resolveFiles` 方法，真相就在这里。
@@ -207,13 +193,13 @@ vue 为了方便用户选择，预设了一些功能集合，`Creator`类的`con
 
 3. 确定功能及目标
 
-----------
+---
 
 前边的对`@vue/cli`的详细分析，可以总结为关键的三点
 
-* 1.  采用**命令行界面**的进行功能选择
-* 2.  `cli` 与 `核心服务` @vue/cli-service（webpack 配置）采用分层设计，**独立发包**
-* 3.  **插件机制**，按需生成不同的功能模版文件
+- 1. 采用**命令行界面**的进行功能选择
+- 2. `cli` 与 `核心服务` @vue/cli-service（webpack 配置）采用分层设计，**独立发包**
+- 3. **插件机制**，按需生成不同的功能模版文件
 
 这样的设计对一个面向所有 vue 开发者的脚手架而言是必要的，因为它需要具备非常大的灵活性。但对一款只满足特定团队的脚手架来说，是过于复杂的，而且开发成本也会很高，光是将各种功能插件拆分就需要非常大的工作量。其次，团队的项目开发，最重要的就是统一与规范，很多配置及功能都可以是默认内置的，比如 eslint、babel、css 处理器，这些都是团队项目开发中必备的功能，所以**配置的多样性及灵活性并不是首要考虑因素**。所以，第三点插件机制可以舍去。
 
@@ -231,12 +217,13 @@ PC 端会内置基于`antd`的布局模版，移动端会开启`px2rem`适配，
 
 ### （3） 状态管理库、react-router 版本按需安装
 
-功能开发
+## 功能开发
+
 ====
 
 ### 初始化项目
 
-* monorepo
+- monorepo
 
 它相比单仓库的优势是在于有利于多个 npm 之间的高效联调及`node_modules`磁盘空间共享 由于 lerna 的依赖提升对依赖版本号要求过于严格，而且缺少很多`yarn-workspace`独有的功能 (特别是对 bin、module 的本地软链处理)。目前主流的实践是，利用`yarn`的`workspace`做依赖管理，`lerna`做 npm 包的自动版本管理及发包。 这里采用`monorepo`的原因是，后续可能会基于这个脚手架开发组件库或者 webpack-plugin 等项目，方便他们之间的联调。
 
@@ -577,7 +564,7 @@ module.exports = function ask () {
 
 #### 生成项目文件
 
-lib/generate.js
+`lib/generate.js`
 
 ```jsx
 const { isBinaryFileSync } = require("isbinaryfile");
@@ -673,47 +660,49 @@ ejs 渲染时， `platform = mobile`，代表选择是移动端，就在 html �
 ```bash
 npm login
 lerna publish
-
-
 ```
 
 发包这一步，还是挺容易踩到坑的，这里总结下我遇到的：
 
-* 1.  **npm 公开包的名称需要是唯一的。**
+1. **npm 公开包的名称需要是唯一的。**
 
- 最好提前去 [npm](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2F "https://www.npmjs.com/") 网站搜索一下，看自己将要发的包名是否已存在。或者花钱买私有域，类似于 @vue/xxx 这样的。
+最好提前去 [npm](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2F "https://www.npmjs.com/") 网站搜索一下，看自己将要发的包名是否已存在。或者花钱买私有域，类似于 @vue/xxx 这样的。
 
-* 2.  **lerna publish 重试不生效。**
+2. **lerna publish 重试不生效。**
 
- 运行 lerna publish 如果中途有包发布失败，再运行 lerna publish 的时候，因为 git 的 Tag 已经打上去了，所以不会再重新发布包到 NPM。
+运行 lerna publish 如果中途有包发布失败，再运行 lerna publish 的时候，因为 git 的 Tag 已经打上去了，所以不会再重新发布包到 NPM。
 
- 解决方法：运行 lerna publish from-git，会把当前标签中涉及的 NPM 包再发布一次，PS：不会再更新 package.json，只是执行 npm publish
+解决方法：运行 lerna publish from-git，会把当前标签中涉及的 NPM 包再发布一次，PS：不会再更新 package.json，只是执行 npm publish
 
-* 3.  **全局修改为淘宝 npm 源导致的问题**
+3. **全局修改为淘宝 npm 源导致的问题**
 
-  * 淘宝源与官方源的同步存在延时
+- 淘宝源与官方源的同步存在延时
 
-        npm 包已经发布成功，但因为全局设置的是淘宝源，亲测会有一定的同步延时，大概半小时到一个小时左右，所以有可能会更新不到最新的包版本或者直接首次发版成功后的一段时间内找不到包。
+  ```
+  npm 包已经发布成功，但因为全局设置的是淘宝源，亲测会有一定的同步延时，大概半小时到一个小时左右，所以有可能会更新不到最新的包版本或者直接首次发版成功后的一段时间内找不到包。
+  ```
 
-  * 全局用淘宝源，会导致发包失败。
+- 全局用淘宝源，会导致发包失败。
 
-        因为淘宝源只能下载包，不能上传包。但是不用淘宝源，安装其他依赖又慢的不行。 解决方法： 安装依赖，统一从淘宝源拉，保证依赖安装速度。发包时借助 npm 包的 package.json 的`publishConfig`字段指定官方源，确保能发包成功。
+  ```
+  因为淘宝源只能下载包，不能上传包。但是不用淘宝源，安装其他依赖又慢的不行。 解决方法： 安装依赖，统一从淘宝源拉，保证依赖安装速度。发包时借助 npm 包的 package.json 的`publishConfig`字段指定官方源，确保能发包成功。
+  ```
 
-  ```jsx
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-   },
-  
-    ```
+```jsx
+"publishConfig": {
+	"registry": "https://registry.npmjs.org/",
+	"access": "public"
+ },
+```
 
-* 4.  **devDependencies** 与 **dependencies** 的区别
+4. **devDependencies** 与 **dependencies** 的区别
 
-    首先，在普通的业务项目中，这两者是没有任何本质区别的。也就是说在安装时，带不带 --dev，只会影响最终在`package.json`中的归类位置，最终会不会被 webpack 等的工具打包构建，只决定于是否在项目中被引用。
+   首先，在普通的业务项目中，这两者是没有任何本质区别的。也就是说在安装时，带不带 --dev，只会影响最终在`package.json`中的归类位置，最终会不会被 webpack 等的工具打包构建，只决定于是否在项目中被引用。
 
-    但对于发到 npm 上的项目而言，这点很重要。 当用户安装你的包时，**只有生产依赖才会被一起安装**，开发依赖则不会。如果使用不当，比如不小心将一个生产依赖装入了开发依赖，安装你 npm 包的用户会运行报错，找不到 xx 模块。
+   但对于发到 npm 上的项目而言，这点很重要。 当用户安装你的包时，**只有生产依赖才会被一起安装**，开发依赖则不会。如果使用不当，比如不小心将一个生产依赖装入了开发依赖，安装你 npm 包的用户会运行报错，找不到 xx 模块。
 
-最后
+## 最后
+
 ==
 
 [npm 地址](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Freact-booster-cli "https://www.npmjs.com/package/react-booster-cli")、 [github 地址](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2FFEyudong%2Fbooster%2Ftree%2Fmaster%2Fpackages%2Freact-booster-cli "https://github.com/FEyudong/booster/tree/master/packages/react-booster-cli"), 欢迎大家试用， 提`issues`。这个项目是我业余时间开发的，**以上标题及故事情节也纯属虚构**。代码是完全脱敏公开的，如果你们团队也有类似的需求，可以给大家提供一个参考，这就是我最好的收获。

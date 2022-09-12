@@ -33,7 +33,7 @@ date updated: 2021-12-17 16:08
 ## OPTIONS
 
 - `OPTIONS` 请求与 `HEAD` 类似，一般也是用于客户端查看服务器的性能。 这个方法会请求服务器返回该资源所支持的所有 HTTP 请求方法, 响应报文包含一个 `Allow` 首部字段，该字段的值表明了服务器支持的所有 HTTP 方法，
-- 该方法会用 `*`  来代替资源名称，向服务器发送 `OPTIONS` 请求，可以测试服务器功能是否正常。JavaScript 的 [XMLHttpRequest](http://itbilu.com/javascript/js/VkiXuUcC.html) 对象进行`CORS`跨域资源共享时，就是使用`OPTIONS`方法发送嗅探请求，以判断是否有对指定资源的访问权限.
+- 该方法会用 `*`  来代替资源名称，向服务器发送 `OPTIONS` 请求，可以测试服务器功能是否正常。JavaScript 的 [XMLHttpRequest](http://itbilu.com/javascript/js/VkiXuUcC.html) 对象进行`CORS`跨域资源共享时，就是使用`OPTIONS`方法发送嗅探请求，以判断是否有对指定资源的访问权限. [[浏览器跨域 CORS]]
 
 ## GET 和 POST 区别
 

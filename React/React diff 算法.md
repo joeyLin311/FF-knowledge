@@ -3,7 +3,7 @@ date created: 2022-05-30 22:50
 date updated: 2022-06-09 01:15
 ---
 
-# React
+#React
 
 ## 相关问题
 
@@ -15,10 +15,10 @@ date updated: 2022-06-09 01:15
 
 > 一个 DOM 节点, 在某个时刻最多会有 4 个节点与它相关
 
-1. current Fiber. 表示该 DOM 节点对应的 Fiber 节点
-2. workInProgress Fiber. 表示该节点本次更新需要渲染到页面中, 与 DOM 相对应的 Fiber 节点
-3. DOM 节点本身
-4. JSX 对象, 表示 render 方法的返回对象, 包含描述 DOM 节点信息
+1.  current Fiber. 表示该 DOM 节点对应的 Fiber 节点
+2.  workInProgress Fiber. 表示该节点本次更新需要渲染到页面中, 与 DOM 相对应的 Fiber 节点
+3.  DOM 节点本身
+4.  JSX 对象, 表示 render 方法的返回对象, 包含描述 DOM 节点信息
 
 Diff 算法的本质上, 就是通过对比 `1` 和 `4` , 生成 `2`. 期间 React 会遍历 Fiber 树, 寻找需要变更的节点, 对其进行相应的更新删除或者移动. 期间由于 Fiber 数据结构的特性, 又区分单节点和多节点的情况进行比较操作.
 
@@ -26,7 +26,7 @@ Diff 算法的本质上, 就是通过对比 `1` 和 `4` , 生成 `2`. 期间 Rea
 
 React  diff 发生在 render 流程中 `beginWork` 中调用 `reconcileChildren` 方法的阶段. 该方法判断 `current 是否为 null` 区分了组件两个不同的情况:
 
-- 需要 `mount` 的组件会创建新的 `子 Fiber 节点` 调用 `mountChildFibers()`
+- 需要 `mount` 的组件会创建新的 ` 子 Fiber 节点 ` 调用 `mountChildFibers()`
 - 需要 `update` 的组件, 方法内部会酱当前组件与该组件在上次更新时对应的 Fiber 节点比较(**diff 算法**), 将比较的结果生成新的 Fiber 节点. 它调用 `reconcileChildFibers()`, 该函数会根据 `child` 类型调用不同的处理函数
 
 分析一下 `reconcileChildFibers()` 的入参情况
@@ -60,7 +60,7 @@ workInProgress.child = reconcileChildFibers(
 ## diff 过程
 
 ![[diff 过程.jpg]]
-在子节点 diff 过程中, React 内部会将子节点分成 `单节点` 和 `多节点` 情况进行区别 diff:
+在子节点 diff 过程中, React 内部会将子节点分成 ` 单节点 ` 和 ` 多节点 ` 情况进行区别 diff:
 
 - 类型为 `object` , `number`, `string` 的节点, 代表同级只有一个节点, 调用 `reconcileSingleElement` 方法处理
 - 类型为 `Array` , 表示同级有多个节点
@@ -77,8 +77,8 @@ workInProgress.child = reconcileChildFibers(
 - 首先比较 `key` 是否相同
 - 比较 `type` 是否相同
 - 细节注意
-  - 当 `child !== null` 且 `key 相同` 且 `key 不同` 时执行 `deleteRemainingChildren` 将 `child` 及其兄弟 fiber 节点都标记删除
-  - 当 `child !== null` 且 `key 不同` 时仅将 `child` 标记删除
+  - 当 `child !== null` 且 `key 相同 ` 且 `key 不同 ` 时执行 `deleteRemainingChildren` 将 `child` 及其兄弟 fiber 节点都标记删除
+  - 当 `child !== null` 且 `key 不同 ` 时仅将 `child` 标记删除
 
 ### 多节点情况
 
@@ -92,14 +92,14 @@ workInProgress.child = reconcileChildFibers(
 
 #### 第一轮遍历
 
-1. 遍历 `newChildren` 与 `oldFiber` 节点比较, 判断 DOM 节点是否能复用
-2. 如果可以复用, 就继续与 `oldFiber.sibling` (兄弟节点) 比较判断是否复用
-3. 如果不能复用, 分两种情况
+1.  遍历 `newChildren` 与 `oldFiber` 节点比较, 判断 DOM 节点是否能复用
+2.  如果可以复用, 就继续与 `oldFiber.sibling` (兄弟节点) 比较判断是否复用
+3.  如果不能复用, 分两种情况
 
 - `key` 不同不能复用, **立即跳出遍历, 第一遍遍历结束**
 - `key` 相同但是 `type` 不同导致不能用, 则标记 `oldFiber` 为 `DELETION`, 然后继续遍历
 
-4. 当 `newChildren` 遍历完或者 `oldFiber` 遍历完, **跳出遍历, 第一轮遍历结束**
+4.  当 `newChildren` 遍历完或者 `oldFiber` 遍历完, **跳出遍历, 第一轮遍历结束**
 
 如此遍历结束后会出现四种情况:
 
@@ -120,7 +120,7 @@ React 使用 `key` 快速寻找 `oldFiber` 中对应的节点, 将他们存进 M
 
 React 中是以最后一个可复用的节点在 `oldFiber` 的位置索引(使用变量 `lastPlacedIndex` 表示)
 
-本次开始更新中的节点是按照 `newChildren` 的顺序排列. 在遍历 `newChildren` 的过程中, 每个**遍历到的可复用节点** 一定是当前遍历到的**所有可复用节点**中**最靠右的那个**, 即一定在 `lastPlacedIndex` 对应的 `可复用的节点` 在本次更新中位置的最后面.
+本次开始更新中的节点是按照 `newChildren` 的顺序排列. 在遍历 `newChildren` 的过程中, 每个**遍历到的可复用节点** 一定是当前遍历到的**所有可复用节点**中**最靠右的那个**, 即一定在 `lastPlacedIndex` 对应的 ` 可复用的节点 ` 在本次更新中位置的最后面.
 
 我们只需要比较**遍历到的可复用节点** 在上次更新时是否也在 `lastPlacedIndex` 对应的 `oldFiber` 后面 , 就可以知道两次更新中这两个节点的相对位置是否发生了改变.
 

@@ -2,7 +2,7 @@
 date created: 2021-12-09 22:55
 date updated: 2021-12-17 16:14
 ---
-
+#JavaScript 
 # JSBridge
 
 在原生开发领域, 移动端操作系统中都包含 JavaScript 运行环境, 比如 Android 的 WebView 和 iOS 的 JSCore. 使用 JS 编写运行在移动平台的 APP 称为可能. 在这过程中, 编写的 JS 应用如何与原生系统进行通信交互, JSBridge 应运而生.
@@ -145,3 +145,5 @@ JSBridge 大概的雏形出现了.现在终于可以着手解决这个问题了:
 与由 Native 端注入正好相反,它的优点在于: JavaScript 端可以确定 JSBridge 的存在,直接调用即可；缺点是: 如果桥的实现方式有更改,JSBridge 需要兼容多版本的 Native Bridge 或者 Native Bridge 兼容多版本的 JSBridge.
 
 ## WeixinJSBridge
+
+[[小程序开发总结#4、通信原理]]

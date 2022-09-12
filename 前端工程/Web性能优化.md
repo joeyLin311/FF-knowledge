@@ -23,3 +23,7 @@
 ## Google 性能优化新方案
 
 [Google将LCP提升30%](https://mp.weixin.qq.com/s/3v54arsDRRw6agyr3MtPRg)
+
+## [[《Web性能权威指南》笔记]]
+
+## [[DNS 解析优化]]

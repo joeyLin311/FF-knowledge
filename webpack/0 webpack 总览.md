@@ -41,3 +41,7 @@ webpack 给我们提供了三种哈希值计算方式，分别是 hash、chunkha
 
 [[webpack 打包优化]]
 [官网](https://www.webpackjs.com/guides/build-performance/)
+
+## [[webpack 配置文件说明]]
+
+## [[package.json 字段说明]]

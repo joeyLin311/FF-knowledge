@@ -1,5 +1,3 @@
-> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [juejin.cn](https://juejin.cn/post/7020568739594633230)
-
 前言
 --
 
@@ -224,20 +222,20 @@ templates/ts/reactFuncTSX.js
 ```jsx
 module.exports = function (funcName) {
     return `
-import React, {useEffect, useState} from 'react';
-
-const ${funcName} = (props: any) => {
-    
-    useEffect(() => {
-        
-    },[])
-    
-    return (
-        <div></div>
-    )
-}
-
-export default ${funcName};
+			import React, {useEffect, useState} from 'react';
+			
+			const ${funcName} = (props: any) => {
+			    
+			    useEffect(() => {
+			        
+			    },[])
+			    
+			    return (
+			        <div></div>
+			    )
+			}
+			
+			export default ${funcName};
     ` 
 }
 ```
@@ -358,7 +356,7 @@ module.exports = () => {
 
 最后就是命令的编写 bin/xman.js：
 
-```
+```jsx
 #!/usr/bin/env node
 
 const { program } = require('commander');
@@ -399,7 +397,7 @@ program
 
 #### 编写配置文件
 
-```
+```jsx
 // 说明： 
 // folder: 文件夹名，可以嵌套，用 “/”分隔
 // fileName: 文件名
@@ -448,7 +446,7 @@ module.exports = [
 
 根据配置文件进行文件夹和文件的批量创建 command/createManyFiles.js：
 
-```
+```jsx
 // 批量创建文件
 
 const chalk = require('chalk');

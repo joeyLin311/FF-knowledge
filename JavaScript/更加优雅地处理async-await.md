@@ -1,9 +1,9 @@
 ---
 date created: 2021-12-09 23:00
-date updated: 2022-05-24 01:13
+date updated: 2022-07-12 10:47
 ---
 
-# JavaScript
+#JavaScript
 
 # JavaScript
 

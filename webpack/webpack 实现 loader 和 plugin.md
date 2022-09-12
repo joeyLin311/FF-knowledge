@@ -44,7 +44,7 @@ date updated: 2021-12-17 16:00
 
 [babel-loader](https://blog.csdn.net/qq_38935512/article/details/112918516)
 [jianshu](https://www.jianshu.com/p/297e838b104e)
-
+[[实现的 webpack loader]]
 ```jsx
 my-babel-loader.js
 // 用来处理es6的语法转换

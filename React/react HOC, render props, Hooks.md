@@ -18,7 +18,7 @@ HOC / Render props / Hooks 三种方案都可以**提高代码的复用性**, �
 - Render props 是指讲一个返回 React 组件的函数, 作为 props 传递给另一个 React 组件的的代码技术
 - Hooks 是 React 提供的一组API, 使开发者可以在不编写 class component 的情况下, 使用 state 和其它 React 特性
 
-
+[[react HOC 的理解和使用场景]]
 
 
 

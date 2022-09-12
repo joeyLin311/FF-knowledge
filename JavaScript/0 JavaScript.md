@@ -1,10 +1,13 @@
 ---
 date created: 2021-12-09 22:56
-date updated: 2021-12-17 16:12
+date updated: 2022-07-01 16:56
 ---
 
 #面试 #JavaScript
-JavaScript 整理相关知识点一
+
+# JavaScript 整理相关知识点
+
+## [[JS 数据类型]]
 
 ## [[JS 作用域和作用域链]]
 
@@ -28,14 +31,18 @@ JavaScript 整理相关知识点一
 
 ## [[函数, 函数参数 arguments]]
 
-## [[内存管理]]
+## [[浏览器内存管理]]
 
 ## [[new 运算符 - 手写实现]]
 
 ## [[Web Worker]]
 
-## [[JS Module]]
+## [[JS 模块化]]
 
 ## [[JS Class 类的理解]]
 
 ## [[async-await 是如何实现的]]
+
+## [[JS 基础]]
+
+## [[JSBridge]]

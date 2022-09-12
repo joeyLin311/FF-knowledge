@@ -1,5 +1,5 @@
  [共享 Cookie 实现 SSO 单点登录](https://juejin.cn/post/7083319128144445477)
-
+[[cookie 和 token 的区别]]
 由于 `HTTP` 协议具有 ` 无状态 ` 的特点，对于事物的处理没有记忆能力，每一次请求都是独立的，这样就无法保持客户端与服务端的会话状态
 
 也就是说无法根据之前的请求状态进行本次的请求处理，以此来减少服务器的 `CPU` 占用以及内存资源的消耗
@@ -17,12 +17,13 @@
     一个简单的、轻量的处理 `cookies` 的 `JS API`
 
 - 基本用法
+```js
+import Cookies from 'js-cookie'
+Cookies.set('name', '老夫子', { expires: 7 }) // 有效期 7 天
+Cookies.get('name') // => '老夫子'
+```
 
-    import Cookies from 'js-cookie'
-    Cookies.set('name', '老夫子', { expires: 7 }) // 有效期 7 天
-    Cookies.get('name') // => '老夫子'
-
-    [详细使用文档](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fjs-cookie "https://www.npmjs.com/package/js-cookie")
+[详细使用文档](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fjs-cookie "https://www.npmjs.com/package/js-cookie")
 
 ### Cookie 的缺点
 

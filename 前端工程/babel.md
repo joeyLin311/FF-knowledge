@@ -1,9 +1,9 @@
 ---
 date created: 2021-12-09 22:57
-date updated: 2021-12-17 16:02
+date updated: 2022-07-01 16:30
 ---
 
-# babel
+#babel
 
 ## babel 编译流程
 
@@ -37,13 +37,15 @@ babel 的核心模块 `@babel/core`, `@babel/parser`, `@babel/generator` 和 `@b
 
 **插件总共分为两种：**
 
+1. 语法插件
+
 当我们添加 **语法插件** 之后, 在解析这一步就使得 babel 能够解析更多的语法.(顺带一提, babel 内部使用的解析类库叫做 babylon, 并非 babel 自行开发)
 
 举个简单的例子, 当我们定义或者调用方法时, 最后一个参数之后是不允许增加逗号的, 如 `callFoo(param1, param2,)` 就是非法的.如果源码是这种写法, 经过 babel 之后就会提示语法错误.
 但最近的 JS 提案中已经允许了这种新的写法(让代码 diff 更加清晰).为了避免 babel 报错, 就需要增加语法插件 `babel-plugin-syntax-trailing-function-commas`
 
 当我们添加 转译插件 之后, 在转换这一步把源码转换并输出.这也是我们使用 babel 最本质的需求.
-
+2. 转译插件
 比起语法插件, 转译插件其实更好理解, 比如箭头函数 `(a) => a` 就会转化为 `function (a) {return a}`.完成这个工作的插件叫做 `babel-plugin-transform-es2015-arrow-functions`
 
 ## babel 执行顺序

@@ -28,7 +28,7 @@
 
 而 `Vite` 直接整合了 `Rollup`，为用户提供了完善、开箱即用的解决方案，并且由于这些集成，也方便扩展更多的高级功能。
 
-两者较大的区别是在需要`bundle`打包的时候`Vite` 使用 `Rollup` 内置配置，而 `Snowpack` 通过其他插件将其委托给 `Parcel/``webpack`。
+两者较大的区别是在需要`bundle`打包的时候`Vite` 使用 `Rollup` 内置配置，而 `Snowpack` 通过其他插件将其委托给 `Parcel/webpack`。
 
 ### 2 前置知识
 

@@ -19,7 +19,7 @@ Vite相比于Webpack而言，**没有打包的过程**，而是**直接启动了
 Vite 直接整合了 Rollup，为用户提供了完善、开箱即用的解决方案，在需要bundle打包的时候Vite 使用 Rollup 内置配置。
 
 ESM是JavaScript提出的官方标准化模块系统，不同于之前的CJS，AMD，CMD等等，ESM提供了更原生以及更动态的模块加载方案，最重要的就是它是浏览器原生支持的，也就是说我们可以**直接在浏览器中去执行import，动态引入我们需要的模块，而不是把所有模块打包在一起**。
-ESM: [[JS modules#ES Modules]]: 官方模块化规范，**现代浏览器原生支持**，通过 `import` **异步**加载模块，`export` 导出内容。
+ESM: [[JS 模块化详情#ES Modules]]: 官方模块化规范，**现代浏览器原生支持**，通过 `import` **异步**加载模块，`export` 导出内容。
 
 当我们在使用模块开发时，其实就是在**构建一张模块依赖关系图**，当模块加载时，就会从入口文件开始，最终生成完整的模块实例图。
 
@@ -44,6 +44,8 @@ Webpack是**先解析依赖、打包构建再启动开发服务器**，Dev Serve
 目前**所有的打包工具实现热更新的思路都大同小异：主要是通过WebSocket创建浏览器和服务器的通信监听文件的改变**，当文件被修改时，服务端发送消息通知客户端修改相应的代码，客户端对应不同的文件进行不同的操作的更新。
 
 Vite 通过 `chokidar` 来监听文件系统的变更，**只用对发生变更的模块重新加载**， 只需要精确的使相关模块与其临近的 HMR边界连接失效即可，这样HMR 更新速度就不会因为应用体积的增加而变慢。
+### [[Vite 核心原理]]
+
 
 ## 热更新流程
 
@@ -59,7 +61,7 @@ Vite整个热更新过程可以分成四步：
 - 执行热更新：`moduleGraph+handleHMRUpdate`模块。接收到文件改动执行的回调，这里主要两个操作：`moduleGraph.onFileChange`修改文件的缓存和`handleHMRUpdate`执行热更新。`moduleGraph` 是Vite定义的用来记录**整个应用的模块依赖图的类**，除此之外还有moduleNode。moduleGraph是由一系列 map 组成，而这些map分别是url、id、file等与ModuleNode的映射，而ModuleNode 是 Vite中定义的最小模块单位。
 
 - handleHMRUpdate: 主要是监听文件的更改，进行处理和判断通过WebSocket给客户端发送消息通知客户端去请求新的模块代码。
-
+[[vite 热更新流程]]
 ## 预编译原理
 
 Vite预编译之后，将文件缓存在node_modules/.vite/文件夹下。根据以下地方来决定是否需要重新执行预构建。
@@ -68,3 +70,4 @@ Vite预编译之后，将文件缓存在node_modules/.vite/文件夹下。根据
 - 包管理器的lockfile
 
 如果想强制让Vite重新预构建依赖，可以使用--force启动开发服务器，或者直接删掉node_modules/.vite/文件夹。
+

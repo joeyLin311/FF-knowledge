@@ -2,8 +2,7 @@
 date created: 2022-05-24 23:29
 date updated: 2022-05-25 22:43
 ---
-
-# React
+#React 
 
 ## 相关问题
 
@@ -103,3 +102,5 @@ Object.assgin(
 ### 6. 推荐使用方式
 
 在调用 `setState` 时使用函数传递 `state` 值, 在回调函数中获取最新更新后的 `state`
+
+[[setSate 手写实现]]

@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ab1d8d6a15da336f",
+        "id": "a1da157c1d70b7ba",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "前端工程/React-CLI 代码模板快速生成.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -40,7 +36,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "复制代码",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -53,7 +49,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 283
+    "width": 224
   },
   "right": {
     "id": "5bde9680b6f8dda1",
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端工程/React-CLI 代码模板快速生成.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,9 +81,8 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端工程/React-CLI 代码模板快速生成.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": false
+                "linksCollapsed": true,
+                "unlinkedCollapsed": true
               }
             }
           },
@@ -97,9 +91,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "前端工程/React-CLI 代码模板快速生成.md"
-              }
+              "state": {}
             }
           },
           {
@@ -126,19 +118,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225
+    "width": 241
   },
-  "active": "ab1d8d6a15da336f",
+  "active": "a1da157c1d70b7ba",
   "lastOpenFiles": [
-    "前端工程/React-CLI 代码模板快速生成.md",
-    "项目总结/RBCA 权限控制.md",
-    "webpack/package.json 字段说明.md",
-    "前端工程/前端安全.md",
-    "前端工程/monorepo 踩坑.md",
-    "小程序/小程序开发总结.md",
-    "JavaScript/JSBridge.md",
+    "JavaScript/async-await 是如何实现的.md",
+    "JavaScript/函数, 函数参数 arguments.md",
+    "JavaScript/更加优雅地处理async-await.md",
+    "Vue/Vue diff 算法.md",
+    "Vue/Vue 3.md",
     "前端工程/前端表单配置化.md",
-    "浏览器&DOM HTML/浏览器跨域 CORS.md",
-    "浏览器&DOM HTML/浏览器跨域.md"
+    "前端工程/浏览器性能指标解析.md",
+    "前端工程/页面性能 LCP 指标.md",
+    "前端工程/0 前端工程.md",
+    "前端工程/3.规范化.md"
   ]
 }

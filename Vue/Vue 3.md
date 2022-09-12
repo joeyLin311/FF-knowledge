@@ -168,3 +168,5 @@ Vue 2.x 中渲染最小的单位是组件，diff 的过程会跳过静态根节�
 
 > watch/watchEffect 是 Vue3 的 runtime.core 中实现的，watch 函数的内部其实实现了一个底层函数 effect
 > 我们会模拟实现 effect 函数以及 Vue3 中收集依赖和触发更新的函数 track 和 trigger
+
+## [[vue3 实践总结]]
