@@ -3,7 +3,7 @@
 
 新建 global.css 文件，并在 main.js 中引入。 global.css 文件一般都放在 src->assets 静态资源文件夹下的 style 文件夹下，在 main.js 的引用写法如下：
 
-```
+```ts
 import "./assets/style/global.css";
 
 
@@ -19,7 +19,7 @@ import "./assets/style/global.css";
 
 找到需要修改的 ElementUI 标签的类名，然后在类名前加上 `/deep/` ，可以强制修改默认样式。这种方式可以直接用到有 `scoped` 属性的 style 标签中。
 
-```
+```css
 // 修改级联选择框的默认宽度
 /deep/ .el-cascader {
   width: 100%;
@@ -33,7 +33,7 @@ import "./assets/style/global.css";
 通过内联样式 style ，绑定类样式的方式，可以在**某些标签**中可以直接覆盖默认样式，不是很通用。具体实例如下：  
 内联样式`style`的方式：
 
-```
+```vue
 <el-button :style="selfstyle">默认按钮</el-button>
 <script>
     export default {
@@ -55,7 +55,7 @@ import "./assets/style/global.css";
 
 通过绑定修改样式方式修改：
 
-```
+```vue
 <el-button :class="[selfbutton]">默认按钮</el-button>
 <script>
   export default {
@@ -95,7 +95,7 @@ import "./assets/style/global.css";
 
 一番搜寻得知，可以使用 `>>>` 来深度修改样式。如下面的例子：
 
-```
+```vue
 <style scoped>
   .a >>> .b { /* ... */ }
 </style>
@@ -105,7 +105,7 @@ import "./assets/style/global.css";
 
 上面的代码将会被解析成如下格式，可在浏览器中查看：
 
-```
+```scss
 .a[data-v-f3f3eg9] .b { /* ... */ }
 
 
@@ -116,7 +116,7 @@ import "./assets/style/global.css";
 **如何在 css 预处理器中使用 `>>>` 深度修改 elementUI 样式呢？**  
 `用变量代替 >>> 符号`，如下代码示例：
 
-```
+```vue
 <style scoped lang='less'>
     @deep: ~'>>>';
       .box {
@@ -127,6 +127,8 @@ import "./assets/style/global.css";
 </style>
 **~ 表示转义**
 转义允许您将任意字符串用作属性或变量值。除插值外，里面的任何东西 ~"anything" 或 ~'anything' 原样使用。
+```
+
 ```css
 .weird-element {
   content: ~"^//* some horrible but needed css hack";
@@ -137,7 +139,7 @@ import "./assets/style/global.css";
 
 编译为以下内容：
 
-```
+```css
 .weird-element {
   content: ^//* some horrible but needed ss hack;
 }

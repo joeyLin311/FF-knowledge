@@ -1163,7 +1163,7 @@ type 和 interface 的区别
     type H = G & {b: number}
     const obj3:H = { a: `小杜杜`, b: 7 }
 
-
+T extends String
 ```
 
 重复定义

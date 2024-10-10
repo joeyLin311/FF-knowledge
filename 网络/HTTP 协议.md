@@ -21,7 +21,7 @@ date updated: 2021-12-17 16:09
 3. Head-of-line blocking(HOLB) 对头阻塞会导致带宽无法被充分利用, 以致于健康的请求被不健康的请求影响
 4. **解决方案:** 在请求头添加 `Connection: keep-alive`
 
-#### 浏览器链接限制
+#### 浏览器链接限制 6个
 
 ### HTTP1.1
 

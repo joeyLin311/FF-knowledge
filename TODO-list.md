@@ -58,9 +58,16 @@
 - `for... in` 与 `for` 的性能优劣
 - `new` 关键词原理
 	- `Object.create()` 和 字面量声明有什么区别
-- 写动画, 了解哪些? 是否遇到过动画性能瓶颈
 - 复杂的对象数组去重方案
 
+### Typescript 问题点
+
+- 如何在TS项目中使用eslint和prettier
+- 在项目中是如何使用TS的, 做了什么(declare , type , interface, etc)
+- 旧项目中如何改造升级为TS
+- 泛型约束!
+- [参考链接1](https://juejin.cn/post/7058868160706904078)
+- 
 
 开科唯识
 汉克时代

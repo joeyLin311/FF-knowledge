@@ -32,7 +32,7 @@ Class 可以通过对象语法和数组语法进行动态绑定：
 
 * 对象语法：
 
-```
+```vue
 <div v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
 
 data: {
@@ -45,7 +45,7 @@ data: {
 
 * 数组语法：
 
-```
+```vue
 <div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
 
 data: {
@@ -60,7 +60,7 @@ Style 也可以通过对象语法和数组语法进行动态绑定：
 
 * 对象语法：
 
-```
+```vue
 <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
 
 data: {
@@ -73,7 +73,7 @@ data: {
 
 * 数组语法：
 
-```
+```vue
 <div v-bind:style="[styleColor, styleSize]"></div>
 
 data: {
@@ -99,7 +99,7 @@ data: {
 
 * **这个 prop 用来传递一个初始值；这个子组件接下来希望将其作为一个本地的 prop 数据来使用。** 在这种情况下，最好定义一个本地的 data 属性并将这个 prop 用作其初始值：
 
-```
+```vue
 props: ['initialCounter'],
 data: function () {
   return {
@@ -112,7 +112,7 @@ data: function () {
 
 * **这个 prop 以一种原始的值传入且需要进行转换。** 在这种情况下，最好使用这个 prop 的值来定义一个计算属性
 
-```
+```vue
 props: ['size'],
 computed: {
   normalizedSize: function () {

@@ -69,7 +69,7 @@ var target = {}
 var proxyObj = new Proxy(
   target,
   {
-    get: function(target, propKey, receiver) {
+    get: function(target, propKey, receiver) {[]()
       console.log(`getting ${propKey}!`)
       return Reflect.get(target, propKey, receiver)
     },

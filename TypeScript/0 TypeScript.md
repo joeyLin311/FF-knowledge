@@ -49,3 +49,5 @@ function add(a: any, b:any): any {
 ## [[TypeScript 指南]]
 
 ## [[TypeScript 编码规范]]
+
+## [[TypeScript 中为什么应该使用 Type 而不是 Interface]]
